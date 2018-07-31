@@ -1,0 +1,6 @@
+framework module Pods_RCAUITests {
+  umbrella header "Pods-RCAUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
