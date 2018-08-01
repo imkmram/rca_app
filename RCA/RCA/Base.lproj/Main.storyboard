@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="ViewController" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,14 +44,78 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LWn-ZR-4Zw"/>
+                    <navigationItem key="navigationItem" title="Home" id="LWn-ZR-4Zw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="30.134932533733135"/>
+        </scene>
+        <!--About UsVC-->
+        <scene sceneID="af3-Ba-Yme">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsVC" id="lrz-qn-bzJ" customClass="AboutUsVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VLV-a8-dQU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hQI-9s-ehY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AFn-1m-DXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="693"/>
+        </scene>
+        <!--Privacy PolicyVC-->
+        <scene sceneID="FLP-qH-Wze">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyPolicyVC" id="cEo-3o-kj9" customClass="PrivacyPolicyVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8P-0L-E2o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PGJ-ig-gWR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dd-T0-5m6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="389"/>
+        </scene>
+        <!--Left MenuVC-->
+        <scene sceneID="ijh-Px-THY">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuVC" id="XRs-xB-Avl" customClass="LeftMenuVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRF-6B-dyW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaB-e8-avd">
+                                <rect key="frame" x="0.0" y="160" width="375" height="507"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XRs-xB-Avl" id="MLh-kv-quX"/>
+                                    <outlet property="delegate" destination="XRs-xB-Avl" id="r4H-3p-Ng2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NaB-e8-avd" firstAttribute="leading" secondItem="NoY-RJ-RpN" secondAttribute="leading" id="L3t-SJ-k41"/>
+                            <constraint firstItem="NaB-e8-avd" firstAttribute="bottom" secondItem="NoY-RJ-RpN" secondAttribute="bottom" id="b16-5R-cTl"/>
+                            <constraint firstItem="NaB-e8-avd" firstAttribute="top" secondItem="kRF-6B-dyW" secondAttribute="top" constant="160" id="qPu-g2-sHf"/>
+                            <constraint firstItem="NaB-e8-avd" firstAttribute="trailing" secondItem="NoY-RJ-RpN" secondAttribute="trailing" id="xMQ-cD-QYj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NoY-RJ-RpN"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblMenu" destination="NaB-e8-avd" id="6hC-qR-plh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6z-tV-BdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="684.10794602698661"/>
         </scene>
         <!--FormVC-->
         <scene sceneID="tz8-cK-3On">

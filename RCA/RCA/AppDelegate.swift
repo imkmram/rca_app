@@ -15,14 +15,38 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    fileprivate func createMenuView() {
+        
+        // create viewController code...
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! ViewController
+        let leftMenuVC = storyboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
+    
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: homeVC)
+        
+        UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+        
+        leftMenuVC.homeVC = nvc
+        
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftMenuVC)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        
+        slideMenuController.delegate = homeVC
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         NetworkManager.shared.startMonitoring()
-        
         FirebaseApp.configure()
+        self.createMenuView()
         
         return true
     }

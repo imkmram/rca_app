@@ -27,12 +27,13 @@ class ViewController: BaseVC {
         super.delagate = self
         
         if NetworkManager.shared.isNetworkAvailable {
-           presenter.getData(strURL: "www.google.com")
+           //presenter.getData(strURL: "www.google.com")
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.setNavigationBarItem()
         
      //   NetworkManager.shared.addListener(listener: self)
     }
@@ -62,8 +63,9 @@ class ViewController: BaseVC {
         
         //let  passportData = NSEntityDescription.insertNewObject(forEntityName: "PassportType", into: coreDataService.managedObjectContext) as! PassportType
         
-        passportData.type_name = "Lets"
-        passportData.type_code = "Go"
+        passportData.type_id = 100
+        passportData.type_name = "See"
+        passportData.type_code = "You"
     
         coreDataService.saveContext()
     }
@@ -108,6 +110,41 @@ extension ViewController:BaseViewDelegate {
 //        else {
 //            presenter.pauseDataCall()
 //        }
+    }
+}
+
+extension ViewController : SlideMenuControllerDelegate {
+    
+    func leftWillOpen() {
+        print("SlideMenuControllerDelegate: leftWillOpen")
+    }
+    
+    func leftDidOpen() {
+        print("SlideMenuControllerDelegate: leftDidOpen")
+    }
+    
+    func leftWillClose() {
+        print("SlideMenuControllerDelegate: leftWillClose")
+    }
+    
+    func leftDidClose() {
+        print("SlideMenuControllerDelegate: leftDidClose")
+    }
+    
+    func rightWillOpen() {
+        print("SlideMenuControllerDelegate: rightWillOpen")
+    }
+    
+    func rightDidOpen() {
+        print("SlideMenuControllerDelegate: rightDidOpen")
+    }
+    
+    func rightWillClose() {
+        print("SlideMenuControllerDelegate: rightWillClose")
+    }
+    
+    func rightDidClose() {
+        print("SlideMenuControllerDelegate: rightDidClose")
     }
 }
 

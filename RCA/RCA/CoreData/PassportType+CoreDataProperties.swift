@@ -19,5 +19,6 @@ extension PassportType {
 
     @NSManaged public var type_code: String?
     @NSManaged public var type_name: String?
+    @NSManaged public var type_id: Int32
 
 }
