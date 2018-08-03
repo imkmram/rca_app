@@ -21,11 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create viewController code...
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! ViewController
+        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         let leftMenuVC = storyboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
     
         
         let nvc: UINavigationController = UINavigationController(rootViewController: homeVC)
+        let attributes = [NSAttributedStringKey.font : UIFont(name: "OpenSans-Bold", size: 18)!]
+        nvc.navigationBar.titleTextAttributes = attributes
         
         UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
         

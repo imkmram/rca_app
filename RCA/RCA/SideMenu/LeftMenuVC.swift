@@ -43,6 +43,10 @@ class LeftMenuVC: UIViewController {
         tblMenu.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+//        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+//        self.homeVC = UINavigationController(rootViewController: homeVC)
+        
         let aboutUsVC = storyboard.instantiateViewController(withIdentifier: "AboutUsVC") as! AboutUsVC
         self.aboutUsVC = UINavigationController(rootViewController: aboutUsVC)
         

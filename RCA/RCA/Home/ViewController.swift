@@ -113,40 +113,40 @@ extension ViewController:BaseViewDelegate {
     }
 }
 
-extension ViewController : SlideMenuControllerDelegate {
-    
-    func leftWillOpen() {
-        print("SlideMenuControllerDelegate: leftWillOpen")
-    }
-    
-    func leftDidOpen() {
-        print("SlideMenuControllerDelegate: leftDidOpen")
-    }
-    
-    func leftWillClose() {
-        print("SlideMenuControllerDelegate: leftWillClose")
-    }
-    
-    func leftDidClose() {
-        print("SlideMenuControllerDelegate: leftDidClose")
-    }
-    
-    func rightWillOpen() {
-        print("SlideMenuControllerDelegate: rightWillOpen")
-    }
-    
-    func rightDidOpen() {
-        print("SlideMenuControllerDelegate: rightDidOpen")
-    }
-    
-    func rightWillClose() {
-        print("SlideMenuControllerDelegate: rightWillClose")
-    }
-    
-    func rightDidClose() {
-        print("SlideMenuControllerDelegate: rightDidClose")
-    }
-}
+//extension ViewController : SlideMenuControllerDelegate {
+//    
+//    func leftWillOpen() {
+//        print("SlideMenuControllerDelegate: leftWillOpen")
+//    }
+//    
+//    func leftDidOpen() {
+//        print("SlideMenuControllerDelegate: leftDidOpen")
+//    }
+//    
+//    func leftWillClose() {
+//        print("SlideMenuControllerDelegate: leftWillClose")
+//    }
+//    
+//    func leftDidClose() {
+//        print("SlideMenuControllerDelegate: leftDidClose")
+//    }
+//    
+//    func rightWillOpen() {
+//        print("SlideMenuControllerDelegate: rightWillOpen")
+//    }
+//    
+//    func rightDidOpen() {
+//        print("SlideMenuControllerDelegate: rightDidOpen")
+//    }
+//    
+//    func rightWillClose() {
+//        print("SlideMenuControllerDelegate: rightWillClose")
+//    }
+//    
+//    func rightDidClose() {
+//        print("SlideMenuControllerDelegate: rightDidClose")
+//    }
+//}
 
 //extension ViewController:NetworkStatusListener {
 //
