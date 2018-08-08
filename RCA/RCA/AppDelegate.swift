@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSAttributedStringKey.font : UIFont(name: "OpenSans-Bold", size: 18)!]
         nvc.navigationBar.titleTextAttributes = attributes
         
-        UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+       // UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+        UINavigationBar.appearance().tintColor = UIColor.black
         
         leftMenuVC.homeVC = nvc
         

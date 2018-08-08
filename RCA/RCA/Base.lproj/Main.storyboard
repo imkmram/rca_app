@@ -126,20 +126,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaB-e8-avd">
-                                <rect key="frame" x="0.0" y="160" width="375" height="507"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaB-e8-avd">
+                                <rect key="frame" x="0.0" y="36" width="375" height="540"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="XRs-xB-Avl" id="MLh-kv-quX"/>
                                     <outlet property="delegate" destination="XRs-xB-Avl" id="r4H-3p-Ng2"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftmenu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-1g-Y1N">
+                                <rect key="frame" x="96.5" y="584" width="182" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="D76-Q5-Eo6"/>
+                                    <constraint firstAttribute="height" constant="63" id="Re2-Wp-Ben"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NoY-RJ-RpN" firstAttribute="bottom" secondItem="TDi-1g-Y1N" secondAttribute="bottom" constant="20" id="0BJ-df-101"/>
+                            <constraint firstItem="TDi-1g-Y1N" firstAttribute="centerX" secondItem="kRF-6B-dyW" secondAttribute="centerX" id="6Md-3G-eYl"/>
                             <constraint firstItem="NaB-e8-avd" firstAttribute="leading" secondItem="NoY-RJ-RpN" secondAttribute="leading" id="L3t-SJ-k41"/>
-                            <constraint firstItem="NaB-e8-avd" firstAttribute="bottom" secondItem="NoY-RJ-RpN" secondAttribute="bottom" id="b16-5R-cTl"/>
-                            <constraint firstItem="NaB-e8-avd" firstAttribute="top" secondItem="kRF-6B-dyW" secondAttribute="top" constant="160" id="qPu-g2-sHf"/>
+                            <constraint firstItem="NaB-e8-avd" firstAttribute="bottom" secondItem="NoY-RJ-RpN" secondAttribute="bottom" constant="-91" id="b16-5R-cTl"/>
+                            <constraint firstItem="NaB-e8-avd" firstAttribute="top" secondItem="kRF-6B-dyW" secondAttribute="top" constant="36" id="qPu-g2-sHf"/>
+                            <constraint firstItem="TDi-1g-Y1N" firstAttribute="top" secondItem="NaB-e8-avd" secondAttribute="bottom" constant="8" id="wVL-1t-vBX"/>
                             <constraint firstItem="NaB-e8-avd" firstAttribute="trailing" secondItem="NoY-RJ-RpN" secondAttribute="trailing" id="xMQ-cD-QYj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NoY-RJ-RpN"/>
@@ -276,6 +286,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="leftmenu_logo" width="182" height="63"/>
         <image name="mic" width="32" height="32"/>
         <image name="recording" width="32" height="32"/>
     </resources>

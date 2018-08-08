@@ -9,7 +9,7 @@
 import UIKit
 
 struct E_Visa {
-    
+    var countryCode:Int?
     var title:String?
     var description:String?
     var image:UIImage?
@@ -30,10 +30,10 @@ class E_VisaVC: UIViewController {
         tblEVisa.rowHeight = UITableViewAutomaticDimension
         tblEVisa.estimatedRowHeight = 160
         
-        e_visaList.append(E_Visa(title: "Malaysia", description: "eVisa service bfkjsd;vkjndf;kjvndfkjbnvdfkjlbndkfj Visa Service=======", image: #imageLiteral(resourceName: "malaysia"), origin:"India", destination:"Malaysia"))
-        e_visaList.append(E_Visa(title: "Hong Kong", description: "Coming Soon", image:#imageLiteral(resourceName: "hongkong"), origin:"India", destination:"Hong Kong"))
-        e_visaList.append(E_Visa(title: "Sri Lanka", description: "Coming Soon", image: #imageLiteral(resourceName: "srilanka"), origin:"India", destination:"Sri Lanka"))
-        e_visaList.append(E_Visa(title: "Others", description: "Coming Soon", image: #imageLiteral(resourceName: "other_countries"), origin:"India", destination:""))
+        e_visaList.append(E_Visa(countryCode:1, title: "Malaysia", description: "eVisa service bfkjsd;vkjndf;kjvndfkjbnvdfkjlbndkfj Visa Service=======", image: #imageLiteral(resourceName: "malaysia"), origin:"India", destination:"Malaysia"))
+        e_visaList.append(E_Visa(countryCode:2, title: "Hong Kong", description: "Coming Soon", image:#imageLiteral(resourceName: "hongkong"), origin:"India", destination:"Hong Kong"))
+        e_visaList.append(E_Visa(countryCode:3, title: "Sri Lanka", description: "Coming Soon", image: #imageLiteral(resourceName: "srilanka"), origin:"India", destination:"Sri Lanka"))
+        e_visaList.append(E_Visa(countryCode:4, title: "Others", description: "Coming Soon", image: #imageLiteral(resourceName: "other_countries"), origin:"India", destination:""))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +44,6 @@ class E_VisaVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -84,9 +83,10 @@ extension E_VisaVC : UITableViewDelegate {
         if indexPath.row == 0 {
             let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
             let eVisaVC = storyboard.instantiateViewController(withIdentifier: "E_VisaDetailVC") as! E_VisaDetailVC
-//            let backItem = UIBarButtonItem()
-//            backItem.title = "Back"
-//            navigationItem.backBarButtonItem = backItem
+            
+            eVisaVC.country = e_visaList[indexPath.row]
+            setBackTitle(title: "\(String(describing: eVisaVC.country.title ?? "")) eVisa")
+            
             self.navigationController?.pushViewController(eVisaVC, animated: true)
         }
     }

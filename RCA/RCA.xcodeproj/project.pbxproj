@@ -13,6 +13,9 @@
 		D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */; };
 		D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */; };
 		D90B30AE210F230200C8F3A4 /* PassportType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AC210F230200C8F3A4 /* PassportType+CoreDataProperties.swift */; };
+		D94C67B721197CEA00D49A29 /* ThankYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C67B621197CEA00D49A29 /* ThankYouVC.swift */; };
+		D94C67B92119820D00D49A29 /* ConfirmDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */; };
+		D94C67BB21198CE300D49A29 /* ConfirmDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */; };
 		D956C9312111928D0083CE9E /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956C92E2111928D0083CE9E /* SlideMenuController.swift */; };
 		D956C9322111928D0083CE9E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956C92F2111928D0083CE9E /* UIApplication.swift */; };
 		D956C9332111928D0083CE9E /* ExSlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956C9302111928D0083CE9E /* ExSlideMenuController.swift */; };
@@ -48,6 +51,10 @@
 		D962CDC32113307600CF94CA /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D962CDB12113230500CF94CA /* OpenSans-SemiBoldItalic.ttf */; };
 		D962CDC62113319800CF94CA /* E-visa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D962CDC52113319800CF94CA /* E-visa.storyboard */; };
 		D962CDCB211335D700CF94CA /* E_VisaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D962CDCA211335D700CF94CA /* E_VisaVC.swift */; };
+		D963CF97211ABE850051F8A4 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963CF96211ABE850051F8A4 /* AttributedString.swift */; };
+		D963CF99211ACBA80051F8A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963CF98211ACBA80051F8A4 /* Constant.swift */; };
+		D964AA672118399B00C32E14 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964AA662118399B00C32E14 /* PaddedLabel.swift */; };
+		D964AA69211880E000C32E14 /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964AA68211880DF00C32E14 /* ConfirmationVC.swift */; };
 		D96A99612108B27900908488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A99602108B27900908488 /* AppDelegate.swift */; };
 		D96A99632108B27900908488 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A99622108B27900908488 /* ViewController.swift */; };
 		D96A99662108B27900908488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96A99642108B27900908488 /* Main.storyboard */; };
@@ -102,6 +109,9 @@
 		D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreService.swift; sourceTree = "<group>"; };
 		D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassportType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D90B30AC210F230200C8F3A4 /* PassportType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassportType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D94C67B621197CEA00D49A29 /* ThankYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
+		D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmDataCell.xib; sourceTree = "<group>"; };
+		D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDataCell.swift; sourceTree = "<group>"; };
 		D956C92E2111928D0083CE9E /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		D956C92F2111928D0083CE9E /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		D956C9302111928D0083CE9E /* ExSlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSlideMenuController.swift; sourceTree = "<group>"; };
@@ -137,6 +147,10 @@
 		D962CDB92113230600CF94CA /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D962CDC52113319800CF94CA /* E-visa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "E-visa.storyboard"; sourceTree = "<group>"; };
 		D962CDCA211335D700CF94CA /* E_VisaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_VisaVC.swift; sourceTree = "<group>"; };
+		D963CF96211ABE850051F8A4 /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
+		D963CF98211ACBA80051F8A4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D964AA662118399B00C32E14 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		D964AA68211880DF00C32E14 /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
 		D96A995D2108B27900908488 /* RCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96A99602108B27900908488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D96A99622108B27900908488 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +266,8 @@
 				D956C94821119FA70083CE9E /* UIImageView.swift */,
 				D956C9382111962F0083CE9E /* UIColor.swift */,
 				D956C9372111962F0083CE9E /* UIViewController.swift */,
+				D963CF96211ABE850051F8A4 /* AttributedString.swift */,
+				D963CF98211ACBA80051F8A4 /* Constant.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +340,10 @@
 				D986A718211468D600D7E1D7 /* VoiceVC.swift */,
 				D986A71A2114698B00D7E1D7 /* ChatCell.xib */,
 				D986A71C211469AC00D7E1D7 /* ChatCell.swift */,
+				D964AA68211880DF00C32E14 /* ConfirmationVC.swift */,
+				D94C67B621197CEA00D49A29 /* ThankYouVC.swift */,
+				D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */,
+				D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */,
 			);
 			path = "E-Visa";
 			sourceTree = "<group>";
@@ -399,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				D986A7102114320F00D7E1D7 /* RoundButton.swift */,
+				D964AA662118399B00C32E14 /* PaddedLabel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -546,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D962CDC32113307600CF94CA /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				D94C67B92119820D00D49A29 /* ConfirmDataCell.xib in Resources */,
 				D96A996E2108B27E00908488 /* LaunchScreen.storyboard in Resources */,
 				D962CDBE2113306900CF94CA /* OpenSans-Italic.ttf in Resources */,
 				D962CDBA2113305C00CF94CA /* OpenSans-Bold.ttf in Resources */,
@@ -647,12 +669,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RCA/Pods-RCA-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,14 +706,18 @@
 			files = (
 				D956C94121119C750083CE9E /* ImageHeaderView.swift in Sources */,
 				D956C9322111928D0083CE9E /* UIApplication.swift in Sources */,
+				D963CF99211ACBA80051F8A4 /* Constant.swift in Sources */,
 				D9768F2E210AFE7400F8FACB /* FormVC.swift in Sources */,
 				D956C9392111962F0083CE9E /* UIViewController.swift in Sources */,
 				D956C9632111ED060083CE9E /* RCA.xcdatamodeld in Sources */,
+				D964AA69211880E000C32E14 /* ConfirmationVC.swift in Sources */,
 				D956C9312111928D0083CE9E /* SlideMenuController.swift in Sources */,
+				D94C67B721197CEA00D49A29 /* ThankYouVC.swift in Sources */,
 				D956C9532111B60F0083CE9E /* BaseTableViewCell.swift in Sources */,
 				D989ED7A21099B87005975C3 /* NetworkManager.swift in Sources */,
 				D956C94F2111A3340083CE9E /* UIImage.swift in Sources */,
 				D962CDA92112EB6B00CF94CA /* HomeVC.swift in Sources */,
+				D963CF97211ABE850051F8A4 /* AttributedString.swift in Sources */,
 				D986A71321145D5700D7E1D7 /* E_VisaDetailVC.swift in Sources */,
 				D956C95B2111D5170083CE9E /* Country+CoreDataClass.swift in Sources */,
 				D962CDCB211335D700CF94CA /* E_VisaVC.swift in Sources */,
@@ -707,6 +735,7 @@
 				D986A7112114320F00D7E1D7 /* RoundButton.swift in Sources */,
 				D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */,
 				D956C94521119D6A0083CE9E /* PrivacyPolicyVC.swift in Sources */,
+				D94C67BB21198CE300D49A29 /* ConfirmDataCell.swift in Sources */,
 				D956C94921119FA70083CE9E /* UIImageView.swift in Sources */,
 				D989ED7F2109D46C005975C3 /* BaseView.swift in Sources */,
 				D962CDAD2112EE1300CF94CA /* HomeCell.swift in Sources */,
@@ -718,6 +747,7 @@
 				D989ED7D2109BD7F005975C3 /* BaseVC.swift in Sources */,
 				D986A71721145DC500D7E1D7 /* BottomCell.swift in Sources */,
 				D989ED842109E0FF005975C3 /* HomePresenter.swift in Sources */,
+				D964AA672118399B00C32E14 /* PaddedLabel.swift in Sources */,
 				D956C9512111B5FC0083CE9E /* UITableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,17 +922,21 @@
 			baseConfigurationReference = C51F31B5B7DE85B55B58964A /* Pods-RCA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = U9749735YS;
 				INFOPLIST_FILE = RCA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thewhiteboardcompany.RCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "780f1885-002d-4b93-8d8f-de63344dabf9";
+				PROVISIONING_PROFILE_SPECIFIER = "RCA DEV Provisional";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -911,16 +945,20 @@
 			baseConfigurationReference = 96A8E18A3D78996B8345182F /* Pods-RCA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U9749735YS;
 				INFOPLIST_FILE = RCA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thewhiteboardcompany.RCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "780f1885-002d-4b93-8d8f-de63344dabf9";
+				PROVISIONING_PROFILE_SPECIFIER = "RCA DEV Provisional";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

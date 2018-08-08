@@ -17,13 +17,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_splash" translatesAutoresizingMaskIntoConstraints="NO" id="jUa-pD-uzi">
+                                <rect key="frame" x="52" y="243" width="270" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="27r-qX-ALI"/>
+                                    <constraint firstAttribute="width" constant="270" id="IRc-OB-trn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.10980392156862745" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jUa-pD-uzi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2OX-CZ-sMn"/>
+                            <constraint firstItem="jUa-pD-uzi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="S9F-0b-vpR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="new_splash" width="300" height="200"/>
+    </resources>
 </document>

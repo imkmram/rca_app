@@ -30,4 +30,10 @@ extension UIViewController {
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
     }
+    
+    func setBackTitle(title:String) {
+        let backItem = UIBarButtonItem()
+        backItem.title = title
+        navigationItem.backBarButtonItem = backItem
+    }
 }

@@ -59,8 +59,8 @@ class LeftMenuVC: UIViewController {
         
       //  self.tableView.registerCellClass(BaseTableViewCell.self)
         
-        self.imageHeaderView = ImageHeaderView.loadNib()
-        self.view.addSubview(self.imageHeaderView)
+//        self.imageHeaderView = ImageHeaderView.loadNib()
+//        self.view.addSubview(self.imageHeaderView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,8 +69,8 @@ class LeftMenuVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
-        self.view.layoutIfNeeded()
+       // self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
+        //self.view.layoutIfNeeded()
     }
     
     func changeViewController(_ menu: LeftMenu) {

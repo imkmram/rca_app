@@ -12,15 +12,14 @@ class E_VisaDetailVC: UIViewController {
 
     @IBOutlet weak var tblDetails: UITableView!
     
+    var country:E_Visa = E_Visa()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tblDetails.registerCellNib(BottomCell.self)
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 160
-
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +27,6 @@ class E_VisaDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -38,7 +36,6 @@ class E_VisaDetailVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 extension E_VisaDetailVC : UITableViewDataSource {
@@ -88,9 +85,8 @@ extension E_VisaDetailVC : BottomCellDelegate {
     func btnVoiceTapped(sender: UIButton) {
         let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
         let voiceVC = storyboard.instantiateViewController(withIdentifier: "VoiceVC") as! VoiceVC
-//        let backItem = UIBarButtonItem()
-//        backItem.title = "Back"
-//        navigationItem.backBarButtonItem = backItem
+        setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
+        voiceVC.country = country
         self.navigationController?.pushViewController(voiceVC, animated: true)
     }
     

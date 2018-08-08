@@ -11,6 +11,7 @@ target 'RCA' do
 	pod 'Crashlytics', '~> 3.10.5'
 	pod 'Firebase/Core'
 	pod ‘ReachabilitySwift’, ‘~> 3’
+	pod 'SDWebImage', '~> 4.0'
 
 
   target 'RCATests' do
