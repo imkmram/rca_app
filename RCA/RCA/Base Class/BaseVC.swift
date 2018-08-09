@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ReachabilitySwift
 
 protocol BaseViewDelegate: class {
     
@@ -39,17 +38,17 @@ class BaseVC: UIViewController {
     }
 }
 
-extension BaseVC:NetworkStatusListener {
-
-    func networkStatusDidChanged(status: Reachability.NetworkStatus) {
+extension BaseVC: NetworkStatusListener {
+   
+    func networkStatusDidChanged(status: Reachability.Connection) {
 
         switch status {
 
-        case .notReachable:
+        case .none:
             print("Not Connected")
             delagate?.networkStausChanged(isReachable: false)
 
-        case .reachableViaWiFi, .reachableViaWWAN:
+        case .wifi, .cellular:
             print("Connected")
              delagate?.networkStausChanged(isReachable: true)
         }

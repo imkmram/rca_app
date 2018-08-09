@@ -16,6 +16,8 @@
 		D94C67B721197CEA00D49A29 /* ThankYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C67B621197CEA00D49A29 /* ThankYouVC.swift */; };
 		D94C67B92119820D00D49A29 /* ConfirmDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */; };
 		D94C67BB21198CE300D49A29 /* ConfirmDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */; };
+		D9566A6A211C53DF009EF5E4 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9566A69211C53DF009EF5E4 /* Validate.swift */; };
+		D9566A6C211C625C009EF5E4 /* speech.gif in Resources */ = {isa = PBXBuildFile; fileRef = D9566A6B211C625C009EF5E4 /* speech.gif */; };
 		D956C9312111928D0083CE9E /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956C92E2111928D0083CE9E /* SlideMenuController.swift */; };
 		D956C9322111928D0083CE9E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956C92F2111928D0083CE9E /* UIApplication.swift */; };
 		D956C9332111928D0083CE9E /* ExSlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956C9302111928D0083CE9E /* ExSlideMenuController.swift */; };
@@ -77,6 +79,7 @@
 		D989ED822109E02F005975C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989ED812109E02F005975C3 /* HomeView.swift */; };
 		D989ED842109E0FF005975C3 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989ED832109E0FF005975C3 /* HomePresenter.swift */; };
 		D989ED862109E300005975C3 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989ED852109E300005975C3 /* BasePresenter.swift */; };
+		D9DB0219211C93B4003F25F3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB0218211C93B3003F25F3 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,8 @@
 		D94C67B621197CEA00D49A29 /* ThankYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
 		D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmDataCell.xib; sourceTree = "<group>"; };
 		D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDataCell.swift; sourceTree = "<group>"; };
+		D9566A69211C53DF009EF5E4 /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		D9566A6B211C625C009EF5E4 /* speech.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = speech.gif; sourceTree = "<group>"; };
 		D956C92E2111928D0083CE9E /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		D956C92F2111928D0083CE9E /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		D956C9302111928D0083CE9E /* ExSlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSlideMenuController.swift; sourceTree = "<group>"; };
@@ -165,6 +170,7 @@
 		D96A99832108B27E00908488 /* RCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCAUITests.swift; sourceTree = "<group>"; };
 		D96A99852108B27E00908488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D96A99912108B4D600908488 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D96FDAEA211C91B0009719BB /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9768F2D210AFE7400F8FACB /* FormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormVC.swift; sourceTree = "<group>"; };
 		D986A7102114320F00D7E1D7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		D986A71221145D5700D7E1D7 /* E_VisaDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_VisaDetailVC.swift; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 		D989ED812109E02F005975C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D989ED832109E0FF005975C3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D989ED852109E300005975C3 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		D9DB0218211C93B3003F25F3 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +232,7 @@
 		80A50C49AEE67DF84CA51BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D96FDAEA211C91B0009719BB /* Reachability.framework */,
 				5F2BE4920EE86F7CE04FFC2E /* Pods_RCA.framework */,
 				9DF7C2FA01E22A1B86D38911 /* Pods_RCATests.framework */,
 				B959D26927643CAB23E4E77C /* Pods_RCAUITests.framework */,
@@ -344,6 +352,7 @@
 				D94C67B621197CEA00D49A29 /* ThankYouVC.swift */,
 				D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */,
 				D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */,
+				D9566A69211C53DF009EF5E4 /* Validate.swift */,
 			);
 			path = "E-Visa";
 			sourceTree = "<group>";
@@ -373,6 +382,8 @@
 		D96A995F2108B27900908488 /* RCA */ = {
 			isa = PBXGroup;
 			children = (
+				D9DB0218211C93B3003F25F3 /* Reachability.swift */,
+				D9566A6B211C625C009EF5E4 /* speech.gif */,
 				D986A70F211431D000D7E1D7 /* CustomViews */,
 				D962CDC72113341200CF94CA /* E-Visa */,
 				D962CDC42113313B00CF94CA /* Storyboard */,
@@ -437,9 +448,9 @@
 			isa = PBXGroup;
 			children = (
 				D989ED7C2109BD7F005975C3 /* BaseVC.swift */,
-				D989ED7E2109D46C005975C3 /* BaseView.swift */,
 				D989ED852109E300005975C3 /* BasePresenter.swift */,
 				D956C9522111B60F0083CE9E /* BaseTableViewCell.swift */,
+				D989ED7E2109D46C005975C3 /* BaseView.swift */,
 			);
 			path = "Base Class";
 			sourceTree = "<group>";
@@ -566,6 +577,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9566A6C211C625C009EF5E4 /* speech.gif in Resources */,
 				D962CDC32113307600CF94CA /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				D94C67B92119820D00D49A29 /* ConfirmDataCell.xib in Resources */,
 				D96A996E2108B27E00908488 /* LaunchScreen.storyboard in Resources */,
@@ -668,14 +680,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RCA/Pods-RCA-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -695,7 +705,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -739,8 +749,10 @@
 				D956C94921119FA70083CE9E /* UIImageView.swift in Sources */,
 				D989ED7F2109D46C005975C3 /* BaseView.swift in Sources */,
 				D962CDAD2112EE1300CF94CA /* HomeCell.swift in Sources */,
+				D9566A6A211C53DF009EF5E4 /* Validate.swift in Sources */,
 				D956C93C21119AA20083CE9E /* LeftMenuVC.swift in Sources */,
 				D956C94B2111A0140083CE9E /* UIView.swift in Sources */,
+				D9DB0219211C93B4003F25F3 /* Reachability.swift in Sources */,
 				D986A719211468D600D7E1D7 /* VoiceVC.swift in Sources */,
 				D90B30AE210F230200C8F3A4 /* PassportType+CoreDataProperties.swift in Sources */,
 				D956C94721119D830083CE9E /* AboutUsVC.swift in Sources */,

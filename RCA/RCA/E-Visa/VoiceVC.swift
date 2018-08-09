@@ -8,6 +8,7 @@
 
 import UIKit
 import Speech
+import SDWebImage
 
 struct Questionnaire {
     
@@ -43,6 +44,7 @@ class VoiceVC: UIViewController {
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    
     var questionnaireList: [Questionnaire] = [Questionnaire]()
     var rowCount: Int = 1
     var questionIndex: Int = 0
@@ -54,8 +56,9 @@ class VoiceVC: UIViewController {
     
     var timer : Timer?
     
-    var inputNode:AVAudioInputNode?
-    
+    var rowSelected:Int?
+  
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -73,7 +76,7 @@ class VoiceVC: UIViewController {
                             Questionnaire(questionID:5, question: "Are you going for Business or as a tourist or transiting?.", answerFramed:"You want {{value}}"),
                             Questionnaire(questionID:6, question: "That sounds interesting. When do you arrive in Malaysia?.", answerFramed:"Your arrival at \(String(describing: "\(country.title ?? "")")) {{value}}"),
                             Questionnaire(questionID:7, question: "How many days are you planning to stay?", answerFramed:"You plan to stay for {{value}}"),
-                            Questionnaire(questionID:8, question: " That’s great! Let’s get connected. What is your email id?", answerFramed:"Your email address is {{value}}"),
+                            Questionnaire(questionID:8, question: "That’s great! Let’s get connected. What is your email id?", answerFramed:"Your email address is {{value}}"),
                             Questionnaire(questionID:9, question: "Thanks. Where can i contact you? Your phone number please…", answerFramed:"Your phone number is {{value}}")
         ]
         
@@ -138,21 +141,26 @@ class VoiceVC: UIViewController {
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         
-         inputNode = audioEngine.inputNode
+         var inputnode:AVAudioInputNode?
         
-        guard let inputNode = self.inputNode else {
-            fatalError("Audio engine has no input node")
+         inputnode = audioEngine.inputNode
+        
+        guard let inputNode = inputnode else {
+            return
+           // fatalError("Audio engine has no input node")
         }
         
         guard let recognitionRequest = recognitionRequest else {
-            fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
+            return
+            //fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
+            
         }
         
         recognitionRequest.shouldReportPartialResults = true
         
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in  //7
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: {[unowned self]  (result, error) in  //7
 
-            var isFinal = false
+            //var isFinal = false
 
             if result != nil {
 
@@ -160,29 +168,41 @@ class VoiceVC: UIViewController {
                 
                 let capturedText = result?.bestTranscription.formattedString
 
-                print("Captured Value : \(String(describing: self.lblCapturedText.text))")
+                print("Captured Value : \(String(describing: capturedText!))")
                 
                 if let value = capturedText {
                     
                     if self.questionIndex == 0 {
+                        
                         self.passengerName = value
-                        self.questionnaireList[1].question = "So, \(self.passengerName ?? "") what is your last name?"
+                        
+                        self.questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
+                        print(self.questionnaireList[1].question)
                     }
                     
-                    self.questionnaireList[self.questionIndex].answer = value
-                    self.tblChats.reloadRows(at: [IndexPath(row: self.questionIndex, section: 0)], with: .automatic)
-                    self.tblChats.scrollToRow(at: IndexPath(row: self.questionIndex, section: 0), at: .top, animated: true)
+                        self.rowSelected = nil
+                    
+                        self.questionnaireList[self.questionIndex].answer = value
+                        self.tblChats.reloadRows(at: [IndexPath(row: self.questionIndex, section: 0)], with: .automatic)
+                        self.tblChats.scrollToRow(at: IndexPath(row: self.questionIndex, section: 0), at: .top, animated: true)
                 }
                 
-                if self.rowCount == self.questionnaireList.count {
+                
+                if self.rowCount == self.questionnaireList.count && self.questionnaireList[self.rowCount - 1].answer != nil {
                     
                     self.btnProceed.isHidden = false
                     self.btnNext.isHidden = true
                 }
-                 isFinal = (result?.isFinal)!
+//                 isFinal = (result?.isFinal)!
+//
+//                if isFinal {
+//                    print("=============Final is true======================")
+//                }
+                
             }
 
-            if error != nil || isFinal {
+         //   if error != nil || isFinal {
+            if result?.isFinal ?? (error != nil) {
 
                 self.audioEngine.stop()
                
@@ -190,6 +210,8 @@ class VoiceVC: UIViewController {
     
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
+                
+                print("=====isFinal is true======")
             }
         })
         
@@ -220,6 +242,9 @@ class VoiceVC: UIViewController {
             audioEngine.inputNode.removeTap(onBus: 0)
             recognitionTask?.cancel()
             
+//             recognitionRequest = nil
+//            recognitionTask = nil
+           
             self.btnNext.isSelected = false
         }
     }
@@ -241,7 +266,8 @@ class VoiceVC: UIViewController {
             else {
                 
                 if questionnaireList[rowCount - 1].answer == nil {
-                    askQuestion(index: rowCount - 1)
+                    questionIndex = rowCount - 1
+                    askQuestion(index: questionIndex)
                 }
                 else {
                     if rowCount != questionnaireList.count {
@@ -281,37 +307,25 @@ class VoiceVC: UIViewController {
             switch question.questionID {
             case 1:
                 confirmData.name = question.answer
-                
+    
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
-                
                 confirmData.attributedName = attributedString.formatString(framedAnswer: question.answerFramed, value: question.answer ?? "")
                 
-                //confirmData.framedName =   question.answerFramed.replacingOccurrences(of: "{{value}}", with: question.answer ?? "")
             case 4:
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
                   confirmData.pax = attributedString.formatString(framedAnswer: question.answerFramed, value: question.answer ?? "")
-               // confirmData.pax = question.answerFramed.replacingOccurrences(of: "{{value}}", with: question.answer ?? "")
             case 6:
-                
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
                 confirmData.travellingDate = attributedString.formatString(framedAnswer: question.answerFramed, value: question.answer ?? "")
-               // confirmData.travellingDate = question.answerFramed.replacingOccurrences(of: "{{value}}", with: question.answer ?? "")
             case 8:
-                
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
                 confirmData.email = attributedString.formatString(framedAnswer: question.answerFramed, value: question.answer ?? "")
-                //confirmData.email = question.answerFramed.replacingOccurrences(of: "{{value}}", with: question.answer ?? "")
             case 9:
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
                 confirmData.phone = attributedString.formatString(framedAnswer: question.answerFramed, value: question.answer ?? "")
-                
-               /// confirmData.phone = question.answerFramed.replacingOccurrences(of: "{{value}}", with: question.answer ?? "")
             case 5:
-                
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
                 confirmData.visaType = attributedString.formatString(framedAnswer: question.answerFramed, value: question.answer ?? "")
-              //  confirmData.visaType = question.answerFramed.replacingOccurrences(of: "{{value}}", with: question.answer ?? "")
-                
             default:
                 print("Default")
             }
@@ -394,6 +408,15 @@ extension VoiceVC : UITableViewDataSource {
         
             cell.delegate = self
             cell.btnEdit.tag = indexPath.row
+        
+        if rowSelected == indexPath.row {
+            
+           cell.btnEdit.isSelected = true
+        }
+        else {
+            cell.btnEdit.isSelected = false
+            
+        }
             cell.setData(questionnaireList[indexPath.row])
         
             return cell
@@ -422,8 +445,10 @@ extension VoiceVC : ChatCellDelagate {
         
             questionIndex = sender.tag
             stopRecording()
+            rowSelected = sender.tag
             askQuestion(index: questionIndex)
             btnProceed.isHidden = true
             btnNext.isHidden = false
+            //sender.isSelected = true
     }
 }

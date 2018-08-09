@@ -60,6 +60,25 @@ class ChatCell: BaseTableViewCell {
                  answerView.isHidden = true
             }
         }
+        
+        if btnEdit.isSelected  {
+            
+            guard let url = Bundle.main.url(forResource: "speech", withExtension: "gif") else {
+                return
+            }
+            
+            do {
+                let imgData :Data = try Data(contentsOf: url)
+                let testImage = UIImage.sd_animatedGIF(with: imgData)
+                btnEdit.setImage(testImage, for: .selected)
+            }
+            catch {
+                
+            }
+        }
+        else {
+            btnEdit.setImage(UIImage(named: "voice"), for: .normal)
+        }
     }
     
     @IBAction func btnEditTapped(_ sender: UIButton) {

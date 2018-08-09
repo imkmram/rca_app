@@ -8,7 +8,6 @@
 
 import UIKit
 import Crashlytics
-import ReachabilitySwift
 import Speech
 import CoreData
 

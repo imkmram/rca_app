@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import WebKit
 
-class E_VisaDetailVC: UIViewController {
+class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
 
     @IBOutlet weak var tblDetails: UITableView!
+    @IBOutlet weak var webViewContainer: UIView!
     
+     var webView : WKWebView!
+   
     var country:E_Visa = E_Visa()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        webViewContainer.layer.cornerRadius = 10.0
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +29,29 @@ class E_VisaDetailVC: UIViewController {
         tblDetails.registerCellNib(BottomCell.self)
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 160
+        
+        initWEBView()
+    
+    }
+    
+    func initWEBView() {
+        
+        let webConfiguration = WKWebViewConfiguration()
+        let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
+        self.webView = WKWebView (frame: customFrame , configuration: webConfiguration)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        self.webViewContainer.addSubview(webView)
+        webView.topAnchor.constraint(equalTo: webViewContainer.topAnchor).isActive = true
+        webView.rightAnchor.constraint(equalTo: webViewContainer.rightAnchor).isActive = true
+        webView.leftAnchor.constraint(equalTo: webViewContainer.leftAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: webViewContainer.bottomAnchor).isActive = true
+        webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor).isActive = true
+        //webView.uiDelegate = self
+        webView.navigationDelegate = self
+        
+        let myURL = URL(string: "https://www.apple.com")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +59,14 @@ class E_VisaDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("======== Finish Loading ========")
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("============ Error =============")
+        print(error.localizedDescription)
+    }
     /*
     // MARK: - Navigation
 
@@ -94,3 +134,7 @@ extension E_VisaDetailVC : BottomCellDelegate {
         
     }
 }
+
+//extension E_VisaDetailVC : WKNavigationDelegate {
+//
+//}

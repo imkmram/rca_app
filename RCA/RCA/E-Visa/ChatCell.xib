@@ -22,10 +22,10 @@
                         <rect key="frame" x="10" y="10" width="472" height="195.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wih-Pb-EI6">
-                                <rect key="frame" x="0.0" y="0.0" width="472" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="472" height="10"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-SZ-YZi" customClass="PaddedLabel" customModule="RCA" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="5" width="20" height="20"/>
+                                        <rect key="frame" x="20" y="5" width="0.0" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -55,21 +55,21 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYB-Wa-XT8">
-                                <rect key="frame" x="0.0" y="35" width="472" height="160.5"/>
+                                <rect key="frame" x="0.0" y="15" width="472" height="180.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpv-q9-JoB">
-                                        <rect key="frame" x="10" y="5" width="394" height="148"/>
+                                        <rect key="frame" x="10" y="5" width="404" height="168"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ2-tT-cH3">
-                                        <rect key="frame" x="424" y="120.5" width="40" height="40"/>
+                                        <rect key="frame" x="434" y="150.5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="CKb-aK-AZS"/>
-                                            <constraint firstAttribute="height" constant="40" id="kep-Vs-36J"/>
+                                            <constraint firstAttribute="width" constant="30" id="CKb-aK-AZS"/>
+                                            <constraint firstAttribute="height" constant="30" id="kep-Vs-36J"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="voice"/>
+                                        <state key="normal" image="voice"/>
                                         <connections>
                                             <action selector="btnEditTapped:" destination="0lZ-Bm-LBO" eventType="touchUpInside" id="N09-1s-opl"/>
                                         </connections>

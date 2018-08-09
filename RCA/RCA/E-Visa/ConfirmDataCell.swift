@@ -22,6 +22,8 @@ class ConfirmDataCell: BaseTableViewCell {
     @IBOutlet weak var lblVisaType: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var btnGoBack: RoundButton!
+    @IBOutlet weak var btnConfrim: RoundButton!
     
     weak var delegate: ConfirmDataCellDelegate?
     
@@ -30,6 +32,8 @@ class ConfirmDataCell: BaseTableViewCell {
         // Initialization code
         BGView.layer.cornerRadius = 8.0
         stackBaseView.layer.cornerRadius = 8.0
+       
+        btnConfrim.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,6 +52,9 @@ class ConfirmDataCell: BaseTableViewCell {
             lblVisaType.attributedText = data.visaType
             lblEmail.attributedText = data.email
             lblPhone.attributedText = data.phone
+            
+            btnGoBack.layer.cornerRadius = btnGoBack.frame.size.height / 2
+            btnConfrim.layer.cornerRadius = btnConfrim.frame.size.height / 2
         }
     }
     
