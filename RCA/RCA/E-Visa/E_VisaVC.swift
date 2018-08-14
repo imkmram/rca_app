@@ -30,7 +30,7 @@ class E_VisaVC: UIViewController {
         tblEVisa.rowHeight = UITableViewAutomaticDimension
         tblEVisa.estimatedRowHeight = 160
         
-        e_visaList.append(E_Visa(countryCode:1, title: "Malaysia", description: "eVisa service bfkjsd;vkjndf;kjvndfkjbnvdfkjlbndkfj Visa Service=======", image: #imageLiteral(resourceName: "malaysia"), origin:"India", destination:"Malaysia"))
+        e_visaList.append(E_Visa(countryCode:1, title: "Malaysia", description: "eVisa service", image: #imageLiteral(resourceName: "malaysia"), origin:"India", destination:"Malaysia"))
         e_visaList.append(E_Visa(countryCode:2, title: "Hong Kong", description: "Coming Soon", image:#imageLiteral(resourceName: "hongkong"), origin:"India", destination:"Hong Kong"))
         e_visaList.append(E_Visa(countryCode:3, title: "Sri Lanka", description: "Coming Soon", image: #imageLiteral(resourceName: "srilanka"), origin:"India", destination:"Sri Lanka"))
         e_visaList.append(E_Visa(countryCode:4, title: "Others", description: "Coming Soon", image: #imageLiteral(resourceName: "other_countries"), origin:"India", destination:""))

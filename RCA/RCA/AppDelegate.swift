@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
-
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,12 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         let leftMenuVC = storyboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
     
-        
         let nvc: UINavigationController = UINavigationController(rootViewController: homeVC)
         let attributes = [NSAttributedStringKey.font : UIFont(name: "OpenSans-Bold", size: 18)!]
         nvc.navigationBar.titleTextAttributes = attributes
         
-       // UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+       //UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
         UINavigationBar.appearance().tintColor = UIColor.black
         
         leftMenuVC.homeVC = nvc
@@ -43,13 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
     }
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         NetworkManager.shared.startMonitoring()
         FirebaseApp.configure()
         self.createMenuView()
+        IQKeyboardManager.sharedManager().enable = true
         
         return true
     }

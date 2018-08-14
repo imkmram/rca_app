@@ -11,6 +11,7 @@ import WebKit
 
 class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
 
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tblDetails: UITableView!
     @IBOutlet weak var webViewContainer: UIView!
     
@@ -30,11 +31,15 @@ class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 160
         
+        
         initWEBView()
     
     }
     
     func initWEBView() {
+        
+        webViewContainer.bringSubview(toFront: indicator)
+        indicator.startAnimating()
         
         let webConfiguration = WKWebViewConfiguration()
         let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
@@ -61,6 +66,7 @@ class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("======== Finish Loading ========")
+        indicator.stopAnimating()
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -132,6 +138,11 @@ extension E_VisaDetailVC : BottomCellDelegate {
     
     func btnManualTapped(sender: UIButton) {
         
+        let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
+        let manualVC = storyboard.instantiateViewController(withIdentifier: "ManualVC") as! ManualVC
+        setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
+        manualVC.country = country
+        self.navigationController?.pushViewController(manualVC, animated: true)
     }
 }
 

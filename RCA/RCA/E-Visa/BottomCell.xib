@@ -30,13 +30,13 @@
                         <rect key="frame" x="10" y="10.000000000000007" width="483" height="118.66666666666669"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you want to provide your details?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haK-2I-JV7">
-                                <rect key="frame" x="45" y="10" width="393" height="21"/>
+                                <rect key="frame" x="45" y="10.000000000000002" width="393" height="24.666666666666671"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gj2-R7-SEk">
-                                <rect key="frame" x="30" y="50.666666666666657" width="423" height="50"/>
+                                <rect key="frame" x="30" y="54.333333333333329" width="423" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-e3-iiv" customClass="RoundButton" customModule="RCA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="201.66666666666666" height="50"/>

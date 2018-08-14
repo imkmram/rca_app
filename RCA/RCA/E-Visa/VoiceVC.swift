@@ -23,7 +23,6 @@ struct Questionnaire {
         self.question = question
         self.answerFramed = answerFramed
     }
-    
     init(questionID:Int, question:String, answerFramed:String, opt:[String]) {
         self.init(questionID: questionID, question: question, answerFramed:answerFramed)
         self.option = opt
@@ -84,7 +83,7 @@ class VoiceVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        bottomBaseView.layer.cornerRadius = bottomBaseView.frame.height / 2
+       // bottomBaseView.layer.cornerRadius = bottomBaseView.frame.height / 2
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -172,9 +171,13 @@ class VoiceVC: UIViewController {
                 
                 if let value = capturedText {
                     
+                    let validate = Validate()
+                    
+                    let validatedValue = validate.validate(email:value, questionID: self.questionnaireList[self.questionIndex].questionID)
+                    
                     if self.questionIndex == 0 {
                         
-                        self.passengerName = value
+                        self.passengerName = validatedValue
                         
                         self.questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
                         print(self.questionnaireList[1].question)
@@ -182,7 +185,7 @@ class VoiceVC: UIViewController {
                     
                         self.rowSelected = nil
                     
-                        self.questionnaireList[self.questionIndex].answer = value
+                        self.questionnaireList[self.questionIndex].answer = validatedValue
                         self.tblChats.reloadRows(at: [IndexPath(row: self.questionIndex, section: 0)], with: .automatic)
                         self.tblChats.scrollToRow(at: IndexPath(row: self.questionIndex, section: 0), at: .top, animated: true)
                 }

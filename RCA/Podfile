@@ -11,6 +11,8 @@ target 'RCA' do
 	pod 'Crashlytics', '~> 3.10.5'
 	pod 'Firebase/Core'
 	pod 'SDWebImage', '~> 4.0'
+   	pod 'IQKeyboardManagerSwift', '5.0.0'
+	pod 'ReverseExtension'
 
 
   target 'RCATests' do

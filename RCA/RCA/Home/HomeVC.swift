@@ -27,7 +27,7 @@ class HomeVC: BaseVC {
         tblHome.rowHeight = UITableViewAutomaticDimension
         tblHome.estimatedRowHeight = 160
         
-        serviceList.append(Service(title: "eVisa", description: "eVisa service bfkjsd;vkjndf;kjvndfkjbnvdfkjlbndkfj Visa Service=======", image: #imageLiteral(resourceName: "e_visa")))
+        serviceList.append(Service(title: "eVisa", description: "eVisa service", image: #imageLiteral(resourceName: "e_visa")))
         serviceList.append(Service(title: "Airport Meet & Greet", description: "Coming Soon", image:#imageLiteral(resourceName: "meet_n_assist")))
         serviceList.append(Service(title: "Airport Lounges", description: "Coming Soon", image: #imageLiteral(resourceName: "lounges")))
         serviceList.append(Service(title: "Document Repository", description: "Coming Soon", image: #imageLiteral(resourceName: "e_visa")))

@@ -10,6 +10,8 @@
 		0D74BA0B41908EE5EBB8C133 /* Pods_RCA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2BE4920EE86F7CE04FFC2E /* Pods_RCA.framework */; };
 		11F3E4B6FC741CDD8AB70660 /* Pods_RCAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959D26927643CAB23E4E77C /* Pods_RCAUITests.framework */; };
 		9A9389347D64B8DBE9EAE8EE /* Pods_RCATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7C2FA01E22A1B86D38911 /* Pods_RCATests.framework */; };
+		9B0F89A8211F57F5002594B2 /* ManualVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F89A7211F57F5002594B2 /* ManualVC.swift */; };
+		9B1561132120A26400ACE9CF /* PaddedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1561122120A26400ACE9CF /* PaddedTextView.swift */; };
 		D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */; };
 		D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */; };
 		D90B30AE210F230200C8F3A4 /* PassportType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AC210F230200C8F3A4 /* PassportType+CoreDataProperties.swift */; };
@@ -104,6 +106,8 @@
 		5F2BE4920EE86F7CE04FFC2E /* Pods_RCA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		901CE2F6B4054E5FA5006C4C /* Pods-RCAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCAUITests/Pods-RCAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96A8E18A3D78996B8345182F /* Pods-RCA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCA.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCA/Pods-RCA.release.xcconfig"; sourceTree = "<group>"; };
+		9B0F89A7211F57F5002594B2 /* ManualVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualVC.swift; sourceTree = "<group>"; };
+		9B1561122120A26400ACE9CF /* PaddedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextView.swift; sourceTree = "<group>"; };
 		9B45D11C45D5A89FD8B4E84E /* Pods-RCATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCATests/Pods-RCATests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DF7C2FA01E22A1B86D38911 /* Pods_RCATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B959D26927643CAB23E4E77C /* Pods_RCAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +357,7 @@
 				D94C67B82119820D00D49A29 /* ConfirmDataCell.xib */,
 				D94C67BA21198CE300D49A29 /* ConfirmDataCell.swift */,
 				D9566A69211C53DF009EF5E4 /* Validate.swift */,
+				9B0F89A7211F57F5002594B2 /* ManualVC.swift */,
 			);
 			path = "E-Visa";
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			children = (
 				D986A7102114320F00D7E1D7 /* RoundButton.swift */,
 				D964AA662118399B00C32E14 /* PaddedLabel.swift */,
+				9B1561122120A26400ACE9CF /* PaddedTextView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -680,12 +686,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RCA/Pods-RCA-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReverseExtension/ReverseExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReverseExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -714,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0F89A8211F57F5002594B2 /* ManualVC.swift in Sources */,
 				D956C94121119C750083CE9E /* ImageHeaderView.swift in Sources */,
 				D956C9322111928D0083CE9E /* UIApplication.swift in Sources */,
 				D963CF99211ACBA80051F8A4 /* Constant.swift in Sources */,
@@ -744,6 +755,7 @@
 				D986A71D211469AC00D7E1D7 /* ChatCell.swift in Sources */,
 				D986A7112114320F00D7E1D7 /* RoundButton.swift in Sources */,
 				D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */,
+				9B1561132120A26400ACE9CF /* PaddedTextView.swift in Sources */,
 				D956C94521119D6A0083CE9E /* PrivacyPolicyVC.swift in Sources */,
 				D94C67BB21198CE300D49A29 /* ConfirmDataCell.swift in Sources */,
 				D956C94921119FA70083CE9E /* UIImageView.swift in Sources */,
@@ -945,8 +957,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thewhiteboardcompany.RCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "780f1885-002d-4b93-8d8f-de63344dabf9";
-				PROVISIONING_PROFILE_SPECIFIER = "RCA DEV Provisional";
+				PROVISIONING_PROFILE = "06759d3a-75ae-4047-827f-3585e828ad2a";
+				PROVISIONING_PROFILE_SPECIFIER = RCA_Develop;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -967,8 +979,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thewhiteboardcompany.RCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "780f1885-002d-4b93-8d8f-de63344dabf9";
-				PROVISIONING_PROFILE_SPECIFIER = "RCA DEV Provisional";
+				PROVISIONING_PROFILE = "723509b4-3bf2-4bbf-b793-2077e349e74c";
+				PROVISIONING_PROFILE_SPECIFIER = RCA_Develop;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
