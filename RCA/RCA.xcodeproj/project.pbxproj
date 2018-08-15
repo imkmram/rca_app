@@ -652,8 +652,9 @@
 			baseConfigurationReference = C51F31B5B7DE85B55B58964A /* Pods-RCA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = U9749735YS;
 				INFOPLIST_FILE = RCA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,6 +662,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thewhiteboardcompany.RCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9988333b-541a-4acc-b253-fe165a6127e7";
+				PROVISIONING_PROFILE_SPECIFIER = RCA_Develop;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -671,7 +674,8 @@
 			baseConfigurationReference = 96A8E18A3D78996B8345182F /* Pods-RCA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U9749735YS;
 				INFOPLIST_FILE = RCA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,6 +683,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thewhiteboardcompany.RCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9988333b-541a-4acc-b253-fe165a6127e7";
+				PROVISIONING_PROFILE_SPECIFIER = RCA_Develop;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
