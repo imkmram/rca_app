@@ -9,9 +9,9 @@
 import UIKit
 import WebKit
 
-class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
+class E_VisaDetailVC: BaseVC , WKNavigationDelegate{
 
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+   // @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var tblDetails: UITableView!
     @IBOutlet weak var webViewContainer: UIView!
     
@@ -30,16 +30,20 @@ class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
         tblDetails.registerCellNib(BottomCell.self)
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 160
-        
-        
-        initWEBView()
     
+        initWEBView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.stopLoading()
     }
     
     func initWEBView() {
         
-        webViewContainer.bringSubview(toFront: indicator)
-        indicator.startAnimating()
+        //webViewContainer.bringSubview(toFront: indicator)
+       // indicator.startAnimating()
+        
+        self.startLoading()
         
         let webConfiguration = WKWebViewConfiguration()
         let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
@@ -66,7 +70,8 @@ class E_VisaDetailVC: UIViewController , WKNavigationDelegate{
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("======== Finish Loading ========")
-        indicator.stopAnimating()
+       // indicator.stopAnimating()
+        self.stopLoading()
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -129,8 +134,8 @@ extension E_VisaDetailVC : UITableViewDelegate {
 extension E_VisaDetailVC : BottomCellDelegate {
     
     func btnVoiceTapped(sender: UIButton) {
-        let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
-        let voiceVC = storyboard.instantiateViewController(withIdentifier: "VoiceVC") as! VoiceVC
+        let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+        let voiceVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_VOICE) as! VoiceVC
         setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
         voiceVC.country = country
         self.navigationController?.pushViewController(voiceVC, animated: true)
@@ -138,14 +143,10 @@ extension E_VisaDetailVC : BottomCellDelegate {
     
     func btnManualTapped(sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
-        let manualVC = storyboard.instantiateViewController(withIdentifier: "ManualVC") as! ManualVC
+        let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+        let manualVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_MANUAL) as! ManualVC
         setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
         manualVC.country = country
         self.navigationController?.pushViewController(manualVC, animated: true)
     }
 }
-
-//extension E_VisaDetailVC : WKNavigationDelegate {
-//
-//}

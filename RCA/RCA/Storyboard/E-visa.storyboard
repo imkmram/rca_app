@@ -79,10 +79,6 @@
                                 <rect key="frame" x="10" y="44" width="300" height="366"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hCp-Zj-T2z">
-                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
-                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -93,14 +89,11 @@
                             <constraint firstItem="G8m-VJ-8ce" firstAttribute="trailing" secondItem="0Rp-TZ-gy6" secondAttribute="trailing" constant="10" id="aoL-LT-B1O"/>
                             <constraint firstItem="0Rp-TZ-gy6" firstAttribute="leading" secondItem="G8m-VJ-8ce" secondAttribute="leading" constant="10" id="ddO-oC-hYG"/>
                             <constraint firstItem="wGI-LY-yuJ" firstAttribute="top" secondItem="0Rp-TZ-gy6" secondAttribute="bottom" constant="8" id="rq2-ne-aob"/>
-                            <constraint firstItem="hCp-Zj-T2z" firstAttribute="centerY" secondItem="wRm-nu-VAG" secondAttribute="centerY" id="to2-ye-yg0"/>
-                            <constraint firstItem="hCp-Zj-T2z" firstAttribute="centerX" secondItem="wRm-nu-VAG" secondAttribute="centerX" id="z1v-ff-fhM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G8m-VJ-8ce"/>
                     </view>
                     <navigationItem key="navigationItem" id="d54-gF-uYR"/>
                     <connections>
-                        <outlet property="indicator" destination="hCp-Zj-T2z" id="n0z-kK-3SV"/>
                         <outlet property="tblDetails" destination="wGI-LY-yuJ" id="WbH-0l-TJC"/>
                         <outlet property="webViewContainer" destination="0Rp-TZ-gy6" id="Rbb-Vr-snX"/>
                     </connections>
@@ -247,32 +240,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-9p-h1I">
-                                <rect key="frame" x="113" y="100" width="94" height="23.5"/>
+                                <rect key="frame" x="109.5" y="100" width="101" height="27.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tF-w3-N1M">
-                                <rect key="frame" x="160" y="131.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="160" y="135.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completion" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-12-CYM">
-                                <rect key="frame" x="50" y="139.5" width="220" height="220"/>
+                                <rect key="frame" x="50" y="143.5" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="1hs-MZ-xTg"/>
                                     <constraint firstAttribute="width" constant="220" id="RdH-sv-D0M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our representative will contact you soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8F9-Ol-vnp">
-                                <rect key="frame" x="60" y="367.5" width="200" height="44.5"/>
+                                <rect key="frame" x="60" y="371.5" width="200" height="52"/>
                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nc-Xu-v60" customClass="RoundButton" customModule="RCA" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="438" width="147" height="44"/>
+                                <rect key="frame" x="87.5" y="449.5" width="147" height="44"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ATJ-JZ-tGO"/>
@@ -341,11 +334,11 @@
                                             <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8X2-Ml-Pek">
                                                 <rect key="frame" x="10" y="518" width="300" height="50"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-dG-Y7L">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-dG-Y7L">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uHL-MV-QvX">
-                                                                <rect key="frame" x="0.0" y="6.5" width="242" height="43.5"/>
+                                                                <rect key="frame" x="0.0" y="3.5" width="242" height="43.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

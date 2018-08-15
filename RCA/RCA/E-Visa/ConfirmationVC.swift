@@ -77,14 +77,13 @@ extension ConfirmationVC : UITableViewDelegate {
 }
 
 extension ConfirmationVC : ConfirmDataCellDelegate {
+    
     func btnConfirmTapped(sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
-        let thankyouVC = storyboard.instantiateViewController(withIdentifier: "ThankYouVC") as! ThankYouVC
+        let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+        let thankyouVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_THANKYOU) as! ThankYouVC
         thankyouVC.name = confirmData.name
         self.navigationController?.pushViewController(thankyouVC, animated: true)
     }
-    
-    
 }
 

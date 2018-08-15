@@ -13,6 +13,7 @@ target 'RCA' do
 	pod 'SDWebImage', '~> 4.0'
    	pod 'IQKeyboardManagerSwift', '5.0.0'
 	pod 'ReverseExtension'
+	pod 'SVProgressHUD'
 
 
   target 'RCATests' do

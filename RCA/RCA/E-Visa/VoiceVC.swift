@@ -17,6 +17,7 @@ struct Questionnaire {
     var answer:String?
     var answerFramed:String
     var option:[String]?
+    var isValid:Bool = false
    
     init(questionID:Int, question:String, answerFramed:String) {
         self.questionID = questionID
@@ -43,7 +44,6 @@ class VoiceVC: UIViewController {
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
-    
     var questionnaireList: [Questionnaire] = [Questionnaire]()
     var rowCount: Int = 1
     var questionIndex: Int = 0
@@ -56,8 +56,9 @@ class VoiceVC: UIViewController {
     var timer : Timer?
     
     var rowSelected:Int?
+    
+    lazy var speechController = SpeechController()
   
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -79,7 +80,8 @@ class VoiceVC: UIViewController {
                             Questionnaire(questionID:9, question: "Thanks. Where can i contact you? Your phone number please…", answerFramed:"Your phone number is {{value}}")
         ]
         
-         speechSynthesizer.delegate = self
+        speechSynthesizer.delegate = self
+        speechController.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,142 +105,121 @@ class VoiceVC: UIViewController {
         }
     }
     
-//    @objc func dismissTimer() {
+//    func startRecording() {
 //
-//        stopRecording()
+//        self.btnNext.isSelected = true
+//
+//        if recognitionTask != nil {
+//            recognitionTask?.cancel()
+//            recognitionTask = nil
+//        }
+//
+//        let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+//            try audioSession.setMode(AVAudioSessionModeDefault)
+//            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+//        } catch {
+//            print("audioSession properties weren't set because of an error.")
+//        }
+//
+//        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+//
+//         var inputnode:AVAudioInputNode?
+//
+//         inputnode = audioEngine.inputNode
+//
+//        guard let inputNode = inputnode else {
+//            return
+//           // fatalError("Audio engine has no input node")
+//        }
+//
+//        guard let recognitionRequest = recognitionRequest else {
+//            return
+//            //fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
+//        }
+//
+//        recognitionRequest.shouldReportPartialResults = true
+//
+//        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: {[unowned self]  (result, error) in  //7
+//
+//            //var isFinal = false
+//
+//            if result != nil {
+//
+//                // self.lblCapturedText.text = result?.bestTranscription.formattedString
+//
+//                let capturedText = result?.bestTranscription.formattedString
+//
+//                print("Captured Value : \(String(describing: capturedText!))")
+//
+//                if let value = capturedText {
+//
+//                    let validate = Validate()
+//
+//                    let validatedValue = validate.validate(value:value, questionID: self.questionnaireList[self.questionIndex].questionID)
+//
+//                    if self.questionIndex == 0 {
+//
+//                        self.passengerName = validatedValue
+//
+//                        self.questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
+//                        print(self.questionnaireList[1].question)
+//                    }
+//
+//                        self.rowSelected = nil
+//
+//                        self.questionnaireList[self.questionIndex].answer = validatedValue
+//                        self.tblChats.reloadRows(at: [IndexPath(row: self.questionIndex, section: 0)], with: .automatic)
+//                        self.tblChats.scrollToRow(at: IndexPath(row: self.questionIndex, section: 0), at: .top, animated: true)
+//                }
+//
+//                if self.rowCount == self.questionnaireList.count && self.questionnaireList[self.rowCount - 1].answer != nil {
+//
+//                    self.btnProceed.isHidden = false
+//                    self.btnNext.isHidden = true
+//                }
+////                 isFinal = (result?.isFinal)!
+////
+////                if isFinal {
+////                    print("=============Final is true======================")
+////                }
+//
+//            }
+//
+//         //   if error != nil || isFinal {
+//            if result?.isFinal ?? (error != nil) {
+//
+//                self.audioEngine.stop()
+//
+//                inputNode.removeTap(onBus: 0)
+//
+//                self.recognitionRequest = nil
+//                self.recognitionTask = nil
+//
+//                print("=====isFinal is true======")
+//            }
+//        })
+//
+//       let recordingFormat = inputNode.outputFormat(forBus: 0)
+//
+//        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
+//            self.recognitionRequest?.append(buffer)
+//        }
+//
+//        audioEngine.prepare()
+//
+//        do {
+//            try audioEngine.start()
+//        } catch {
+//            print("audioEngine couldn't start because of an error.")
+//        }
+//
+//       // lblCapturedText.text = "Say something, I'm listening!"
 //    }
     
-    func startRecording() {
-        
-//        if (timer != nil) && (timer?.isValid)! {
-//            timer?.invalidate()
-//        }
-//        else {
-//            timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(dismissTimer), userInfo: nil, repeats: false)
-//        }
-        
-//        self.btnNext.isSelected = true
-//        self.btnNext.isUserInteractionEnabled = false
-        
-//        DispatchQueue.main.async {
-             self.btnNext.isSelected = true
-//        }
-        
-        if recognitionTask != nil {
-            recognitionTask?.cancel()
-            recognitionTask = nil
-        }
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try audioSession.setMode(AVAudioSessionModeDefault)
-            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
-        } catch {
-            print("audioSession properties weren't set because of an error.")
-        }
-        
-        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        
-         var inputnode:AVAudioInputNode?
-        
-         inputnode = audioEngine.inputNode
-        
-        guard let inputNode = inputnode else {
-            return
-           // fatalError("Audio engine has no input node")
-        }
-        
-        guard let recognitionRequest = recognitionRequest else {
-            return
-            //fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
-            
-        }
-        
-        recognitionRequest.shouldReportPartialResults = true
-        
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: {[unowned self]  (result, error) in  //7
-
-            //var isFinal = false
-
-            if result != nil {
-
-                // self.lblCapturedText.text = result?.bestTranscription.formattedString
-                
-                let capturedText = result?.bestTranscription.formattedString
-
-                print("Captured Value : \(String(describing: capturedText!))")
-                
-                if let value = capturedText {
-                    
-                    let validate = Validate()
-                    
-                    let validatedValue = validate.validate(email:value, questionID: self.questionnaireList[self.questionIndex].questionID)
-                    
-                    if self.questionIndex == 0 {
-                        
-                        self.passengerName = validatedValue
-                        
-                        self.questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
-                        print(self.questionnaireList[1].question)
-                    }
-                    
-                        self.rowSelected = nil
-                    
-                        self.questionnaireList[self.questionIndex].answer = validatedValue
-                        self.tblChats.reloadRows(at: [IndexPath(row: self.questionIndex, section: 0)], with: .automatic)
-                        self.tblChats.scrollToRow(at: IndexPath(row: self.questionIndex, section: 0), at: .top, animated: true)
-                }
-                
-                
-                if self.rowCount == self.questionnaireList.count && self.questionnaireList[self.rowCount - 1].answer != nil {
-                    
-                    self.btnProceed.isHidden = false
-                    self.btnNext.isHidden = true
-                }
-//                 isFinal = (result?.isFinal)!
-//
-//                if isFinal {
-//                    print("=============Final is true======================")
-//                }
-                
-            }
-
-         //   if error != nil || isFinal {
-            if result?.isFinal ?? (error != nil) {
-
-                self.audioEngine.stop()
-               
-                inputNode.removeTap(onBus: 0)
-    
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
-                
-                print("=====isFinal is true======")
-            }
-        })
-        
-       let recordingFormat = inputNode.outputFormat(forBus: 0)
-       
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
-            self.recognitionRequest?.append(buffer)
-        }
-        
-        audioEngine.prepare()
-        
-        do {
-            try audioEngine.start()
-        } catch {
-            print("audioEngine couldn't start because of an error.")
-        }
-        
-       // lblCapturedText.text = "Say something, I'm listening!"
-    }
-    
     func stopRecording() {
-        
-       // timer?.invalidate()
-        
+    
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
@@ -261,7 +242,8 @@ class VoiceVC: UIViewController {
         
         if btnNext.isSelected == true {
             btnNext.isSelected = false
-            stopRecording()
+            
+            speechController.stopRecording()
             
             if questionnaireList[questionIndex].answer == nil {
                 askQuestion(index: questionIndex)
@@ -287,20 +269,11 @@ class VoiceVC: UIViewController {
             }
         }
         else {
-//            if questionnaireList[questionIndex].answer == nil {
-//                askQuestion(index: questionIndex)
-//            }
-//            else {
-//                if rowCount != questionnaireList.count {
-//
-//                    rowCount = rowCount + 1
-//                    questionIndex = rowCount - 1
-//                    askQuestion(index: questionIndex)
-//                }
-//            }
+
         }
     }
     @IBAction func btnProceedTapped(_ sender: Any) {
+        
         isNavigated = true
         
         var confirmData:ConfirmData = ConfirmData()
@@ -334,8 +307,8 @@ class VoiceVC: UIViewController {
             }
         }
         
-        let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
-        let eVisaVC = storyboard.instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationVC
+        let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+        let eVisaVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_CONFIRMATION) as! ConfirmationVC
         setBackTitle(title: "eVisa")
         eVisaVC.confirmData = confirmData
         self.navigationController?.pushViewController(eVisaVC, animated: true)
@@ -438,7 +411,8 @@ extension VoiceVC :AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         
         speechSynthesizer.stopSpeaking(at: .word)
-        startRecording()
+        //startRecording()
+        speechController.startRecording()
     }
 }
 
@@ -447,11 +421,50 @@ extension VoiceVC : ChatCellDelagate {
     func btnEditTapped(sender: UIButton) {
         
             questionIndex = sender.tag
-            stopRecording()
+            speechController.stopRecording()
             rowSelected = sender.tag
             askQuestion(index: questionIndex)
             btnProceed.isHidden = true
             btnNext.isHidden = false
             //sender.isSelected = true
+    }
+}
+
+extension VoiceVC : SpeechControllerDelegate {
+    
+    func capturedText(capturedText: String) {
+        
+        let validate = Validate()
+        
+        let validatedValue = validate.validate(value:capturedText, questionID: questionnaireList[questionIndex].questionID)
+        
+            questionnaireList[questionIndex].isValid = validatedValue.1
+        
+        if questionIndex == 0 {
+            
+            passengerName = validatedValue.0
+            questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
+            print(self.questionnaireList[1].question)
+        }
+        
+       rowSelected = nil
+        
+        questionnaireList[questionIndex].answer = validatedValue.0
+        tblChats.reloadRows(at: [IndexPath(row: questionIndex, section: 0)], with: .automatic)
+        tblChats.scrollToRow(at: IndexPath(row: questionIndex, section: 0), at: .top, animated: true)
+    
+        if rowCount == questionnaireList.count && questionnaireList[rowCount - 1].answer != nil {
+    
+            btnProceed.isHidden = false
+            btnNext.isHidden = true
+        }
+    }
+    
+    func viewUpdateOnStopRecording() {
+        btnNext.isSelected = false
+    }
+    
+    func viewUpdateOnStartRecording() {
+        btnNext.isSelected = true
     }
 }

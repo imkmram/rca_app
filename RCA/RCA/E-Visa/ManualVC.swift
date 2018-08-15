@@ -11,7 +11,6 @@ import ReverseExtension
 
 class ManualVC: UIViewController {
 
-
     @IBOutlet weak var tblChat: UITableView!
     @IBOutlet weak var bottomBaseView: UIView!
     @IBOutlet weak var btnNext: UIButton!
@@ -37,14 +36,12 @@ class ManualVC: UIViewController {
         
         tblChat.re.scrollViewDidReachTop = { scrollView in
             print("scrollViewDidReachTop")
+            //self.tblChat.contentOffset = CGPoint(x: 0.0, y: 0.0)
         }
         tblChat.re.scrollViewDidReachBottom = { scrollView in
             print("scrollViewDidReachBottom")
+            //self.tblChat.contentOffset = CGPoint(x: 0.0, y: 0.0)
         }
-        
-//        tblChat.beginUpdates()
-//        tblChat.re.insertRows(at: [IndexPath(row: rowCount - 1, section: 0)], with: .automatic)
-//        tblChat.endUpdates()
         
         //btnProceed.isHidden = true
         //btnNext.isHidden = false
@@ -84,17 +81,35 @@ class ManualVC: UIViewController {
     
     @IBAction func btnNextTapped(_ sender: Any) {
         
-        tblChat.beginUpdates()
-            questionnaireList[questionIndex].answer = txtInput.text
-            txtInput.text = ""
-            tblChat.reloadData()
-        tblChat.endUpdates()
+        let validate = Validate()
         
-         tblChat.beginUpdates()
-            questionIndex =  questionIndex + 1
-            rowCount = rowCount + 1
-            tblChat.re.insertRows(at: [IndexPath(row: rowCount - 1, section: 0)], with: .automatic)
-        tblChat.endUpdates()
+        UIView.animate(withDuration: 0.0, animations: {
+            
+            self.tblChat.beginUpdates()
+            
+            let result = validate.validate(value: self.txtInput.text, questionID: self.questionnaireList[self.questionIndex].questionID)
+//                self.questionnaireList[self.questionIndex].answer =   validate.validate(value: self.txtInput.text, questionID: self.questionnaireList[self.questionIndex].questionID)
+            
+            self.questionnaireList[self.questionIndex].answer = result.0
+             self.questionnaireList[self.questionIndex].isValid = result.1
+            
+                self.txtInput.text = ""
+                self.tblChat.reloadData()
+            self.tblChat.endUpdates()
+            
+        }) { (success) in
+            
+            if success {
+            
+                UIView.animate(withDuration: 0.70, animations: {
+                    self.tblChat.beginUpdates()
+                    self.questionIndex =  self.questionIndex + 1
+                    self.rowCount = self.rowCount + 1
+                    self.tblChat.re.insertRows(at: [IndexPath(row: self.rowCount - 1, section: 0)], with: .automatic)
+                    self.tblChat.endUpdates()
+                })
+            }
+        }
     }
 }
 
@@ -124,7 +139,7 @@ extension ManualVC : UITableViewDataSource {
         cell.btnEdit.isHidden = true
         
         cell.setData(questionnaireList[indexPath.row])
-    
+        
         return cell
     }
 }
@@ -137,5 +152,6 @@ extension ManualVC : UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("scrollView.contentOffset.y =", scrollView.contentOffset.y)
+        scrollView.contentOffset = CGPoint(x: 0.0, y: 0.0)
     }
 }

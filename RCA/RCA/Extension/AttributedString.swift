@@ -34,4 +34,13 @@ public extension NSMutableAttributedString {
         
         return mutableAttributedString
     }
+    
+    func formatStringForError(framedAnswer:String, value:String) -> NSMutableAttributedString {
+        
+        let initialString = framedAnswer
+        let attributes = [NSAttributedStringKey.font: UIFont(name: "OpenSans-Regular", size: 12.0)!, NSAttributedStringKey.foregroundColor:UIColor.red]
+        let mutableAttributedString = NSMutableAttributedString(string: initialString, attributes: attributes)
+        
+        return mutableAttributedString
+    }
 }

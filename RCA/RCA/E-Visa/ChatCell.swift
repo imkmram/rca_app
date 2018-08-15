@@ -54,7 +54,13 @@ class ChatCell: BaseTableViewCell {
                     lblFramedAnswer.text = data.answerFramed.replacingOccurrences(of: "{{value}}", with: value)
                 
                 let attributedString:NSMutableAttributedString = NSMutableAttributedString()
+                
+                if data.isValid {
                     lblFramedAnswer.attributedText = attributedString.formatString(framedAnswer: data.answerFramed, value: value)
+                }
+                else {
+                    lblFramedAnswer.attributedText = attributedString.formatStringForError(framedAnswer: data.answer!, value: value)
+                }
             }
             else {
                  answerView.isHidden = true

@@ -22,7 +22,7 @@ class Validate {
         "one":"1",
         "two":"2",
         "three":"3",
-        "four":"4",
+        "four":"4", "for":"4",
         "five":"5",
         "six":"6",
         "seven":"7",
@@ -30,39 +30,34 @@ class Validate {
         "nine":"9",
         "ten":"10",
         "eleven":"11",
-        "level":"11"
+        "level":"11",
+        "january":"01 - ", "febuary":"02 - ", "march":"03 - ", "april":"04 - ", "may":"05 - ", "june":"06 - ", "july":"07 - ", "august":"08 - ", "september":"09 - ", "october":"10 - ", "november":"11 - ", "december":"12 - ",
+        "first":"01 - ", "second":"02 - ", "third":"03 - ", "forth":"04 - ", "fifth":"05 - ", "eleventh":"11 -", "tewelth":"12 - ", "thirteenth":"13 - ", "fourteenth":"14 - ", "fifteenth":"15 - ", "sixteenth":"16 - ", "seventeenth":"17 - ", "eighteenth":"18 - ", "nineteenth":"19 - ", "twentyth":"20 - "
     ]
     
-    func firstName(name:String) -> String? {
+    func onlyString(value:String) -> (value:String?, isValid:Bool) {
         
-        do{
-            let regex = try NSRegularExpression(pattern: ".*[^A-Za-z].*", options: .caseInsensitive)
-            
-            if regex.firstMatch(in: name, options: .reportCompletion, range: NSRange(location: 0, length: name.length)) != nil {
+            let regex = "[A-Za-z]"
+            let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+            let result = predicate.evaluate(with: value)
+            if result {
                 
+                return (value, true)
             }
             else {
-             //   if myDictionary.contains(name) {
-                    
-                    //let result =  name.replacingCharacters(in: NSRange(location:1, length: name.length - 1 ), with: String(repeating: "x", count: name.length))
-               // }
+                return  ("Only characters allowed", false)
             }
-        }
-        catch {
-            
-        }
-    
-        return nil
     }
     
-    func validate(email:String, questionID:Int) -> String {
+    func validate(value:String, questionID:Int) -> (String, Bool){
         
-        var newStr = email.lowercased()
+        let oldStr = value.lowercased()
+        var newStr = oldStr
        
       let result =  myDictionary.filter { (key, value) -> Bool in
             if newStr.contains(key) {
                 
-                newStr = newStr.replacingOccurrences(of: key, with: value)
+                newStr = oldStr.replacingOccurrences(of: key.capitalized, with: value)
                 return true
             }
             else {
@@ -70,19 +65,21 @@ class Validate {
             }
         }
         
-    
         print("======================VALIDATE===============")
        print(result.values)
         print(newStr)
         
         switch questionID {
-        case 1, 2, 3, 4, 5, 6, 7 :
-            return newStr.capitalized
+        case 1 :
+            let returnedValue = onlyString(value: newStr)
+                return (returnedValue.value?.capitalized ?? newStr, returnedValue.isValid)
+        case 2, 3, 4, 5, 6, 7 :
+             return (newStr.capitalized, true)
         case 8 :
             newStr = newStr.lowercased()
-            return newStr.trimmingCharacters(in: .whitespaces)
+            return (newStr.trimmingCharacters(in: .whitespaces), true)
         default:
-            return newStr
+            return (newStr, true)
         }
     }
 }

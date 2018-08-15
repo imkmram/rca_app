@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 protocol BaseViewDelegate: class {
     
@@ -16,6 +17,8 @@ protocol BaseViewDelegate: class {
 class BaseVC: UIViewController {
     
     weak var delagate : BaseViewDelegate?
+    
+  //  var indicator:UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,13 +61,12 @@ extension BaseVC: NetworkStatusListener {
 extension BaseVC:BaseView {
     
     func startLoading() {
-        
+        SVProgressHUD.show()
     }
     
     func stopLoading() {
-        
+        SVProgressHUD.dismiss()
     }
-    
 }
 extension BaseVC : SlideMenuControllerDelegate {
     

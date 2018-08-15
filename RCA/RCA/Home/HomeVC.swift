@@ -82,8 +82,8 @@ extension HomeVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
-            let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
-            let eVisaVC = storyboard.instantiateViewController(withIdentifier: "E_VisaVC") as! E_VisaVC
+            let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+            let eVisaVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_E_VISA) as! E_VisaVC
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem

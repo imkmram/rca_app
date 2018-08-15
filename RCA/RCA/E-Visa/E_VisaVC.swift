@@ -81,7 +81,7 @@ extension E_VisaVC : UITableViewDelegate {
         
         
         if indexPath.row == 0 {
-            let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
+            let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
             let eVisaVC = storyboard.instantiateViewController(withIdentifier: "E_VisaDetailVC") as! E_VisaDetailVC
             
             eVisaVC.country = e_visaList[indexPath.row]
