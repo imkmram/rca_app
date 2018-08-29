@@ -89,7 +89,7 @@ class E_VisaDetailVC: BaseVC , WKNavigationDelegate{
     */
 }
 
-extension E_VisaDetailVC : UITableViewDataSource {
+extension E_VisaDetailVC : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -110,24 +110,9 @@ extension E_VisaDetailVC : UITableViewDataSource {
         
         return UITableViewCell()
     }
-}
-
-extension E_VisaDetailVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //        if indexPath.row == 0 {
-        //            let storyboard = UIStoryboard(name: "E-visa", bundle: nil)
-        //            let eVisaVC = storyboard.instantiateViewController(withIdentifier: "E_VisaVC") as! E_VisaVC
-        //            let backItem = UIBarButtonItem()
-        //            backItem.title = "Back"
-        //            navigationItem.backBarButtonItem = backItem
-        //            self.navigationController?.pushViewController(eVisaVC, animated: true)
-        //        }
     }
 }
 
@@ -135,7 +120,7 @@ extension E_VisaDetailVC : BottomCellDelegate {
     
     func btnVoiceTapped(sender: UIButton) {
         let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
-        let voiceVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_VOICE) as! VoiceVC
+        let voiceVC = storyboard.instantiateViewController(withIdentifier: "NewVoiceVC") as! NewVoiceVC
         setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
         voiceVC.country = country
         self.navigationController?.pushViewController(voiceVC, animated: true)
@@ -143,10 +128,21 @@ extension E_VisaDetailVC : BottomCellDelegate {
     
     func btnManualTapped(sender: UIButton) {
         
+//        let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+//        let manualVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_MANUAL) as! ManualVC
+//        setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
+//        manualVC.country = country
+//        self.navigationController?.pushViewController(manualVC, animated: true)
+        
+        
+//        let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
+//        let formVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_TYPEDFORM) as! TypedFormVC
+//        setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
+//        self.navigationController?.pushViewController(formVC, animated: true)
+        
         let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
-        let manualVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_MANUAL) as! ManualVC
+        let paragraphVC = storyboard.instantiateViewController(withIdentifier: "ParagraphVC") as! ParagraphVC
         setBackTitle(title: "\(String(describing: country.title ?? "")) eVisa")
-        manualVC.country = country
-        self.navigationController?.pushViewController(manualVC, animated: true)
+        self.navigationController?.pushViewController(paragraphVC, animated: true)
     }
 }

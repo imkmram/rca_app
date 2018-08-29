@@ -8,17 +8,13 @@
 
 import UIKit
 
-struct Service {
-    
-    var title:String?
-    var description:String?
-    var image:UIImage?
-}
-
 class HomeVC: BaseVC {
 
     @IBOutlet weak var tblHome: UITableView!
-    var serviceList :[Service] = [Service]()
+    var serviceList:[Service] = []
+    let presenter = HomePresenter()
+    var isSuccess:Bool = false
+    var message:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,54 +22,52 @@ class HomeVC: BaseVC {
         tblHome.registerCellNib(HomeCell.self)
         tblHome.rowHeight = UITableViewAutomaticDimension
         tblHome.estimatedRowHeight = 160
+        tblHome.isHidden = true
+        super.delagate = self
         
-        serviceList.append(Service(title: "eVisa", description: "eVisa service", image: #imageLiteral(resourceName: "e_visa")))
-        serviceList.append(Service(title: "Airport Meet & Greet", description: "Coming Soon", image:#imageLiteral(resourceName: "meet_n_assist")))
-        serviceList.append(Service(title: "Airport Lounges", description: "Coming Soon", image: #imageLiteral(resourceName: "lounges")))
-        serviceList.append(Service(title: "Document Repository", description: "Coming Soon", image: #imageLiteral(resourceName: "e_visa")))
+        presenter.attachView(view: self)
+        presenter.getData(strURL: "https://www.google.com")
+        
+//        let imgURL = URL(string: "https://yt3.ggpht.com/a-/ACSszfFVNourOmj3-ytJECQCieFxpQ9ztjHTChKmCg=s900-mo-c-c0xffffffff-rj-k-no")
+//        DataManager.downloadFile(fileName: "test", url: imgURL!)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.setNavigationBarItem()
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+       // presenter.detachView()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension HomeVC : UITableViewDataSource {
+extension HomeVC : UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-       return serviceList.count
+        if isSuccess {
+             return serviceList.count
+        }
+       return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeCell.identifier) as! HomeCell
-        let data : Service = serviceList[indexPath.row]
-        cell.setData(data)
-        return cell
-    }
-}
+        if isSuccess {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HomeCell.identifier) as! HomeCell
+            let data : Service = serviceList[indexPath.row]
+            cell.setData(data)
+            return cell
+        }
 
-extension HomeVC : UITableViewDelegate {
+        return UITableViewCell()
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -92,37 +86,52 @@ extension HomeVC : UITableViewDelegate {
     }
 }
 
-//extension HomeVC : SlideMenuControllerDelegate {
+extension HomeVC : HomeView {
+    
+    func setList(data: [Service]?, success: Bool) {
+        
+        isSuccess = success
+        if let services = data {
+            serviceList = services
+            DispatchQueue.main.async {
+                self.removeErrorPage(parent: self)
+                self.tblHome.isHidden = false
+                self.tblHome.reloadData()
+            }
+        }
+    }
+    
+    func emptyList(error: CustomError, success: Bool) {
+        
+        isSuccess = success
+        self.tblHome.isHidden = true
+        loadErrorPage(parent: self, error: error)
+    }
+    
+    
+//    func setList<T>(data: [T]) {
 //
-//    func leftWillOpen() {
-//        print("SlideMenuControllerDelegate: leftWillOpen")
+//        serviceList = data as! [Service]
+//        DispatchQueue.main.async {
+//            self.tblHome.reloadData()
+//        }
 //    }
-//
-//    func leftDidOpen() {
-//        print("SlideMenuControllerDelegate: leftDidOpen")
-//    }
-//
-//    func leftWillClose() {
-//        print("SlideMenuControllerDelegate: leftWillClose")
-//    }
-//
-//    func leftDidClose() {
-//        print("SlideMenuControllerDelegate: leftDidClose")
-//    }
-//    
-//    func rightWillOpen() {
-//        print("SlideMenuControllerDelegate: rightWillOpen")
-//    }
-//
-//    func rightDidOpen() {
-//        print("SlideMenuControllerDelegate: rightDidOpen")
-//    }
-//
-//    func rightWillClose() {
-//        print("SlideMenuControllerDelegate: rightWillClose")
-//    }
-//
-//    func rightDidClose() {
-//        print("SlideMenuControllerDelegate: rightDidClose")
-//    }
-//}
+
+}
+
+extension HomeVC : BaseViewDelegate {
+
+    func networkStausChanged(isReachable: Bool) {
+
+        if isReachable {
+
+            if serviceList.count == 0 {
+                presenter.reloadDataCall()
+            }
+        }
+        else {
+           // presenter.pauseDataCall()
+        }
+    }
+}
+

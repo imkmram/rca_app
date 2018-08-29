@@ -9,22 +9,19 @@
 import UIKit
 
 public protocol NetworkStatusListener:class {
-    
     func networkStatusDidChanged(status:Reachability.Connection)
 }
 
 class NetworkManager: NSObject {
     
-     static let shared = NetworkManager()  // 2. Shared instance
+    static let shared = NetworkManager()  // 2. Shared instance
     
+    var reachabilityStatus: Reachability.Connection = .none
     // 3. Boolean to track network reachability
     var isNetworkAvailable : Bool {
         return reachabilityStatus != .none
     }
-    
     // 4. Tracks current NetworkStatus (notReachable, reachableViaWiFi, reachableViaWWAN)
-    var reachabilityStatus: Reachability.Connection = .none
-    
     
     // 5. Reachibility instance for Network status monitoring
     let reachability = Reachability()!
@@ -37,29 +34,23 @@ class NetworkManager: NSObject {
         
         switch reachability.connection {
             
-        case .none:
-            debugPrint("Network became unreachable")
-            
-            reachabilityStatus = .none
-          
-        case .wifi:
-            debugPrint("Network reachable through WiFi")
-            
-            reachabilityStatus = .wifi
-           
-        case .cellular:
-            debugPrint("Network reachable through Cellular Data")
-            
-             reachabilityStatus = .cellular
-        }
+            case .none:
+                debugPrint("Network became unreachable")
+                reachabilityStatus = .none
+            case .wifi:
+                debugPrint("Network reachable through WiFi")
+                reachabilityStatus = .wifi
+            case .cellular:
+                debugPrint("Network reachable through Cellular Data")
+                reachabilityStatus = .cellular
+            }
         
         for listener in listeners {
-            
             listener.networkStatusDidChanged(status: reachability.connection)
         }
     }
     
-    /// Starts monitoring the network availability status
+    //Starts monitoring the network availability status
     func startMonitoring() {
         
         NotificationCenter.default.addObserver(self,
@@ -67,6 +58,7 @@ class NetworkManager: NSObject {
                                                name: Notification.Name.reachabilityChanged,
                                                object: reachability)
         do{
+            
             try reachability.startNotifier()
         }catch{
             debugPrint("Could not start reachability notifier")

@@ -85,7 +85,7 @@ class ManualVC: UIViewController {
         
         UIView.animate(withDuration: 0.0, animations: {
             
-            self.tblChat.beginUpdates()
+           
             
             let result = validate.validate(value: self.txtInput.text, questionID: self.questionnaireList[self.questionIndex].questionID)
 //                self.questionnaireList[self.questionIndex].answer =   validate.validate(value: self.txtInput.text, questionID: self.questionnaireList[self.questionIndex].questionID)
@@ -94,7 +94,9 @@ class ManualVC: UIViewController {
              self.questionnaireList[self.questionIndex].isValid = result.1
             
                 self.txtInput.text = ""
-                self.tblChat.reloadData()
+         self.tblChat.beginUpdates()
+            self.tblChat.reloadData()
+            
             self.tblChat.endUpdates()
             
         }) { (success) in
@@ -105,7 +107,7 @@ class ManualVC: UIViewController {
                     self.tblChat.beginUpdates()
                     self.questionIndex =  self.questionIndex + 1
                     self.rowCount = self.rowCount + 1
-                    self.tblChat.re.insertRows(at: [IndexPath(row: self.rowCount - 1, section: 0)], with: .automatic)
+                    self.tblChat.re.insertRows(at: [IndexPath(row: self.rowCount - 1, section: 0)], with: .none)
                     self.tblChat.endUpdates()
                 })
             }

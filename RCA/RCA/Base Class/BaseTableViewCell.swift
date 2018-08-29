@@ -11,6 +11,17 @@ open class BaseTableViewCell : UITableViewCell {
     
     class var identifier: String { return String.className(self) }
     
+    private var _message: String = "Something went wrong!"
+    
+    var message:String {
+        get {
+            return _message
+        }
+        set {
+            self._message = newValue
+        }
+    }
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()

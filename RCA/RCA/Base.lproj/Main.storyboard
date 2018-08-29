@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--What are you looking for?-->
+        <!--HomeVC-->
         <scene sceneID="mmE-cD-c1G">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="MXT-Jn-ANc" customClass="HomeVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="MXT-Jn-ANc" userLabel="HomeVC" customClass="HomeVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xB5-9Q-kJA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dd-T0-5m6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2642" y="389"/>
+        </scene>
+        <!--ErrorVC-->
+        <scene sceneID="WQA-aA-r3o">
+            <objects>
+                <viewController storyboardIdentifier="ErrorVC" id="EB4-fc-nfl" customClass="ErrorVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MUM-wC-pvl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J46-Ir-Pz4">
+                                <rect key="frame" x="127" y="160" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8aa-ej-ai6"/>
+                                    <constraint firstAttribute="width" constant="120" id="PPq-XX-ErB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6R-l0-f9j">
+                                <rect key="frame" x="30" y="300" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J46-Ir-Pz4" firstAttribute="centerX" secondItem="MUM-wC-pvl" secondAttribute="centerX" id="CnB-BF-8Uq"/>
+                            <constraint firstItem="t6R-l0-f9j" firstAttribute="top" secondItem="J46-Ir-Pz4" secondAttribute="bottom" constant="20" id="Gdi-4A-hFE"/>
+                            <constraint firstItem="J46-Ir-Pz4" firstAttribute="top" secondItem="uhy-zP-iz8" secondAttribute="top" constant="140" id="GqC-kT-CSi"/>
+                            <constraint firstItem="t6R-l0-f9j" firstAttribute="leading" secondItem="uhy-zP-iz8" secondAttribute="leading" constant="30" id="YMI-w9-dVL"/>
+                            <constraint firstItem="uhy-zP-iz8" firstAttribute="trailing" secondItem="t6R-l0-f9j" secondAttribute="trailing" constant="30" id="u6W-ps-aEf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uhy-zP-iz8"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblMessage" destination="t6R-l0-f9j" id="7dH-pS-cEh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8z-Sm-wew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3237.5999999999999" y="-29.23538230884558"/>
         </scene>
         <!--Left MenuVC-->
         <scene sceneID="ijh-Px-THY">
@@ -286,6 +326,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="error.jpg" width="300" height="300"/>
         <image name="leftmenu_logo" width="182" height="63"/>
         <image name="mic" width="32" height="32"/>
         <image name="recording" width="32" height="32"/>

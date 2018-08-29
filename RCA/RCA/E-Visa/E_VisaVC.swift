@@ -55,7 +55,7 @@ class E_VisaVC: UIViewController {
     */
 }
 
-extension E_VisaVC : UITableViewDataSource {
+extension E_VisaVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -69,16 +69,12 @@ extension E_VisaVC : UITableViewDataSource {
         cell.setData(data)
         return cell
     }
-}
-
-extension E_VisaVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         
         if indexPath.row == 0 {
             let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)

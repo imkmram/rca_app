@@ -37,16 +37,16 @@ class Validate {
     
     func onlyString(value:String) -> (value:String?, isValid:Bool) {
         
-            let regex = "[A-Za-z]"
-            let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
-            let result = predicate.evaluate(with: value)
-            if result {
-                
-                return (value, true)
-            }
-            else {
-                return  ("Only characters allowed", false)
-            }
+        let regex = "[A-Za-z]+"
+       
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        let result = predicate.evaluate(with: value)
+        if result {
+            return (value, true)
+        }
+        else {
+            return  ("Only characters allowed", false)
+        }
     }
     
     func validate(value:String, questionID:Int) -> (String, Bool){
@@ -66,7 +66,7 @@ class Validate {
         }
         
         print("======================VALIDATE===============")
-       print(result.values)
+        print(result.values)
         print(newStr)
         
         switch questionID {

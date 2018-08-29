@@ -87,24 +87,24 @@ class ViewController: BaseVC {
 }
 
 extension ViewController:HomeView {
-    
-    func setData<T>(data: [T]) {
-        
+    func emptyList(error: CustomError, success: Bool) {
     }
     
-    func emptyList() {
-        
+    func setList(data: [Service]?, success: Bool) {
+    }
+    
+    func setList<T>(data: [T]) {
     }
 }
 
 extension ViewController:BaseViewDelegate {
-    
+
     func networkStausChanged(isReachable: Bool) {
-        
+
        // if isReachable {
-         
-            presenter.reloadDataCall()
-            
+
+          //  presenter.reloadDataCall()
+
 //        }
 //        else {
 //            presenter.pauseDataCall()

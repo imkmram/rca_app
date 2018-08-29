@@ -25,7 +25,16 @@ class SpeechController {
     
    weak var delegate:SpeechControllerDelegate?
     
+    private var timer = Timer()
+    
+    @objc func dismissAudio() {
+//        timer.invalidate()
+//        stopRecording()
+    }
+    
     func startRecording() {
+        
+        // timer = Timer.scheduledTimer(timeInterval: 15.0, target: self, selector: #selector(dismissAudio), userInfo: nil, repeats: false)
         
         delegate?.viewUpdateOnStartRecording()
        
@@ -61,9 +70,11 @@ class SpeechController {
         
         recognitionRequest.shouldReportPartialResults = true
         
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: {[unowned self]  (result, error) in  //7
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: {[unowned self]  (result, error) in
             
             if result != nil {
+                
+              //  self.timer = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(self.dismissAudio), userInfo: nil, repeats: false)
             
                 let capturedText = result?.bestTranscription.formattedString
                 
@@ -84,6 +95,9 @@ class SpeechController {
                 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
+                
+               // self.timer.invalidate()
+                
                 
                 print("=====isFinal is true======")
             }

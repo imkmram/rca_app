@@ -22,13 +22,10 @@ class BaseVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-         NetworkManager.shared.addListener(listener: self)
+        NetworkManager.shared.addListener(listener: self)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -37,16 +34,36 @@ class BaseVC: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func loadErrorPage(parent:UIViewController, error:CustomError) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let errorVC = storyboard.instantiateViewController(withIdentifier: "ErrorVC") as! ErrorVC
+        errorVC.message = error.localizedDescription
+        parent.addChildViewController(errorVC)
+        parent.view.addSubview(errorVC.view)
+        errorVC.didMove(toParentViewController: parent)
+    }
+    func removeErrorPage(parent:UIViewController) {
+        
+        for controller in parent.childViewControllers {
+            if controller.isKind(of: ErrorVC.self){
+                DispatchQueue.main.async {
+                    controller.willMove(toParentViewController: nil)
+                    controller.view.removeFromSuperview()
+                    controller.removeFromParentViewController()
+                }
+            }
+        }
     }
 }
 
 extension BaseVC: NetworkStatusListener {
-   
+
     func networkStatusDidChanged(status: Reachability.Connection) {
 
         switch status {
-
         case .none:
             print("Not Connected")
             delagate?.networkStausChanged(isReachable: false)
@@ -60,12 +77,39 @@ extension BaseVC: NetworkStatusListener {
 
 extension BaseVC:BaseView {
     
+//    func errorPage(error:CustomError) {
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let errorVC = storyboard.instantiateViewController(withIdentifier: "ErrorVC") as! ErrorVC
+//        errorVC.message = error.localizedDescription
+//        self.addChildViewController(errorVC)
+//        self.view.addSubview(errorVC.view)
+//        errorVC.didMove(toParentViewController: self)
+//    }
+//
+//    func loadingPage() {
+//        removeErrorPage()
+//    }
+    
     func startLoading() {
         SVProgressHUD.show()
     }
     
     func stopLoading() {
         SVProgressHUD.dismiss()
+    }
+    
+    private func removeErrorPage() {
+        
+        for controller in childViewControllers {
+            if controller.isKind(of: ErrorVC.self){
+                DispatchQueue.main.async {
+                    controller.willMove(toParentViewController: nil)
+                    controller.view.removeFromSuperview()
+                    controller.removeFromParentViewController()
+                }
+            }
+        }
     }
 }
 extension BaseVC : SlideMenuControllerDelegate {

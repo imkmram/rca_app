@@ -19,5 +19,8 @@ class Constant {
     static let VIEWCONTROLLER_MANUAL = "ManualVC"
     static let VIEWCONTROLLER_CONFIRMATION = "ConfirmationVC"
     static let VIEWCONTROLLER_THANKYOU = "ThankYouVC"
+    static let PAGEVIEWCONTROLLER = "PageViewController"
+    static let PAGEVIEWCONTENTVC = "PageViewContentVC"
+    static let VIEWCONTROLLER_TYPEDFORM = "TypedFormVC"
 }
 

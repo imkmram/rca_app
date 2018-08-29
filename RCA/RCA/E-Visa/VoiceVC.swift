@@ -17,7 +17,7 @@ struct Questionnaire {
     var answer:String?
     var answerFramed:String
     var option:[String]?
-    var isValid:Bool = false
+    var isValid:Bool?
    
     init(questionID:Int, question:String, answerFramed:String) {
         self.questionID = questionID
@@ -39,10 +39,10 @@ class VoiceVC: UIViewController {
     @IBOutlet weak var btnProceed: RoundButton!
     
     private let speechSynthesizer = AVSpeechSynthesizer()
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-IN"))!
-    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
-    private var recognitionTask: SFSpeechRecognitionTask?
-    private let audioEngine = AVAudioEngine()
+//    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-IN"))!
+//    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+//    private var recognitionTask: SFSpeechRecognitionTask?
+//    private let audioEngine = AVAudioEngine()
     
     var questionnaireList: [Questionnaire] = [Questionnaire]()
     var rowCount: Int = 1
@@ -218,20 +218,20 @@ class VoiceVC: UIViewController {
 //       // lblCapturedText.text = "Say something, I'm listening!"
 //    }
     
-    func stopRecording() {
-    
-        if audioEngine.isRunning {
-            audioEngine.stop()
-            recognitionRequest?.endAudio()
-            audioEngine.inputNode.removeTap(onBus: 0)
-            recognitionTask?.cancel()
-            
-//             recognitionRequest = nil
-//            recognitionTask = nil
-           
-            self.btnNext.isSelected = false
-        }
-    }
+//    func stopRecording() {
+//
+//        if audioEngine.isRunning {
+//            audioEngine.stop()
+//            recognitionRequest?.endAudio()
+//            audioEngine.inputNode.removeTap(onBus: 0)
+//            recognitionTask?.cancel()
+//
+////             recognitionRequest = nil
+////            recognitionTask = nil
+//
+//            self.btnNext.isSelected = false
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -371,7 +371,8 @@ class VoiceVC: UIViewController {
     }
 }
 
-extension VoiceVC : UITableViewDataSource {
+//MARK:- UITableViewDataSource, UITableViewDelegate
+extension VoiceVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -391,21 +392,18 @@ extension VoiceVC : UITableViewDataSource {
         }
         else {
             cell.btnEdit.isSelected = false
-            
         }
             cell.setData(questionnaireList[indexPath.row])
         
             return cell
     }
-}
-
-extension VoiceVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 }
 
+//MARK:- AVSpeechSynthesizerDelegate
 extension VoiceVC :AVSpeechSynthesizerDelegate {
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
@@ -416,6 +414,7 @@ extension VoiceVC :AVSpeechSynthesizerDelegate {
     }
 }
 
+//MARK:- ChatCellDelagate
 extension VoiceVC : ChatCellDelagate {
     
     func btnEditTapped(sender: UIButton) {
@@ -430,6 +429,7 @@ extension VoiceVC : ChatCellDelagate {
     }
 }
 
+//MARK:- SpeechControllerDelegate
 extension VoiceVC : SpeechControllerDelegate {
     
     func capturedText(capturedText: String) {
