@@ -44,8 +44,8 @@ class LeftMenuVC: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-//        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-//        self.homeVC = UINavigationController(rootViewController: homeVC)
+        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        self.homeVC = UINavigationController(rootViewController: homeVC)
         
         let aboutUsVC = storyboard.instantiateViewController(withIdentifier: "AboutUsVC") as! AboutUsVC
         self.aboutUsVC = UINavigationController(rootViewController: aboutUsVC)

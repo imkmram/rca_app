@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PrivacyPolicyVC: UIViewController {
+class PrivacyPolicyVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

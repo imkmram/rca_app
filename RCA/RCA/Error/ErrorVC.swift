@@ -10,9 +10,10 @@ import UIKit
 
 class ErrorVC: UIViewController {
     
-    var message:String = "Opppssss, we will bw back!"
+    var message:String = "Opppssss, we will be back!"
 
     @IBOutlet weak var lblMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +25,6 @@ class ErrorVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

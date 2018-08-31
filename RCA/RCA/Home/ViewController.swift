@@ -71,13 +71,13 @@ class ViewController: BaseVC {
     
     @IBAction func getDataTapped(_ sender: Any) {
         
-        let passportType = PassportType()
-        let list = passportType.getAllDataFromBD()
-        print(list)
-        
-        for data in list {
-            print("===========\(data.type_name!)========")
-        }
+//        let passportType = PassportType()
+//        let list = passportType.getAllDataFromBD()
+//        print(list)
+//        
+//        for data in list {
+//            print("===========\(data.type_name!)========")
+//        }
     }
     
     override func didReceiveMemoryWarning() {

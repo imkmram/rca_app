@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeVC: BaseVC {
 
@@ -31,6 +32,18 @@ class HomeVC: BaseVC {
 //        let imgURL = URL(string: "https://yt3.ggpht.com/a-/ACSszfFVNourOmj3-ytJECQCieFxpQ9ztjHTChKmCg=s900-mo-c-c0xffffffff-rj-k-no")
 //        DataManager.downloadFile(fileName: "test", url: imgURL!)
         
+        let passportType = PassportType()
+        var list = passportType.selectAllFrom(entityName: "PassportType") as [PassportType]
+        
+        print(list)
+        
+        for data in list {
+           // print("===========\(data.type_name!)========")
+        }
+       let result = passportType.deleteAllFrom(entityName: "PassportType")
+          list = passportType.selectAllFrom(entityName: "PassportType") as [PassportType]
+        
+        print(list)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,7 +129,6 @@ extension HomeVC : HomeView {
 //            self.tblHome.reloadData()
 //        }
 //    }
-
 }
 
 extension HomeVC : BaseViewDelegate {

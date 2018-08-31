@@ -27,6 +27,7 @@
 		9B8C5FFC212AABA0005A456C /* Wallpaper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFB212AAB9F005A456C /* Wallpaper@2x.png */; };
 		9B8C5FFE212ABC6C005A456C /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */; };
 		9B8C6000212ABD90005A456C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFF212ABD90005A456C /* CustomTextField.swift */; };
+		9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */; };
 		9BFB58F4212EB18100395AA1 /* NewVoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */; };
 		D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */; };
 		D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */; };
@@ -140,6 +141,7 @@
 		9B8C5FFB212AAB9F005A456C /* Wallpaper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wallpaper@2x.png"; sourceTree = "<group>"; };
 		9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		9B8C5FFF212ABD90005A456C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManagedObject.swift; sourceTree = "<group>"; };
 		9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVoiceVC.swift; sourceTree = "<group>"; };
 		9DF7C2FA01E22A1B86D38911 /* Pods_RCATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B959D26927643CAB23E4E77C /* Pods_RCAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +305,7 @@
 				D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */,
 				D90B30AC210F230200C8F3A4 /* PassportType+CoreDataProperties.swift */,
 				D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */,
+				9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				D963CF97211ABE850051F8A4 /* AttributedString.swift in Sources */,
 				D986A71321145D5700D7E1D7 /* E_VisaDetailVC.swift in Sources */,
 				9B124FE32134035E0046CFCF /* Enums.swift in Sources */,
+				9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */,
 				D956C95B2111D5170083CE9E /* Country+CoreDataClass.swift in Sources */,
 				D962CDCB211335D700CF94CA /* E_VisaVC.swift in Sources */,
 				D956C9332111928D0083CE9E /* ExSlideMenuController.swift in Sources */,

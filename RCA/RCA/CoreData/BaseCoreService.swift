@@ -16,7 +16,6 @@ class BaseCoreService {
         return NSManagedObjectModel(contentsOf: modelUrl)!
     }()
     
-    
    private lazy var peristentStoreCoordinator: NSPersistentStoreCoordinator = {
     
         let coordinator: NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
@@ -32,7 +31,6 @@ class BaseCoreService {
         
         return coordinator
     }()
-    
     
    lazy var managedObjectContext: NSManagedObjectContext = {
         
