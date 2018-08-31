@@ -11,6 +11,7 @@ import Foundation
 
 protocol HomeView:BaseView {
     
-    func setData<T>(data:[T])
-    func emptyList()
+    func setList(data:[Service]?, success:Bool)
+   // func setList<T>(data:[T])
+    func emptyList(error:CustomError, success:Bool)
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ReachabilitySwift
+import SVProgressHUD
 
 protocol BaseViewDelegate: class {
     
@@ -17,16 +17,15 @@ protocol BaseViewDelegate: class {
 class BaseVC: UIViewController {
     
     weak var delagate : BaseViewDelegate?
+    
+  //  var indicator:UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-         NetworkManager.shared.addListener(listener: self)
+        NetworkManager.shared.addListener(listener: self)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -35,21 +34,41 @@ class BaseVC: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func loadErrorPage(parent:UIViewController, error:CustomError) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let errorVC = storyboard.instantiateViewController(withIdentifier: "ErrorVC") as! ErrorVC
+        errorVC.message = error.localizedDescription
+        parent.addChildViewController(errorVC)
+        parent.view.addSubview(errorVC.view)
+        errorVC.didMove(toParentViewController: parent)
+    }
+    func removeErrorPage(parent:UIViewController) {
+        
+        for controller in parent.childViewControllers {
+            if controller.isKind(of: ErrorVC.self){
+                DispatchQueue.main.async {
+                    controller.willMove(toParentViewController: nil)
+                    controller.view.removeFromSuperview()
+                    controller.removeFromParentViewController()
+                }
+            }
+        }
     }
 }
 
-extension BaseVC:NetworkStatusListener {
+extension BaseVC: NetworkStatusListener {
 
-    func networkStatusDidChanged(status: Reachability.NetworkStatus) {
+    func networkStatusDidChanged(status: Reachability.Connection) {
 
         switch status {
-
-        case .notReachable:
+        case .none:
             print("Not Connected")
             delagate?.networkStausChanged(isReachable: false)
 
-        case .reachableViaWiFi, .reachableViaWWAN:
+        case .wifi, .cellular:
             print("Connected")
              delagate?.networkStausChanged(isReachable: true)
         }
@@ -58,12 +77,73 @@ extension BaseVC:NetworkStatusListener {
 
 extension BaseVC:BaseView {
     
+//    func errorPage(error:CustomError) {
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let errorVC = storyboard.instantiateViewController(withIdentifier: "ErrorVC") as! ErrorVC
+//        errorVC.message = error.localizedDescription
+//        self.addChildViewController(errorVC)
+//        self.view.addSubview(errorVC.view)
+//        errorVC.didMove(toParentViewController: self)
+//    }
+//
+//    func loadingPage() {
+//        removeErrorPage()
+//    }
+    
     func startLoading() {
-        
+        SVProgressHUD.show()
     }
     
     func stopLoading() {
-        
+        SVProgressHUD.dismiss()
     }
     
+    private func removeErrorPage() {
+        
+        for controller in childViewControllers {
+            if controller.isKind(of: ErrorVC.self){
+                DispatchQueue.main.async {
+                    controller.willMove(toParentViewController: nil)
+                    controller.view.removeFromSuperview()
+                    controller.removeFromParentViewController()
+                }
+            }
+        }
+    }
 }
+extension BaseVC : SlideMenuControllerDelegate {
+    
+    func leftWillOpen() {
+        print("SlideMenuControllerDelegate: leftWillOpen")
+    }
+    
+    func leftDidOpen() {
+        print("SlideMenuControllerDelegate: leftDidOpen")
+    }
+    
+    func leftWillClose() {
+        print("SlideMenuControllerDelegate: leftWillClose")
+    }
+    
+    func leftDidClose() {
+        print("SlideMenuControllerDelegate: leftDidClose")
+    }
+    
+    func rightWillOpen() {
+        print("SlideMenuControllerDelegate: rightWillOpen")
+    }
+    
+    func rightDidOpen() {
+        print("SlideMenuControllerDelegate: rightDidOpen")
+    }
+    
+    func rightWillClose() {
+        print("SlideMenuControllerDelegate: rightWillClose")
+    }
+    
+    func rightDidClose() {
+        print("SlideMenuControllerDelegate: rightDidClose")
+    }
+}
+

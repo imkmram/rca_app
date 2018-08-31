@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 protocol BaseView:NSObjectProtocol {
     
     func startLoading()
     func stopLoading()
+//    func errorPage(error:CustomError)
+//    func loadingPage()
+
 }

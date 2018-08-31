@@ -9,20 +9,70 @@
 import UIKit
 import CoreData
 import Firebase
-
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    fileprivate func createMenuView(menu:LeftMenu) {
+        
+        // create viewController code...
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftMenuVC = storyboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! LeftMenuVC
+        
+        let attributes = [NSAttributedStringKey.font : UIFont(name: "OpenSans-Bold", size: 18)!]
+       
+        switch menu {
+        case .home:
+            
+            let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            let nvc: UINavigationController = UINavigationController(rootViewController: homeVC)
+             leftMenuVC.homeVC = nvc
+              nvc.navigationBar.titleTextAttributes = attributes
+            let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftMenuVC)
+            slideMenuController.automaticallyAdjustsScrollViewInsets = true
+            slideMenuController.delegate = homeVC
+            self.window?.rootViewController = slideMenuController
+            
+        case .privacy_policy:
+            
+             let privacyVC = storyboard.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
+             let nvc: UINavigationController = UINavigationController(rootViewController: privacyVC)
+             leftMenuVC.privacyPolicyVC = nvc
+             nvc.navigationBar.titleTextAttributes = attributes
+             let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftMenuVC)
+             slideMenuController.automaticallyAdjustsScrollViewInsets = true
+             slideMenuController.delegate = privacyVC
+            self.window?.rootViewController = slideMenuController
+            
+        case .about_us:
+            
+            let aboutVC = storyboard.instantiateViewController(withIdentifier: "AboutUsVC") as! AboutUsVC
+            let nvc: UINavigationController = UINavigationController(rootViewController: aboutVC)
+            leftMenuVC.aboutUsVC = nvc
+            nvc.navigationBar.titleTextAttributes = attributes
+            let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftMenuVC)
+            slideMenuController.automaticallyAdjustsScrollViewInsets = true
+            slideMenuController.delegate = aboutVC
+            self.window?.rootViewController = slideMenuController
+        }
+        
+       //UINavigationBar.appearance().tintColor = UIColor(hex: "689F38")
+        UINavigationBar.appearance().tintColor = UIColor.black
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.makeKeyAndVisible()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        NetworkManager.shared.startMonitoring()
-        
+     //   NetworkManager.shared.startMonitoring()
         FirebaseApp.configure()
+        self.createMenuView(menu: .home)
+        IQKeyboardManager.sharedManager().enable = true
+        addShortcuts(application: application)
         
         return true
     }
@@ -86,9 +136,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    // MARK: - App Shortcuts
+    func addShortcuts(application: UIApplication) {
+        let shortcut1 = UIMutableApplicationShortcutItem(type: "privacy", localizedTitle: "Privacy", localizedSubtitle: nil, icon: nil, userInfo: nil)
+        
+        let shortcut2 = UIMutableApplicationShortcutItem(type: "aboutus", localizedTitle: "About Us", localizedSubtitle: nil, icon: nil, userInfo: nil)
+        
+        application.shortcutItems = [shortcut1, shortcut2]
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        let handledShortcutItem = handleShortcutItem(shortcutItem: shortcutItem)
+        
+        completionHandler(handledShortcutItem)
+    }
 
+    func handleShortcutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        
+        var handle:Bool = false
+        
+        guard let shortcutType = shortcutItem.type as String?  else {
+            return false
+        }
+        
+        switch shortcutType {
+        case "privacy":
+           createMenuView(menu: .privacy_policy)
+           handle = true
+        case "aboutus":
+           createMenuView(menu: .about_us)
+            handle = true
+        default:
+            break
+        }
+
+        return handle
+    }
+    
     // MARK: - Core Data Saving support
-
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {

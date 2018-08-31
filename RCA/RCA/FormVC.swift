@@ -26,10 +26,8 @@ class FormVC: UIViewController {
     var interactionList :[Interaction] = [Interaction]()
     var name:String?
     var questionIndex:Int = 0
-    var isTextCaptured = false
     
     private let speechSynthesizer = AVSpeechSynthesizer()
-    
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-IN"))!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
@@ -39,7 +37,7 @@ class FormVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        speechSynthesizer.delegate = self
+        
 //        speechRecognizer.delegate = self
 
         interactionList = [Interaction(question: "Hey, What's your name", answer: "", isAnswered: false),

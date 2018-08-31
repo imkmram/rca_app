@@ -12,21 +12,24 @@ import CoreData
 
 
 @objc(PassportType)
-public class PassportType: NSManagedObject {
+ class PassportType: BaseManagedObject {
+    
+//    func getAllDataFromBD() ->[PassportType] {
+//
+//        var list:[PassportType] = [PassportType]()
+//
+//        let request:NSFetchRequest<PassportType> = PassportType.fetchRequest()
+//        let service = BaseCoreService()
+//
+//        do {
+//             list = try service.managedObjectContext.fetch(request)
+//
+//        } catch {
+//
+//        }
+//        return list
+//    }
 
-    func getAllDataFromBD() ->[PassportType] {
-        
-        var list:[PassportType] = [PassportType]()
-        
-        let request:NSFetchRequest<PassportType> = PassportType.fetchRequest()
-        let service = BaseCoreService()
-        
-        do {
-             list = try service.managedObjectContext.fetch(request)
-            
-        } catch {
-            
-        }
-        return list
-    }
 }
+
+
