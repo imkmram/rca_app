@@ -121,7 +121,6 @@ extension HomeVC : HomeView {
         loadErrorPage(parent: self, error: error)
     }
     
-    
 //    func setList<T>(data: [T]) {
 //
 //        serviceList = data as! [Service]
