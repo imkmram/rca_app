@@ -87,10 +87,11 @@ class ViewController: BaseVC {
 }
 
 extension ViewController:HomeView {
-    func emptyList(error: CustomError, success: Bool) {
+    func setList(data: [[String : Any]]?, success: Bool) {
+        
     }
     
-    func setList(data: [Service]?, success: Bool) {
+    func emptyList(error: CustomError, success: Bool) {
     }
     
     func setList<T>(data: [T]) {

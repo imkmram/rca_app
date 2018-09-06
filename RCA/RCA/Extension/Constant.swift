@@ -12,7 +12,8 @@ import Foundation
 class Constant {
     
     static let STORYBOARD_E_Visa = "E-visa"
-    static let STORYBOARD_Main = "main"
+    static let STORYBOARD_Main = "Main"
+    
     static let VIEWCONTROLLER_E_VISA = "E_VisaVC"
     static let VIEWCONTROLLER_E_VisaDetail = "E_VisaDetailVC"
     static let VIEWCONTROLLER_VOICE = "VoiceVC"
@@ -22,5 +23,9 @@ class Constant {
     static let PAGEVIEWCONTROLLER = "PageViewController"
     static let PAGEVIEWCONTENTVC = "PageViewContentVC"
     static let VIEWCONTROLLER_TYPEDFORM = "TypedFormVC"
+    static let VIEWCONTROLLER_MORELISTING = "MoreListingVC"
+    
+    static let HOME_METHOD_NAME = "get_service_list"
+    static let HOME_REQUEST_URL = "http://dev.redcarpetassist.com/rca_website/api/rca_website_api.php"
 }
 

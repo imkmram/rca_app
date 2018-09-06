@@ -9,17 +9,10 @@
 import Foundation
 import UIKit
 
-struct Service {
-    
-    var title:String?
-    var description:String?
-    var image:UIImage?
-}
-
-class HomePresenter:BasePresenter {
+class HomePresenter: BasePresenter {
     
     weak private var homeView :HomeView?
-  //  private lazy var dataManager:DataManager = DataManager()
+   // private lazy var dataManager:DataManager = DataManager()
     private var strURL:String?
     private var getURL:String {
         get {
@@ -35,7 +28,7 @@ class HomePresenter:BasePresenter {
         homeView = nil
     }
     
-    override func getData(strURL:String) {
+   override func getData(strURL:String) {
         
         self.strURL = strURL
         
@@ -44,7 +37,10 @@ class HomePresenter:BasePresenter {
         guard  let url = URL(string: strURL) else {
             return
         }
-        DataManager.getData(url: url) { (data, error) in
+
+         let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
+    
+         DataManager.getData(requestType: "POST", url: url, parameter: param) { (data, error) in
                 
             if error == nil {    
                 self.parseData(data: data, success: true, error: nil)
@@ -58,19 +54,36 @@ class HomePresenter:BasePresenter {
         }
     }
     
-    func parseData(data:Data?, success:Bool, error:CustomError?) {
+   private func parseData(data:Data?, success:Bool, error:CustomError?) {
         
          homeView?.stopLoading()
         if success {
-            var serviceList :[Service] = [Service]()
-            
-            serviceList.append(Service(title: "eVisa", description: "eVisa service", image: #imageLiteral(resourceName: "e_visa")))
-            serviceList.append(Service(title: "Airport Meet & Greet", description: "Coming Soon", image:#imageLiteral(resourceName: "meet_n_assist")))
-            serviceList.append(Service(title: "Airport Lounges", description: "Coming Soon", image: #imageLiteral(resourceName: "lounges")))
-            serviceList.append(Service(title: "Document Repository", description: "Coming Soon", image: #imageLiteral(resourceName: "e_visa")))
-            
-            if(serviceList.count > 0){
-                homeView?.setList(data: serviceList, success: true)
+           
+            let jsonDecoder = JSONDecoder()
+           
+            do {
+                var baseData: BaseModel?
+                baseData = try jsonDecoder.decode(BaseModel.self, from: data!)
+                let content = baseData?.content
+                
+                guard let result = content?.result_set else {
+                    return
+                }
+               
+                var test:[[String:Any]] = []
+                
+                let dict:[String:Any] = ["title":"eVisa", "list":result.evisa_countries!]
+                let dict1:[String:Any] = ["title":"Meet & Assist", "list":result.mna_airports!]
+                let dict2:[String:Any] = ["title":"Lounge", "list":result.lounge_airports!]
+                
+                test.append(dict)
+                test.append(dict1)
+                test.append(dict2)
+                
+                homeView?.setList(data: test, success: true)
+                
+            } catch {
+                
             }
         }
         else {
@@ -81,6 +94,7 @@ class HomePresenter:BasePresenter {
     }
     
     func reloadDataCall() {
+        
         getData(strURL: getURL)
     }
     

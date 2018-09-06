@@ -16,17 +16,22 @@ class NetworkManager: NSObject {
     
     static let shared = NetworkManager()  // 2. Shared instance
     
-    var reachabilityStatus: Reachability.Connection = .none
+     let reachability = Reachability()!
+    
     // 3. Boolean to track network reachability
     var isNetworkAvailable : Bool {
         return reachabilityStatus != .none
     }
     // 4. Tracks current NetworkStatus (notReachable, reachableViaWiFi, reachableViaWWAN)
+     var reachabilityStatus: Reachability.Connection = .none
     
     // 5. Reachibility instance for Network status monitoring
-    let reachability = Reachability()!
-    
+   
     var listeners = [NetworkStatusListener]()
+    
+    override init() {
+        reachabilityStatus = reachability.connection
+    }
     
     @objc func reachabilityChanged(notification: Notification) {
         
@@ -49,6 +54,16 @@ class NetworkManager: NSObject {
             listener.networkStatusDidChanged(status: reachability.connection)
         }
     }
+    
+//    func isConnected() -> Bool {
+//
+//        if isNetworkAvailable{
+//            return true
+//        }
+//        else{
+//            return false
+//        }
+//    }
     
     //Starts monitoring the network availability status
     func startMonitoring() {

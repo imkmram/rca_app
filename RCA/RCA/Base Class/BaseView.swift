@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol BaseView:NSObjectProtocol {
+protocol BaseView:class {
     
     func startLoading()
     func stopLoading()

@@ -24,7 +24,7 @@ enum CustomError : Error {
         case .InternalServerError:
             return NSLocalizedString("Server not responding, try later", comment: "Custom Error")
         case .OtherError:
-            return NSLocalizedString("Something went wrong", comment: "Custom Error")
+            return NSLocalizedString("Something went wrong....", comment: "Custom Error")
         }
     }
 }
@@ -39,18 +39,41 @@ public struct DataManager {
         return downloadTask?.countOfBytesExpectedToReceive ?? 0
     }
     
+    static var taskState: URLSessionTask.State? {
+        return task?.state
+    }
+    
     init() {
     }
     
-    public static func getData(url:URL, completion:@escaping (Data?, Error?)->Void){
+    private static func postData(parameter:[String:Any]?) -> Data? {
         
-      //  if NetworkManager.shared.isNetworkAvailable {
+        do {
+            let data = try JSONSerialization.data(withJSONObject: parameter!, options: .prettyPrinted)
+            return data
+        } catch  {
+            return nil
+        }
+        
+    }
+    
+    public static func getData(requestType: String, url:URL, parameter:[String:Any]?, completion:@escaping (Data?, Error?)->Void) {
+        
+        if NetworkManager.shared.isNetworkAvailable {
             
-            task = session.dataTask(with: url) { (data, response, error) in
+            let request = NSMutableURLRequest(url: url,
+                                              cachePolicy: .useProtocolCachePolicy,
+                                              timeoutInterval: 10.0)
+            request.httpMethod = requestType
+            if parameter != nil {
+                 request.httpBody = DataManager.postData(parameter: parameter)
+            }
+            
+            task =  session.dataTask(with: request as URLRequest) { (data, response, error) in
                 
                 guard error == nil else {
                     print("Returned Error....\(String(describing: error?.localizedDescription))")
-                    completion(nil, CustomError.NoNetwork)
+                    completion(nil, CustomError.OtherError)
                     return
                 }
                 
@@ -79,11 +102,57 @@ public struct DataManager {
             }
             
             task?.resume()
+        }
+        else {
+            completion(nil, CustomError.NoNetwork)
+        }
+    }
+    
+    
+    
+    
+//    public static func getData(url:URL, completion:@escaping (Data?, Error?)->Void){
+//
+//        if NetworkManager.shared.isNetworkAvailable {
+//
+//            task = session.dataTask(with: url) { (data, response, error) in
+//
+//                guard error == nil else {
+//                    print("Returned Error....\(String(describing: error?.localizedDescription))")
+//                    completion(nil, CustomError.OtherError)
+//                    return
+//                }
+//
+//                if let httpResponse = response as? HTTPURLResponse {
+//
+//                    if let content = data  {
+//
+//                        if httpResponse.statusCode >= 200 && httpResponse.statusCode <= 300 {
+//                            print(content)
+//                            completion(data,nil)
+//                        }
+//                        else if httpResponse.statusCode >= 400 && httpResponse.statusCode <= 500 {
+//                            // Client Error
+//                            completion(nil, CustomError.BadRequest)
+//                        }
+//                        else {
+//                            // Server Error
+//                            completion(nil, CustomError.InternalServerError)
+//                        }
+//                    }
+//                    else {
+//                        completion(nil, CustomError.OtherError)
+//                        return
+//                    }
+//                }
+//            }
+//
+//            task?.resume()
 //        }
 //        else {
 //            completion(nil, CustomError.NoNetwork)
 //        }
-    }
+//    }
     
     private static func getLocalDirectory() -> URL? {
     

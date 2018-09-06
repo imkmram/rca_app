@@ -30,18 +30,18 @@ class HomeCell: BaseTableViewCell {
     
     override func setData(_ data: Any?) {
         
-        if let data = data as? Service {
-            
-            lblTitle.text = data.title
-            lblDesc.text = data.description
-            imgLogo.image = data.image
-        }
-        else if let data = data as? E_Visa {
-            
-            lblTitle.text = data.title
-            lblDesc.text = data.description
-            imgLogo.image = data.image
-        }
+//        if let data = data as? Service {
+//            
+//            lblTitle.text = data.title
+//            lblDesc.text = data.description
+//            imgLogo.image = data.image
+//        }
+//        else if let data = data as? E_Visa {
+//            
+//            lblTitle.text = data.title
+//            lblDesc.text = data.description
+//            imgLogo.image = data.image
+//        }
     }
 
 }

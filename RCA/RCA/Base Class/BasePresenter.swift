@@ -12,7 +12,5 @@ class BasePresenter {
     
     func getData(strURL:String) {
         
-        
-        
     }
 }

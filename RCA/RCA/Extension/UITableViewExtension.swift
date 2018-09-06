@@ -31,3 +31,12 @@ public extension UITableView {
         self.register(nib, forHeaderFooterViewReuseIdentifier: identifier)
     }
 }
+
+extension UICollectionView {
+    
+    func registerCellNib(_ cellClass: AnyClass) {
+        let identifier = String.className(cellClass)
+        let nib = UINib(nibName: identifier, bundle: nil)
+        self.register(nib, forCellWithReuseIdentifier: identifier)
+    }
+}
