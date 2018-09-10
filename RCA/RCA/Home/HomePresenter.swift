@@ -12,7 +12,8 @@ import UIKit
 class HomePresenter: BasePresenter {
     
     weak private var homeView :HomeView?
-   // private lazy var dataManager:DataManager = DataManager()
+    var loadData: LoadData?
+    private var dataManager:DataManager = DataManager()
     private var strURL:String?
     private var getURL:String {
         get {
@@ -37,26 +38,30 @@ class HomePresenter: BasePresenter {
         guard  let url = URL(string: strURL) else {
             return
         }
-
-         let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
     
-         DataManager.getData(requestType: "POST", url: url, parameter: param) { (data, error) in
-                
-            if error == nil {    
-                self.parseData(data: data, success: true, error: nil)
-            }
-            else {
-                if  let customError = error as? CustomError {
-                    print(String(describing: customError.localizedDescription))
-                    self.parseData(data: nil, success: false, error: customError)
-                }
-            }
-        }
+        loadData = LoadData()
+        loadData?.delegate = self
+        loadData?.checkDataVersion()
+
+//         let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
+//
+//         dataManager.getData(requestType: "POST", url: url, parameter: param) { (data, error) in
+//
+//            if error == nil {
+//                self.parseData(data: data, success: true, error: nil)
+//            }
+//            else {
+//                if  let customError = error as? CustomError {
+//                    print(String(describing: customError.localizedDescription))
+//                    self.parseData(data: nil, success: false, error: customError)
+//                }
+//            }
+//        }
     }
     
    private func parseData(data:Data?, success:Bool, error:CustomError?) {
-        
-         homeView?.stopLoading()
+        homeView?.stopLoading()
+    
         if success {
            
             let jsonDecoder = JSONDecoder()
@@ -71,14 +76,6 @@ class HomePresenter: BasePresenter {
                 }
                
                 var test:[[String:Any]] = []
-                
-                let dict:[String:Any] = ["title":"eVisa", "list":result.evisa_countries!]
-                let dict1:[String:Any] = ["title":"Meet & Assist", "list":result.mna_airports!]
-                let dict2:[String:Any] = ["title":"Lounge", "list":result.lounge_airports!]
-                
-                test.append(dict)
-                test.append(dict1)
-                test.append(dict2)
                 
                 homeView?.setList(data: test, success: true)
                 
@@ -95,11 +92,52 @@ class HomePresenter: BasePresenter {
     
     func reloadDataCall() {
         
-        getData(strURL: getURL)
+        guard let state :URLSessionTask.State = (loadData?.dataManager.taskState) else {
+            return
+        }
+        
+        switch state {
+        case .running, .completed:
+            break
+        default:
+             getData(strURL: getURL)
+        }
     }
     
     func pauseDataCall() {
         
        // DataManager.pause()
+    }
+}
+
+extension HomePresenter : LoadDataDelegate {
+    func updatePresenter() {
+        
+        let serviceCD = ServiceCD()
+        let evisaList = serviceCD.selectByProductID(productID: "1")
+        let meetNgreetList = serviceCD.selectByProductID(productID: "2")
+        let loungeList = serviceCD.selectByProductID(productID: "3")
+        
+        var test:[[String:Any]] = []
+        
+        let dict:[String:Any] = ["title":"eVisa", "list":createArrayList(listCD: evisaList)]
+        let dict1:[String:Any] = ["title":"Meet & Assist", "list":createArrayList(listCD: meetNgreetList)]
+        let dict2:[String:Any] = ["title":"Lounge", "list":createArrayList(listCD: loungeList)]
+        
+        test.append(dict)
+        test.append(dict1)
+        test.append(dict2)
+        
+        homeView?.stopLoading()
+        homeView?.setList(data: test, success: true)
+    }
+    
+    func createArrayList(listCD: [ServiceCD]) -> [Service_list] {
+        
+        var list:[Service_list] = []
+        for item in listCD {
+            list.append(Service_list(coredata: item))
+        }
+        return list
     }
 }

@@ -9,18 +9,23 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ServiceCell" id="q2W-eg-E6b" customClass="ServiceCell" customModule="RCA" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="185" height="106"/>
+            <rect key="frame" x="0.0" y="0.0" width="185" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="185" height="106"/>
+                <rect key="frame" x="0.0" y="0.0" width="185" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-BV-ooC">
-                        <rect key="frame" x="0.0" y="0.0" width="185" height="106"/>
+                        <rect key="frame" x="0.0" y="0.0" width="185" height="130"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e_visa" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-gr-DJE">
                                 <rect key="frame" x="60" y="8" width="65" height="65"/>
@@ -29,17 +34,20 @@
                                     <constraint firstAttribute="width" constant="65" id="zZ2-As-l2J"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krr-F2-xfQ">
-                                <rect key="frame" x="74" y="81" width="37.5" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label Label " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krr-F2-xfQ">
+                                <rect key="frame" x="10" y="73" width="165" height="57"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="krr-F2-xfQ" firstAttribute="top" secondItem="caZ-gr-DJE" secondAttribute="bottom" constant="8" id="4qw-DK-6t0"/>
+                            <constraint firstAttribute="trailing" secondItem="krr-F2-xfQ" secondAttribute="trailing" constant="10" id="0iM-Ya-ysE"/>
+                            <constraint firstItem="krr-F2-xfQ" firstAttribute="top" secondItem="caZ-gr-DJE" secondAttribute="bottom" id="4qw-DK-6t0"/>
+                            <constraint firstItem="krr-F2-xfQ" firstAttribute="leading" secondItem="d0W-BV-ooC" secondAttribute="leading" constant="10" id="8r8-I9-ncl"/>
                             <constraint firstItem="caZ-gr-DJE" firstAttribute="top" secondItem="d0W-BV-ooC" secondAttribute="top" constant="8" id="9tr-cT-MlY"/>
+                            <constraint firstAttribute="bottom" secondItem="krr-F2-xfQ" secondAttribute="bottom" id="NY9-mE-Rre"/>
                             <constraint firstItem="caZ-gr-DJE" firstAttribute="centerX" secondItem="d0W-BV-ooC" secondAttribute="centerX" id="XCB-p9-ys8"/>
                             <constraint firstItem="krr-F2-xfQ" firstAttribute="centerX" secondItem="d0W-BV-ooC" secondAttribute="centerX" id="qmC-hq-Rz0"/>
                         </constraints>
@@ -54,13 +62,13 @@
                 <constraint firstAttribute="trailing" secondItem="d0W-BV-ooC" secondAttribute="trailing" id="bNB-i9-jPK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="orP-hc-AYs"/>
-            <size key="customSize" width="185" height="106"/>
+            <size key="customSize" width="185" height="128"/>
             <connections>
                 <outlet property="baseView" destination="d0W-BV-ooC" id="RfO-MH-jef"/>
                 <outlet property="img" destination="caZ-gr-DJE" id="OiZ-Yf-aHU"/>
                 <outlet property="lblTitle" destination="krr-F2-xfQ" id="cwC-Pg-h3b"/>
             </connections>
-            <point key="canvasLocation" x="4.5" y="-83"/>
+            <point key="canvasLocation" x="4.5" y="-72"/>
         </collectionViewCell>
     </objects>
     <resources>

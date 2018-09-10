@@ -11,6 +11,8 @@ import CoreData
 
 class BaseCoreService {
     
+    static let shared = BaseCoreService()
+    
    private lazy var managedObjectModel: NSManagedObjectModel = {
         let modelUrl = Bundle.main.url(forResource: "RCA", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelUrl)!
@@ -21,14 +23,16 @@ class BaseCoreService {
         let coordinator: NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let applicationDocumentsDirectory: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
         let persistentStoreUrl: URL = applicationDocumentsDirectory.appendingPathComponent("RCA.sqlite")
-        
-        do {
-            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: persistentStoreUrl, options: nil)
-        }
-        catch {
-            fatalError("Persistent store error! \(error)")
-        }
-        
+    
+    print("LOCAL DB URL: \(persistentStoreUrl)")
+    
+                do {
+                    try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: persistentStoreUrl, options: nil)
+                }
+                catch {
+                    fatalError("Persistent store error! \(error)")
+                }
+ 
         return coordinator
     }()
     

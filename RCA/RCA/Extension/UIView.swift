@@ -30,4 +30,13 @@ extension UIView {
         }
         return nil
     }
+    
+    func removeOverlay() {
+        
+        for subview in self.subviews {
+            if subview.isKind(of: UIVisualEffectView.self) {
+                subview.removeFromSuperview()
+            }
+        }
+    }
 }

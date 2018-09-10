@@ -10,13 +10,15 @@ import CoreData
 
 class BaseManagedObject: NSManagedObject {
     
+    
+    
     func selectAllFrom<T: BaseManagedObject>(entityName: String) ->[T] {
         
         var list: [T] = []
         
         let request =  NSFetchRequest<T>(entityName: entityName)
         
-        let service = BaseCoreService()
+        let service = BaseCoreService.shared
         
         do {
             list = try service.managedObjectContext.fetch(request)
@@ -31,7 +33,7 @@ class BaseManagedObject: NSManagedObject {
         var list: [BaseManagedObject] = []
         let request =  NSFetchRequest<BaseManagedObject>(entityName: entityName)
 
-        let service = BaseCoreService()
+        let service = BaseCoreService.shared
 
         do {
             list = try service.managedObjectContext.fetch(request)

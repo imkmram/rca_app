@@ -29,24 +29,24 @@ enum CustomError : Error {
     }
 }
 
-public struct DataManager {
+public class DataManager {
     
-    private static var session:URLSession = URLSession(configuration: .default)
-    private static var task :URLSessionDataTask?
-    private static var downloadTask: URLSessionDownloadTask?
+    private var session:URLSession = URLSession(configuration: .default)
+    public var task :URLSessionDataTask?
+    private var downloadTask: URLSessionDownloadTask?
    
-    static var bytesExpected:Int64 {
+    var bytesExpected:Int64 {
         return downloadTask?.countOfBytesExpectedToReceive ?? 0
     }
     
-    static var taskState: URLSessionTask.State? {
+   public var taskState: URLSessionTask.State? {
         return task?.state
     }
     
     init() {
     }
     
-    private static func postData(parameter:[String:Any]?) -> Data? {
+    private func postData(parameter:[String:Any]?) -> Data? {
         
         do {
             let data = try JSONSerialization.data(withJSONObject: parameter!, options: .prettyPrinted)
@@ -54,19 +54,18 @@ public struct DataManager {
         } catch  {
             return nil
         }
-        
     }
     
-    public static func getData(requestType: String, url:URL, parameter:[String:Any]?, completion:@escaping (Data?, Error?)->Void) {
+    public func getData(requestType: String, url:URL, parameter:[String:Any]?, completion:@escaping (Data?, Error?) -> Void) {
         
         if NetworkManager.shared.isNetworkAvailable {
             
             let request = NSMutableURLRequest(url: url,
                                               cachePolicy: .useProtocolCachePolicy,
-                                              timeoutInterval: 10.0)
+                                              timeoutInterval: 180.0)
             request.httpMethod = requestType
             if parameter != nil {
-                 request.httpBody = DataManager.postData(parameter: parameter)
+                 request.httpBody = postData(parameter: parameter)
             }
             
             task =  session.dataTask(with: request as URLRequest) { (data, response, error) in
@@ -154,7 +153,7 @@ public struct DataManager {
 //        }
 //    }
     
-    private static func getLocalDirectory() -> URL? {
+    private func getLocalDirectory() -> URL? {
     
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
@@ -176,13 +175,13 @@ public struct DataManager {
         return path
     }
     
-    public static func downloadFile(fileName:String, url:URL) {
+    public func downloadFile(fileName:String, url:URL) {
         
         downloadTask = session.downloadTask(with: url, completionHandler: { (_location, _response, _error) in
             
             if _error == nil {
                 
-                guard  let location = _location, var folderPath = getLocalDirectory() else {
+                guard  let location = _location, var folderPath = self.getLocalDirectory() else {
                     return
                 }
                 
@@ -202,21 +201,21 @@ public struct DataManager {
 
    static func reload(){
         
-        let state :URLSessionTask.State = (task?.state)!
-
-        //task?.resume()
-        switch state {
-        case .running:
-              debugPrint("No Nothing")
-           // task?.suspend()
-        case .suspended:
-            task?.resume()
-        case .canceling:
-            debugPrint("No Nothing")
-        case .completed:
-            task?.resume()
-            debugPrint("Call completed, do nothing")
-        }
+//        let state :URLSessionTask.State = (task?.state)!
+//
+//        //task?.resume()
+//        switch state {
+//        case .running:
+//              debugPrint("No Nothing")
+//           // task?.suspend()
+//        case .suspended:
+//            task?.resume()
+//        case .canceling:
+//            debugPrint("No Nothing")
+//        case .completed:
+//            task?.resume()
+//            debugPrint("Call completed, do nothing")
+//        }
     }
     
     func pause(){

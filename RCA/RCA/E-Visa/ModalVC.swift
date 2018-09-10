@@ -11,60 +11,77 @@ import UIKit
 protocol ModalVCDelegate: class {
     func removeOverlay()
     func updateInputValue(value:String)
+     func continueTappped()
 }
 
 class ModalVC: UIViewController {
     
+    @IBOutlet weak var btnClose: UIButton!
     weak var delegate: ModalVCDelegate?
-    var controlPosition:CGPoint?
+//    var controlPosition:CGPoint?
     var data:QuestionData?
-    var customField:CustomTextField?
-    var isAnimated:Bool = false
+
+    var isIndianVisaSelected:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customField = Bundle.main.loadNibNamed("CustomTextField", owner: self, options: nil)?.first as? CustomTextField
-        customField?.frame.origin = CGPoint(x:20, y: data?.rect?.origin.y ?? 0)
-        customField?.frame.size = CGSize(width:view.frame.size.width - 20 - 10, height: 60)
-        customField?.delegate = self
-        if let data = data {
-            customField?.data = data
+        if isIndianVisaSelected  {
+            
+            let vc = Utils.getMainStoryboardController(identifier: Constant.HOMEPOPUP_VC) as! HomePopup
+            
+            vc.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+            vc.view.backgroundColor = UIColor.clear
+            vc.delegate = self
+            vc.view.clipsToBounds = true
+            self.addChildViewController(vc)
+            view.addSubview(vc.view)
+            vc.didMove(toParentViewController: self)
         }
-        
-        print(CFGetRetainCount(data))
+        else {
+            
+            let vc = Utils.getE_visaStoryboardController(identifier: Constant.ANSWER_VC) as! AnswerVC
+            
+            vc.data = data
+            vc.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+            vc.view.backgroundColor = UIColor.clear
+            self.addChildViewController(vc)
+            view.addSubview(vc.view)
+            vc.didMove(toParentViewController: self)
+        }
+        self.view.bringSubview(toFront: btnClose)
     }
     
     override func viewWillLayoutSubviews() {
     }
     
-    override func viewDidLayoutSubviews() {
-        self.view.backgroundColor = UIColor.clear
-        if !isAnimated {
-         addSubviewWithZoomInAnimation(customField!, duration: 0.5)
-        }
-    }
+//    override func viewDidLayoutSubviews() {
+//        self.view.backgroundColor = UIColor.clear
+//        if !isAnimated {
+//            addSubviewWithZoomInAnimation(customField!, duration: 0.5)
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func addSubviewWithZoomInAnimation(_ view: UIView, duration: TimeInterval) {
+//    func addSubviewWithZoomInAnimation(_ view: UIView, duration: TimeInterval) {
         
-        view.transform = view.transform.scaledBy(x: 0.01, y: 0.01)
-        self.view.addSubview(view)
-        
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
-            view.transform = CGAffineTransform.identity
-        }) { (success) in
-            if success {
-                 self.customField?.setKeyboardType()
-                self.customField?.txtField.becomeFirstResponder()
-                self.isAnimated = true
-            }
-        }
-    }
+//        view.transform = view.transform.scaledBy(x: 0.01, y: 0.01)
+//        self.view.addSubview(view)
+//
+//        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+//            view.transform = CGAffineTransform.identity
+//        }) { (success) in
+//            if success {
+//                 self.customField?.setKeyboardType()
+//                self.customField?.txtField.becomeFirstResponder()
+//                self.isAnimated = true
+//            }
+//        }
+//    }
     
     @IBAction func btnCloseTapped(_ sender: Any) {
         
@@ -76,8 +93,15 @@ class ModalVC: UIViewController {
 extension ModalVC : CustomFieldDelegate {
     func btnEnterTapped(value: String) {
         
-        delegate?.updateInputValue(value: value)
-        dismiss(animated: true, completion: nil)
-        delegate?.removeOverlay()
+//        delegate?.updateInputValue(value: value)
+//        dismiss(animated: true, completion: nil)
+//        delegate?.removeOverlay()
+    }
+}
+
+extension ModalVC : HomePopupDelegate {
+    func btnContinueTapped() {
+    
+        delegate?.continueTappped()
     }
 }

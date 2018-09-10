@@ -11,7 +11,7 @@ import UIKit
 class MoreListingVC: BaseVC {
     
     @IBOutlet weak var collectionViewMore: UICollectionView!
-    var moreList: [ServiceModel] = []
+    var moreList: [Service_list] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

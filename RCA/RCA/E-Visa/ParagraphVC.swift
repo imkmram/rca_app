@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParagraphVC: UIViewController{
+class ParagraphVC: BaseVC{
 
     @IBOutlet weak var txtView: UITextView!
     var selectedQuestionID: Int?
@@ -91,6 +91,7 @@ class ParagraphVC: UIViewController{
         let modalVC = storyboard.instantiateViewController(withIdentifier: "ModalVC") as! ModalVC
         modalVC.modalPresentationStyle = .overCurrentContext
         modalVC.delegate = self
+        modalVC.isIndianVisaSelected = false
        // modalVC.controlPosition = CGPoint(x: rect.origin.x, y: rect.origin.y + txtView.frame.origin.y + rect.size.height)
         modalVC.data = data
         self.present(modalVC, animated: true, completion: nil)
@@ -99,6 +100,10 @@ class ParagraphVC: UIViewController{
 
  // MARK: - ModalVCDelegate
 extension ParagraphVC : ModalVCDelegate {
+    
+    func continueTappped() {
+
+    }
     
     func updateInputValue(value: String) {
         
@@ -137,11 +142,7 @@ extension ParagraphVC : ModalVCDelegate {
     }
     
     func removeOverlay() {
-        for subview in view.subviews {
-            if subview.isKind(of: UIVisualEffectView.self) {
-                subview.removeFromSuperview()
-            }
-        }
+        view.removeOverlay()
     }
 }
 

@@ -73,19 +73,7 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate  {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        if indexPath.row == 0 {
-//            let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
-//            let eVisaVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_E_VISA) as! E_VisaVC
-//            let backItem = UIBarButtonItem()
-//            backItem.title = "Back"
-//            navigationItem.backBarButtonItem = backItem
-//            self.navigationController?.pushViewController(eVisaVC, animated: true)
-//        }
+        return 180
     }
 }
 
@@ -140,23 +128,64 @@ extension HomeVC : BaseViewDelegate {
 // MARK: - NewHomeCell Delegate
 extension HomeVC : NewHomeCellDelegate {
     
-    func serviceTapped(service: ServiceModel, collectionViewTag: Int?) {
+    func serviceTapped(service: Service_list, collectionViewTag: Int?) {
         
         if service.product_id == "0" {
            
           let moreLsitingVC =  Utils.getMainStoryboardController(identifier: Constant.VIEWCONTROLLER_MORELISTING) as! MoreListingVC
             
-            if let list: [ServiceModel] = serviceList[collectionViewTag!]["list"] as? [ServiceModel] {
+            if let list: [Service_list] = serviceList[collectionViewTag!]["list"] as? [Service_list] {
                 moreLsitingVC.moreList = list
             }
             self.navigationController?.pushViewController(moreLsitingVC, animated: true)
         }
         else {
             
-           let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
-            
-            self.navigationController?.pushViewController(detailVC, animated: true)
+            if service.product_type?.caseInsensitiveCompare("India Evisa") == .orderedSame {
+                
+                self.definesPresentationContext = true
+                self.providesPresentationContextTransitionStyle = true
+                
+                let blurredBackgroundView = UIVisualEffectView()
+                
+                blurredBackgroundView.frame = view.frame
+                blurredBackgroundView.effect = UIBlurEffect(style: .dark)
+                blurredBackgroundView.alpha = 0.5
+                view.addSubview(blurredBackgroundView)
+                
+                let modalVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_MODAL) as! ModalVC
+                modalVC.modalPresentationStyle = .overCurrentContext
+                modalVC.delegate = self
+                modalVC.isIndianVisaSelected = true
+                modalVC.view.clipsToBounds = true
+               
+                self.present(modalVC, animated: true, completion: nil)
+            }
+            else {
+                let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
+                
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
         }
     }
 }
+extension HomeVC : ModalVCDelegate {
+    func continueTappped() {
+        
+        let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
 
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
+        let vc = self.presentedViewController
+        vc?.dismiss(animated: false, completion: nil)
+        removeOverlay()
+    }
+    
+    func removeOverlay() {
+        view.removeOverlay()
+    }
+    
+    func updateInputValue(value: String) {
+        
+    }
+}

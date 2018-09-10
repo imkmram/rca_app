@@ -11,24 +11,21 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 */
 
+
 import Foundation
 
 struct Result_set : Codable {
-	let evisa_countries : [Evisa_countries]?
-	let mna_airports : [Mna_airports]?
-	let lounge_airports : [Lounge_airports]?
+	
+    let service_list : [Service_list]?
 
 	enum CodingKeys: String, CodingKey {
 
-		case evisa_countries = "evisa_countries"
-		case mna_airports = "mna_airports"
-		case lounge_airports = "lounge_airports"
+        case service_list = "service_list"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		evisa_countries = try values.decodeIfPresent([Evisa_countries].self, forKey: .evisa_countries)
-		mna_airports = try values.decodeIfPresent([Mna_airports].self, forKey: .mna_airports)
-		lounge_airports = try values.decodeIfPresent([Lounge_airports].self, forKey: .lounge_airports)
+		
+        service_list = try values.decodeIfPresent([Service_list].self, forKey: .service_list)
 	}
 }

@@ -18,7 +18,7 @@ class ServiceCell: BaseCollectionViewCell {
         baseView.layer.cornerRadius = 8.0
     }
     
-    func setData(data: ServiceModel?) {
+    func setData(data: Service_list?) {
         
         if let result = data {
             

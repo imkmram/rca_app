@@ -13,36 +13,54 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 
-struct Mna_airports : Codable, ServiceModel {
+struct Service_list : Codable {
     
-    var title: String?
-    var product_type: String?
-    var product_id: String?
-    var airport: String?
-    var airport_code: String?
-    var country: String?
-    var country_code: String?
-    var city: String?
+	var product_type : String?
+	var product_id : String?
+	var airport : String?
+	var airport_code : String?
+	var country : String?
+	var country_code : String?
+	var city : String?
+    var title : String?
 
 	enum CodingKeys: String, CodingKey {
 
+		case product_type = "product_type"
+		case product_id = "product_id"
 		case airport = "airport"
 		case airport_code = "airport_code"
 		case country = "country"
 		case country_code = "country_code"
 		case city = "city"
-		case product_id = "product_id"
 	}
-
+    
 	init(from decoder: Decoder) throws {
+        
 		let values = try decoder.container(keyedBy: CodingKeys.self)
+		product_type = try values.decodeIfPresent(String.self, forKey: .product_type)
+		product_id = try values.decodeIfPresent(String.self, forKey: .product_id)
 		airport = try values.decodeIfPresent(String.self, forKey: .airport)
 		airport_code = try values.decodeIfPresent(String.self, forKey: .airport_code)
 		country = try values.decodeIfPresent(String.self, forKey: .country)
 		country_code = try values.decodeIfPresent(String.self, forKey: .country_code)
 		city = try values.decodeIfPresent(String.self, forKey: .city)
-		product_id = try values.decodeIfPresent(String.self, forKey: .product_id)
-        title = try values.decodeIfPresent(String.self, forKey: .airport)
 	}
-
+    
+      init(coredata: ServiceCD) {
+        
+        product_type = coredata.product_type
+        product_id = coredata.product_id
+        airport = coredata.airport
+        airport_code = coredata.airport_code
+        country = coredata.country
+        country_code = coredata.country_code
+        city = coredata.city
+        title = coredata.title
+    }
+    
+    init(productID: String, title: String) {
+        product_id = productID
+        self.title = title
+    }
 }

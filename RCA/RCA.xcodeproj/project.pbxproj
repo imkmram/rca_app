@@ -26,21 +26,25 @@
 		9B14FF3D2140F0C6007B8AD9 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF3C2140F0C6007B8AD9 /* BaseCollectionViewCell.swift */; };
 		9B14FF3F21410B50007B8AD9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF3E21410B50007B8AD9 /* Utils.swift */; };
 		9B14FF472141212A007B8AD9 /* Result_set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF4121412129007B8AD9 /* Result_set.swift */; };
-		9B14FF482141212A007B8AD9 /* Lounge_airports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF4221412129007B8AD9 /* Lounge_airports.swift */; };
 		9B14FF492141212A007B8AD9 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF432141212A007B8AD9 /* BaseModel.swift */; };
 		9B14FF4A2141212A007B8AD9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF442141212A007B8AD9 /* Content.swift */; };
-		9B14FF4B2141212A007B8AD9 /* Mna_airports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF452141212A007B8AD9 /* Mna_airports.swift */; };
-		9B14FF4C2141212A007B8AD9 /* Evisa_countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14FF462141212A007B8AD9 /* Evisa_countries.swift */; };
+		9B50C34C21422F5300287D2B /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C34B21422F5300287D2B /* LoadData.swift */; };
+		9B50C34F2142603200287D2B /* ServiceCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C34D2142603200287D2B /* ServiceCD+CoreDataClass.swift */; };
+		9B50C3502142603200287D2B /* ServiceCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C34E2142603200287D2B /* ServiceCD+CoreDataProperties.swift */; };
+		9B50C35221428A1300287D2B /* Service_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C35121428A1300287D2B /* Service_list.swift */; };
+		9B50C35421428EF200287D2B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C35321428EF200287D2B /* UserDefaults.swift */; };
 		9B8C5FF8212A9582005A456C /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C5FF7212A9582005A456C /* ModalVC.swift */; };
 		9B8C5FFA212A9A28005A456C /* ParagraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C5FF9212A9A28005A456C /* ParagraphVC.swift */; };
 		9B8C5FFC212AABA0005A456C /* Wallpaper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFB212AAB9F005A456C /* Wallpaper@2x.png */; };
 		9B8C5FFE212ABC6C005A456C /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */; };
 		9B8C6000212ABD90005A456C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFF212ABD90005A456C /* CustomTextField.swift */; };
+		9B9BF98221465C0200AE04BF /* AnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9BF98121465C0200AE04BF /* AnswerVC.swift */; };
 		9BEB0BEA213FA380004B2DB5 /* NewHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB0BE9213FA380004B2DB5 /* NewHomeCell.swift */; };
 		9BEB0BEC213FA459004B2DB5 /* NewHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEB0BEB213FA459004B2DB5 /* NewHomeCell.xib */; };
 		9BEB0BEE213FCC84004B2DB5 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEB0BED213FCC84004B2DB5 /* ServiceCell.xib */; };
 		9BEB0BF0213FCD31004B2DB5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB0BEF213FCD31004B2DB5 /* ServiceCell.swift */; };
 		9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */; };
+		9BF21E822146334B0003EFFC /* HomePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF21E812146334B0003EFFC /* HomePopup.swift */; };
 		9BFB58F4212EB18100395AA1 /* NewVoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */; };
 		D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */; };
 		D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */; };
@@ -152,22 +156,26 @@
 		9B14FF3C2140F0C6007B8AD9 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		9B14FF3E21410B50007B8AD9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		9B14FF4121412129007B8AD9 /* Result_set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result_set.swift; sourceTree = "<group>"; };
-		9B14FF4221412129007B8AD9 /* Lounge_airports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lounge_airports.swift; sourceTree = "<group>"; };
 		9B14FF432141212A007B8AD9 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		9B14FF442141212A007B8AD9 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		9B14FF452141212A007B8AD9 /* Mna_airports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mna_airports.swift; sourceTree = "<group>"; };
-		9B14FF462141212A007B8AD9 /* Evisa_countries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evisa_countries.swift; sourceTree = "<group>"; };
 		9B45D11C45D5A89FD8B4E84E /* Pods-RCATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCATests/Pods-RCATests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B50C34B21422F5300287D2B /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
+		9B50C34D2142603200287D2B /* ServiceCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9B50C34E2142603200287D2B /* ServiceCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9B50C35121428A1300287D2B /* Service_list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service_list.swift; sourceTree = "<group>"; };
+		9B50C35321428EF200287D2B /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9B8C5FF7212A9582005A456C /* ModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalVC.swift; sourceTree = "<group>"; };
 		9B8C5FF9212A9A28005A456C /* ParagraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphVC.swift; sourceTree = "<group>"; };
 		9B8C5FFB212AAB9F005A456C /* Wallpaper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wallpaper@2x.png"; sourceTree = "<group>"; };
 		9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		9B8C5FFF212ABD90005A456C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9B9BF98121465C0200AE04BF /* AnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerVC.swift; sourceTree = "<group>"; };
 		9BEB0BE9213FA380004B2DB5 /* NewHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeCell.swift; sourceTree = "<group>"; };
 		9BEB0BEB213FA459004B2DB5 /* NewHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewHomeCell.xib; sourceTree = "<group>"; };
 		9BEB0BED213FCC84004B2DB5 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		9BEB0BEF213FCD31004B2DB5 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManagedObject.swift; sourceTree = "<group>"; };
+		9BF21E812146334B0003EFFC /* HomePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopup.swift; sourceTree = "<group>"; };
 		9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVoiceVC.swift; sourceTree = "<group>"; };
 		9DF7C2FA01E22A1B86D38911 /* Pods_RCATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B959D26927643CAB23E4E77C /* Pods_RCAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,6 +328,7 @@
 			children = (
 				9B124FE22134035E0046CFCF /* HelperProtocol.swift */,
 				9B14FF3E21410B50007B8AD9 /* Utils.swift */,
+				9B50C34B21422F5300287D2B /* LoadData.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -335,11 +344,9 @@
 		9B14FF4021412105007B8AD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B50C35121428A1300287D2B /* Service_list.swift */,
 				9B14FF432141212A007B8AD9 /* BaseModel.swift */,
 				9B14FF442141212A007B8AD9 /* Content.swift */,
-				9B14FF462141212A007B8AD9 /* Evisa_countries.swift */,
-				9B14FF4221412129007B8AD9 /* Lounge_airports.swift */,
-				9B14FF452141212A007B8AD9 /* Mna_airports.swift */,
 				9B14FF4121412129007B8AD9 /* Result_set.swift */,
 			);
 			path = Model;
@@ -348,6 +355,8 @@
 		D90B3092210EF13F00C8F3A4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9B50C34D2142603200287D2B /* ServiceCD+CoreDataClass.swift */,
+				9B50C34E2142603200287D2B /* ServiceCD+CoreDataProperties.swift */,
 				D956C9592111D5170083CE9E /* Country+CoreDataClass.swift */,
 				D956C95A2111D5170083CE9E /* Country+CoreDataProperties.swift */,
 				D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */,
@@ -383,6 +392,7 @@
 				D963CF96211ABE850051F8A4 /* AttributedString.swift */,
 				D963CF98211ACBA80051F8A4 /* Constant.swift */,
 				9B1097DD2122A82100DF9F3F /* SpeechController.swift */,
+				9B50C35321428EF200287D2B /* UserDefaults.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -469,6 +479,7 @@
 				9B8C5FF7212A9582005A456C /* ModalVC.swift */,
 				9B8C5FF9212A9A28005A456C /* ParagraphVC.swift */,
 				9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */,
+				9B9BF98121465C0200AE04BF /* AnswerVC.swift */,
 			);
 			path = "E-Visa";
 			sourceTree = "<group>";
@@ -502,7 +513,6 @@
 				9B14FF392140E580007B8AD9 /* More */,
 				9B11E8FC2135201400F201E8 /* Error */,
 				9B124FE1213403450046CFCF /* Support */,
-				D9DB0218211C93B3003F25F3 /* Reachability.swift */,
 				9B8C5FFB212AAB9F005A456C /* Wallpaper@2x.png */,
 				D9566A6B211C625C009EF5E4 /* speech.gif */,
 				D986A70F211431D000D7E1D7 /* CustomViews */,
@@ -561,6 +571,7 @@
 		D989ED7821099B56005975C3 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				D9DB0218211C93B3003F25F3 /* Reachability.swift */,
 				D989ED7921099B87005975C3 /* NetworkManager.swift */,
 				D95A1B2C2110337B0030741F /* DataManager.swift */,
 			);
@@ -592,6 +603,7 @@
 				9BEB0BEB213FA459004B2DB5 /* NewHomeCell.xib */,
 				9BEB0BED213FCC84004B2DB5 /* ServiceCell.xib */,
 				9BEB0BEF213FCD31004B2DB5 /* ServiceCell.swift */,
+				9BF21E812146334B0003EFFC /* HomePopup.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -867,16 +879,17 @@
 				9B1210E72125559900D7AEF9 /* PageViewContentVC.swift in Sources */,
 				D956C9632111ED060083CE9E /* RCA.xcdatamodeld in Sources */,
 				D964AA69211880E000C32E14 /* ConfirmationVC.swift in Sources */,
+				9B50C34C21422F5300287D2B /* LoadData.swift in Sources */,
 				D956C9312111928D0083CE9E /* SlideMenuController.swift in Sources */,
 				9BFB58F4212EB18100395AA1 /* NewVoiceVC.swift in Sources */,
 				D94C67B721197CEA00D49A29 /* ThankYouVC.swift in Sources */,
 				D956C9532111B60F0083CE9E /* BaseTableViewCell.swift in Sources */,
 				D989ED7A21099B87005975C3 /* NetworkManager.swift in Sources */,
-				9B14FF4C2141212A007B8AD9 /* Evisa_countries.swift in Sources */,
 				D956C94F2111A3340083CE9E /* UIImage.swift in Sources */,
 				9B11E8FE2135203000F201E8 /* ErrorVC.swift in Sources */,
 				D962CDA92112EB6B00CF94CA /* HomeVC.swift in Sources */,
 				D963CF97211ABE850051F8A4 /* AttributedString.swift in Sources */,
+				9B50C34F2142603200287D2B /* ServiceCD+CoreDataClass.swift in Sources */,
 				D986A71321145D5700D7E1D7 /* E_VisaDetailVC.swift in Sources */,
 				9B124FE32134035E0046CFCF /* HelperProtocol.swift in Sources */,
 				9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */,
@@ -888,11 +901,15 @@
 				D95A1B2D2110337B0030741F /* DataManager.swift in Sources */,
 				D956C93A2111962F0083CE9E /* UIColor.swift in Sources */,
 				D956C95C2111D5170083CE9E /* Country+CoreDataProperties.swift in Sources */,
+				9BF21E822146334B0003EFFC /* HomePopup.swift in Sources */,
 				D989ED822109E02F005975C3 /* HomeView.swift in Sources */,
 				D96A99632108B27900908488 /* ViewController.swift in Sources */,
+				9B9BF98221465C0200AE04BF /* AnswerVC.swift in Sources */,
 				D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */,
 				D96A99612108B27900908488 /* AppDelegate.swift in Sources */,
+				9B50C3502142603200287D2B /* ServiceCD+CoreDataProperties.swift in Sources */,
 				D956C94D2111A0D30083CE9E /* String.swift in Sources */,
+				9B50C35221428A1300287D2B /* Service_list.swift in Sources */,
 				D986A71D211469AC00D7E1D7 /* ChatCell.swift in Sources */,
 				D986A7112114320F00D7E1D7 /* RoundButton.swift in Sources */,
 				9B1210E32125504B00D7AEF9 /* TypedFormVC.swift in Sources */,
@@ -906,6 +923,7 @@
 				9BEB0BEA213FA380004B2DB5 /* NewHomeCell.swift in Sources */,
 				9B1097DE2122A82100DF9F3F /* SpeechController.swift in Sources */,
 				9B14FF3F21410B50007B8AD9 /* Utils.swift in Sources */,
+				9B50C35421428EF200287D2B /* UserDefaults.swift in Sources */,
 				D989ED7F2109D46C005975C3 /* BaseView.swift in Sources */,
 				D962CDAD2112EE1300CF94CA /* HomeCell.swift in Sources */,
 				D9566A6A211C53DF009EF5E4 /* Validate.swift in Sources */,
@@ -915,11 +933,9 @@
 				9B1210E5212551DF00D7AEF9 /* PageViewController.swift in Sources */,
 				D9DB0219211C93B4003F25F3 /* Reachability.swift in Sources */,
 				9B8C5FF8212A9582005A456C /* ModalVC.swift in Sources */,
-				9B14FF4B2141212A007B8AD9 /* Mna_airports.swift in Sources */,
 				D986A719211468D600D7E1D7 /* VoiceVC.swift in Sources */,
 				D90B30AE210F230200C8F3A4 /* PassportType+CoreDataProperties.swift in Sources */,
 				D956C94721119D830083CE9E /* AboutUsVC.swift in Sources */,
-				9B14FF482141212A007B8AD9 /* Lounge_airports.swift in Sources */,
 				9B14FF3D2140F0C6007B8AD9 /* BaseCollectionViewCell.swift in Sources */,
 				D989ED7D2109BD7F005975C3 /* BaseVC.swift in Sources */,
 				D986A71721145DC500D7E1D7 /* BottomCell.swift in Sources */,
