@@ -45,6 +45,13 @@
 		9BEB0BF0213FCD31004B2DB5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB0BEF213FCD31004B2DB5 /* ServiceCell.swift */; };
 		9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */; };
 		9BF21E822146334B0003EFFC /* HomePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF21E812146334B0003EFFC /* HomePopup.swift */; };
+		9BF621E62147BE46004B682E /* Meet_N_Assist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF621E52147BE46004B682E /* Meet_N_Assist.storyboard */; };
+		9BF621E82147C4B0004B682E /* MeetAndLoungeFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF621E72147C4B0004B682E /* MeetAndLoungeFormVC.swift */; };
+		9BF621EA2147CA85004B682E /* RightNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF621E92147CA85004B682E /* RightNavigationView.xib */; };
+		9BF621ED2147CBF5004B682E /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF621EB2147CBF4004B682E /* cart.png */; };
+		9BF621EE2147CBF5004B682E /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF621EC2147CBF4004B682E /* notification.png */; };
+		9BF621F02147CD88004B682E /* RightNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF621EF2147CD88004B682E /* RightNavigationView.swift */; };
+		9BF621F22147D188004B682E /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF621F12147D188004B682E /* NibView.swift */; };
 		9BFB58F4212EB18100395AA1 /* NewVoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */; };
 		D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30A9210EFD3A00C8F3A4 /* BaseCoreService.swift */; };
 		D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B30AB210F230200C8F3A4 /* PassportType+CoreDataClass.swift */; };
@@ -176,6 +183,13 @@
 		9BEB0BEF213FCD31004B2DB5 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		9BF1C0AC21369DF9004DBC86 /* BaseManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManagedObject.swift; sourceTree = "<group>"; };
 		9BF21E812146334B0003EFFC /* HomePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopup.swift; sourceTree = "<group>"; };
+		9BF621E52147BE46004B682E /* Meet_N_Assist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Meet_N_Assist.storyboard; sourceTree = "<group>"; };
+		9BF621E72147C4B0004B682E /* MeetAndLoungeFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeFormVC.swift; sourceTree = "<group>"; };
+		9BF621E92147CA85004B682E /* RightNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightNavigationView.xib; sourceTree = "<group>"; };
+		9BF621EB2147CBF4004B682E /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
+		9BF621EC2147CBF4004B682E /* notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification.png; sourceTree = "<group>"; };
+		9BF621EF2147CD88004B682E /* RightNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightNavigationView.swift; sourceTree = "<group>"; };
+		9BF621F12147D188004B682E /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		9BFB58F3212EB18100395AA1 /* NewVoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVoiceVC.swift; sourceTree = "<group>"; };
 		9DF7C2FA01E22A1B86D38911 /* Pods_RCATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B959D26927643CAB23E4E77C /* Pods_RCAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,6 +366,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9BF621E42147BE01004B682E /* Meet & Assist */ = {
+			isa = PBXGroup;
+			children = (
+				9BF621E72147C4B0004B682E /* MeetAndLoungeFormVC.swift */,
+			);
+			path = "Meet & Assist";
+			sourceTree = "<group>";
+		};
 		D90B3092210EF13F00C8F3A4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				D962CDC52113319800CF94CA /* E-visa.storyboard */,
+				9BF621E52147BE46004B682E /* Meet_N_Assist.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -509,6 +532,7 @@
 		D96A995F2108B27900908488 /* RCA */ = {
 			isa = PBXGroup;
 			children = (
+				9BF621E42147BE01004B682E /* Meet & Assist */,
 				9B14FF4021412105007B8AD9 /* Model */,
 				9B14FF392140E580007B8AD9 /* More */,
 				9B11E8FC2135201400F201E8 /* Error */,
@@ -560,10 +584,14 @@
 		D986A70F211431D000D7E1D7 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				9BF621EC2147CBF4004B682E /* notification.png */,
+				9BF621EB2147CBF4004B682E /* cart.png */,
 				D986A7102114320F00D7E1D7 /* RoundButton.swift */,
 				D964AA662118399B00C32E14 /* PaddedLabel.swift */,
 				9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */,
 				9B8C5FFF212ABD90005A456C /* CustomTextField.swift */,
+				9BF621E92147CA85004B682E /* RightNavigationView.xib */,
+				9BF621EF2147CD88004B682E /* RightNavigationView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -586,6 +614,7 @@
 				D956C9522111B60F0083CE9E /* BaseTableViewCell.swift */,
 				D989ED7E2109D46C005975C3 /* BaseView.swift */,
 				9B14FF3C2140F0C6007B8AD9 /* BaseCollectionViewCell.swift */,
+				9BF621F12147D188004B682E /* NibView.swift */,
 			);
 			path = "Base Class";
 			sourceTree = "<group>";
@@ -724,12 +753,15 @@
 				9B8C5FFE212ABC6C005A456C /* CustomTextField.xib in Resources */,
 				D962CDBE2113306900CF94CA /* OpenSans-Italic.ttf in Resources */,
 				D962CDBA2113305C00CF94CA /* OpenSans-Bold.ttf in Resources */,
+				9BF621ED2147CBF5004B682E /* cart.png in Resources */,
+				9BF621EA2147CA85004B682E /* RightNavigationView.xib in Resources */,
 				D962CDBC2113306200CF94CA /* OpenSans-ExtraBold.ttf in Resources */,
 				D986A71B2114698B00D7E1D7 /* ChatCell.xib in Resources */,
 				D956C94021119C750083CE9E /* ImageHeaderView.xib in Resources */,
 				D96A996B2108B27E00908488 /* Assets.xcassets in Resources */,
 				D962CDBF2113306C00CF94CA /* OpenSans-Light.ttf in Resources */,
 				D962CDC22113307400CF94CA /* OpenSans-SemiBold.ttf in Resources */,
+				9BF621E62147BE46004B682E /* Meet_N_Assist.storyboard in Resources */,
 				D96A99922108B4D600908488 /* GoogleService-Info.plist in Resources */,
 				9BEB0BEE213FCC84004B2DB5 /* ServiceCell.xib in Resources */,
 				D986A71521145DA200D7E1D7 /* BottomCell.xib in Resources */,
@@ -743,6 +775,7 @@
 				D962CDC62113319800CF94CA /* E-visa.storyboard in Resources */,
 				D962CDC02113306F00CF94CA /* OpenSans-LightItalic.ttf in Resources */,
 				D96A99662108B27900908488 /* Main.storyboard in Resources */,
+				9BF621EE2147CBF5004B682E /* notification.png in Resources */,
 				9B8C5FFC212AABA0005A456C /* Wallpaper@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,16 +937,19 @@
 				9BF21E822146334B0003EFFC /* HomePopup.swift in Sources */,
 				D989ED822109E02F005975C3 /* HomeView.swift in Sources */,
 				D96A99632108B27900908488 /* ViewController.swift in Sources */,
+				9BF621F02147CD88004B682E /* RightNavigationView.swift in Sources */,
 				9B9BF98221465C0200AE04BF /* AnswerVC.swift in Sources */,
 				D90B30AA210EFD3A00C8F3A4 /* BaseCoreService.swift in Sources */,
 				D96A99612108B27900908488 /* AppDelegate.swift in Sources */,
 				9B50C3502142603200287D2B /* ServiceCD+CoreDataProperties.swift in Sources */,
 				D956C94D2111A0D30083CE9E /* String.swift in Sources */,
+				9BF621F22147D188004B682E /* NibView.swift in Sources */,
 				9B50C35221428A1300287D2B /* Service_list.swift in Sources */,
 				D986A71D211469AC00D7E1D7 /* ChatCell.swift in Sources */,
 				D986A7112114320F00D7E1D7 /* RoundButton.swift in Sources */,
 				9B1210E32125504B00D7AEF9 /* TypedFormVC.swift in Sources */,
 				D90B30AD210F230200C8F3A4 /* PassportType+CoreDataClass.swift in Sources */,
+				9BF621E82147C4B0004B682E /* MeetAndLoungeFormVC.swift in Sources */,
 				D956C94521119D6A0083CE9E /* PrivacyPolicyVC.swift in Sources */,
 				D94C67BB21198CE300D49A29 /* ConfirmDataCell.swift in Sources */,
 				9B14FF492141212A007B8AD9 /* BaseModel.swift in Sources */,

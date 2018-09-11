@@ -11,7 +11,7 @@ import Speech
 import SDWebImage
 
 class NewVoiceVC: UIViewController {
-
+    
     @IBOutlet weak var bottomBaseView: UIView!
     @IBOutlet weak var tblChats: UITableView!
     @IBOutlet weak var btnNext: UIButton!
@@ -59,7 +59,6 @@ class NewVoiceVC: UIViewController {
                              Questionnaire(questionID:9, question: "Thanks. Where can i contact you? Your phone number please…", answerFramed:"Your phone number is {{value}}")
         ]
         
-        
         speechSynthesizer.delegate = self
         speechController.delegate = self
     }
@@ -76,8 +75,8 @@ class NewVoiceVC: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        speechController.delegate = nil
-//        speechController.stopRecording()
+        //        speechController.delegate = nil
+        //        speechController.stopRecording()
     }
     
     func askQuestion(index:Int) {
@@ -151,19 +150,19 @@ class NewVoiceVC: UIViewController {
     func nextQuestion() {
         
         isValidatingAnswer = false
-            
+        
         if questionnaireList[questionIndex].answer == nil {
             askQuestion(index: questionIndex)
         }
         else {
-                
+            
             if questionnaireList[rowCount - 1].answer == nil {
                 questionIndex = rowCount - 1
                 askQuestion(index: questionIndex)
             }
             else {
                 if rowCount != questionnaireList.count {
-                        
+                    
                     rowCount = rowCount + 1
                     questionIndex = rowCount - 1
                     askQuestion(index: questionIndex)
@@ -180,7 +179,7 @@ class NewVoiceVC: UIViewController {
         
         if questionIndex < questionnaireList.count {
             let verifyingQuestion = "You have answered \(questionnaireList[questionIndex].answer!), say yes to confirm and no to repeat."
-          
+            
             let speechUtterance = AVSpeechUtterance(string:verifyingQuestion)
             speechSynthesizer.speak(speechUtterance)
         }
@@ -240,8 +239,8 @@ extension NewVoiceVC : ChatCellDelagate {
         questionIndex = sender.tag
         rowSelected = sender.tag
         questionnaireList[questionIndex].isValid = false
-         speechController.stopRecording()
-       // askQuestion(index: questionIndex)
+        speechController.stopRecording()
+        // askQuestion(index: questionIndex)
         btnProceed.isHidden = true
         btnNext.isHidden = false
         //sender.isSelected = true
@@ -253,28 +252,28 @@ extension NewVoiceVC : SpeechControllerDelegate {
     
     func capturedText(capturedText: String) {
         
-            if capturedText.lowercased() == "yes" {
-                
-                questionnaireList[questionIndex].isValid = true
-                speechController.stopRecording()
+        if capturedText.lowercased() == "yes" {
+            
+            questionnaireList[questionIndex].isValid = true
+            speechController.stopRecording()
+        }
+        else if capturedText.lowercased() == "no" {
+            
+            questionnaireList[questionIndex].isValid = false
+            speechController.stopRecording()
+        }
+        else {
+            questionnaireList[questionIndex].answer = capturedText
+            if questionIndex == 0 {
+                questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
+                print(self.questionnaireList[1].question)
             }
-            else if capturedText.lowercased() == "no" {
-                
-                questionnaireList[questionIndex].isValid = false
-                speechController.stopRecording()
-            }
-            else {
-                 questionnaireList[questionIndex].answer = capturedText
-                if questionIndex == 0 {
-                    questionnaireList[1].question = "So, \(String(describing: self.passengerName ?? "")) what is your last name?"
-                    print(self.questionnaireList[1].question)
-                }
-                
-                rowSelected = nil
-                
-                tblChats.reloadRows(at: [IndexPath(row: questionIndex, section: 0)], with: .automatic)
-                tblChats.scrollToRow(at: IndexPath(row: questionIndex, section: 0), at: .top, animated: true)
-            }
+            
+            rowSelected = nil
+            
+            tblChats.reloadRows(at: [IndexPath(row: questionIndex, section: 0)], with: .automatic)
+            tblChats.scrollToRow(at: IndexPath(row: questionIndex, section: 0), at: .top, animated: true)
+        }
         
         if rowCount == questionnaireList.count && questionnaireList[rowCount - 1].answer != nil {
             
@@ -289,7 +288,7 @@ extension NewVoiceVC : SpeechControllerDelegate {
         if let result = questionnaireList[questionIndex].isValid  {
             
             if result{
-                 nextQuestion()
+                nextQuestion()
             }
             else {
                 questionnaireList[questionIndex].isValid = nil

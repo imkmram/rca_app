@@ -26,6 +26,8 @@ class BaseVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         NetworkManager.shared.addListener(listener: self)
+        
+        addRightNavigationView()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

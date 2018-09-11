@@ -41,7 +41,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVa-Ow-s6I"/>
                     </view>
-                    <navigationItem key="navigationItem" title="What are you looking for?" id="KJq-hU-1BK"/>
+                    <navigationItem key="navigationItem" title="Home" id="KJq-hU-1BK"/>
                     <connections>
                         <outlet property="tblHome" destination="7KH-mW-EX9" id="vJA-ej-48Y"/>
                     </connections>

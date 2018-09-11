@@ -1045,13 +1045,14 @@ extension UIViewController {
     public func addLeftBarButtonWithImage(_ buttonImage: UIImage) {
         let leftButton: UIBarButtonItem = UIBarButtonItem(image: buttonImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.toggleLeft))
         navigationItem.leftBarButtonItem = leftButton
-        
     }
     
     public func addRightBarButtonWithImage(_ buttonImage: UIImage) {
         let rightButton: UIBarButtonItem = UIBarButtonItem(image: buttonImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.toggleRight))
         navigationItem.rightBarButtonItem = rightButton
     }
+    
+  
     
     @objc public func toggleLeft() {
         slideMenuController()?.toggleLeft()

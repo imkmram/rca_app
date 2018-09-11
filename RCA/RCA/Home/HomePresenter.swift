@@ -122,7 +122,7 @@ extension HomePresenter : LoadDataDelegate {
         
         let dict:[String:Any] = ["title":"eVisa", "list":createArrayList(listCD: evisaList)]
         let dict1:[String:Any] = ["title":"Meet & Assist", "list":createArrayList(listCD: meetNgreetList)]
-        let dict2:[String:Any] = ["title":"Lounge", "list":createArrayList(listCD: loungeList)]
+        let dict2:[String:Any] = ["title":"Lounges", "list":createArrayList(listCD: loungeList)]
         
         test.append(dict)
         test.append(dict1)

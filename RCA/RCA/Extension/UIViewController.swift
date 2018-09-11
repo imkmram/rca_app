@@ -36,4 +36,14 @@ extension UIViewController {
         backItem.title = title
         navigationItem.backBarButtonItem = backItem
     }
+    
+    public func addRightNavigationView() {
+        
+         let rightNavView = RightNavigationView().loadNib()
+        rightNavView.frame = CGRect(x: 0, y: 0, width: 150, height: 40)
+        
+        let rightButtons: UIBarButtonItem = UIBarButtonItem(customView: rightNavView)
+        navigationItem.rightBarButtonItem = rightButtons
+    }
+    
 }

@@ -22,6 +22,7 @@ class E_VisaDetailVC: BaseVC , WKNavigationDelegate{
     override func viewWillAppear(_ animated: Bool) {
         
         webViewContainer.layer.cornerRadius = 10.0
+        addRightNavigationView()
     }
     
     override func viewDidLoad() {

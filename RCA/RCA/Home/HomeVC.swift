@@ -34,6 +34,7 @@ class HomeVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
+        self.addRightNavigationView()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -136,6 +137,7 @@ extension HomeVC : NewHomeCellDelegate {
             
             if let list: [Service_list] = serviceList[collectionViewTag!]["list"] as? [Service_list] {
                 moreLsitingVC.moreList = list
+                moreLsitingVC.title = serviceList[collectionViewTag!]["title"] as? String
             }
             self.navigationController?.pushViewController(moreLsitingVC, animated: true)
         }
@@ -162,9 +164,17 @@ extension HomeVC : NewHomeCellDelegate {
                 self.present(modalVC, animated: true, completion: nil)
             }
             else {
+                
+                if service.product_id == "1" {
                 let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
                 
                 self.navigationController?.pushViewController(detailVC, animated: true)
+                }
+                else {
+                    let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEETASSISTFORM_VC) as! MeetAndLoungeFormVC
+                    
+                    self.navigationController?.pushViewController(meetAssistVC, animated: true)
+                }
             }
         }
     }
