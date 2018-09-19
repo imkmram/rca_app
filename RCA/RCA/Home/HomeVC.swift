@@ -172,7 +172,7 @@ extension HomeVC : NewHomeCellDelegate {
                 }
                 else {
                     let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEETASSISTFORM_VC) as! MeetAndLoungeFormVC
-                    
+                    meetAssistVC.service = service
                     self.navigationController?.pushViewController(meetAssistVC, animated: true)
                 }
             }

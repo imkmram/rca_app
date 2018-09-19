@@ -62,14 +62,10 @@ extension MoreListingVC : UICollectionViewDataSource, UICollectionViewDelegate, 
         else {
             let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEETASSISTFORM_VC) as! MeetAndLoungeFormVC
             meetAssistVC.service = service
+            setBackTitle(title: "Back")
             
             self.navigationController?.pushViewController(meetAssistVC, animated: true)
         }
     }
 }
 
-extension MoreListingVC : NewHomeCellDelegate {
-    func serviceTapped(service: Service_list, collectionViewTag: Int?) {
-        
-    }
-}

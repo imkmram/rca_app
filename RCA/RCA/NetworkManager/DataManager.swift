@@ -62,8 +62,9 @@ public class DataManager {
             
             let request = NSMutableURLRequest(url: url,
                                               cachePolicy: .useProtocolCachePolicy,
-                                              timeoutInterval: 180.0)
+                                              timeoutInterval: 90.0)
             request.httpMethod = requestType
+            
             if parameter != nil {
                  request.httpBody = postData(parameter: parameter)
             }

@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "CMPopTipView.h"
 
-@interface PopTipView : NSObject
+@interface PopTipView : NSObject<CMPopTipViewDelegate>
+
+-(void)initializePopView:(UIView *)contentView;
+-(void)showPopView:(UIView *)presentingView overView:(UIView *)parentView;
+-(void)dismiss;
 
 @end

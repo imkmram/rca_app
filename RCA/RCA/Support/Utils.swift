@@ -31,4 +31,11 @@ struct Utils {
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
         return vc
     }
+    
+    static func getCalendarStoryboardController(identifier: String) -> UIViewController {
+        
+        let storyboard = UIStoryboard(name: Constant.STORYBOARD_Calendar, bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: identifier)
+        return vc
+    }
 }

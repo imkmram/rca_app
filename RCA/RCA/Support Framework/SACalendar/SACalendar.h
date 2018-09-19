@@ -13,6 +13,8 @@
 @protocol SACalendarDelegate;
 @interface SACalendar : UIView
 
+@property(nonatomic, weak)UIView *presentingView;
+
 @property (nonatomic, weak) id<SACalendarDelegate> delegate;
 
 /**
@@ -87,6 +89,7 @@
  *  @param year     The year selected
  */
 -(void) SACalendar:(SACalendar*)calendar didSelectDate:(int)day month:(int)month year:(int)year;
+
 
 
 @end

@@ -15,7 +15,6 @@ target 'RCA' do
 	pod 'ReverseExtension'
 	pod 'SVProgressHUD'
 
-
   target 'RCATests' do
     inherit! :search_paths
     # Pods for testing
