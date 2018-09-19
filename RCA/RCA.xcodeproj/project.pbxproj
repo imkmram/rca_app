@@ -47,6 +47,13 @@
 		9B8C5FFE212ABC6C005A456C /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */; };
 		9B8C6000212ABD90005A456C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFF212ABD90005A456C /* CustomTextField.swift */; };
 		9B9BF98221465C0200AE04BF /* AnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9BF98121465C0200AE04BF /* AnswerVC.swift */; };
+		9BE59E0C215207350040CE99 /* MeetAndLoungeListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E0B215207350040CE99 /* MeetAndLoungeListingVC.swift */; };
+		9BE59E0E2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E0D2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift */; };
+		9BE59E10215210140040CE99 /* MeetAndLoungeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E0F215210140040CE99 /* MeetAndLoungeView.swift */; };
+		9BE59E122152164D0040CE99 /* MnA_ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E112152164D0040CE99 /* MnA_ProductData.swift */; };
+		9BE59E142152264A0040CE99 /* MeetAndLoungeListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE59E132152264A0040CE99 /* MeetAndLoungeListingCell.xib */; };
+		9BE59E1621522D520040CE99 /* MeetAndLoungeListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E1521522D520040CE99 /* MeetAndLoungeListingCell.swift */; };
+		9BE59E18215249A90040CE99 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E17215249A90040CE99 /* Enums.swift */; };
 		9BEB0BEA213FA380004B2DB5 /* NewHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB0BE9213FA380004B2DB5 /* NewHomeCell.swift */; };
 		9BEB0BEC213FA459004B2DB5 /* NewHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEB0BEB213FA459004B2DB5 /* NewHomeCell.xib */; };
 		9BEB0BEE213FCC84004B2DB5 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BEB0BED213FCC84004B2DB5 /* ServiceCell.xib */; };
@@ -206,6 +213,13 @@
 		9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		9B8C5FFF212ABD90005A456C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9B9BF98121465C0200AE04BF /* AnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerVC.swift; sourceTree = "<group>"; };
+		9BE59E0B215207350040CE99 /* MeetAndLoungeListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeListingVC.swift; sourceTree = "<group>"; };
+		9BE59E0D2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeListingPresenter.swift; sourceTree = "<group>"; };
+		9BE59E0F215210140040CE99 /* MeetAndLoungeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeView.swift; sourceTree = "<group>"; };
+		9BE59E112152164D0040CE99 /* MnA_ProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnA_ProductData.swift; sourceTree = "<group>"; };
+		9BE59E132152264A0040CE99 /* MeetAndLoungeListingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetAndLoungeListingCell.xib; sourceTree = "<group>"; };
+		9BE59E1521522D520040CE99 /* MeetAndLoungeListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeListingCell.swift; sourceTree = "<group>"; };
+		9BE59E17215249A90040CE99 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9BEB0BE9213FA380004B2DB5 /* NewHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeCell.swift; sourceTree = "<group>"; };
 		9BEB0BEB213FA459004B2DB5 /* NewHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewHomeCell.xib; sourceTree = "<group>"; };
 		9BEB0BED213FCC84004B2DB5 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
@@ -389,6 +403,7 @@
 				9B124FE22134035E0046CFCF /* HelperProtocol.swift */,
 				9B14FF3E21410B50007B8AD9 /* Utils.swift */,
 				9B50C34B21422F5300287D2B /* LoadData.swift */,
+				9BE59E17215249A90040CE99 /* Enums.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -404,6 +419,7 @@
 		9B14FF4021412105007B8AD9 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				9BE59E112152164D0040CE99 /* MnA_ProductData.swift */,
 				9B50C35121428A1300287D2B /* Service_list.swift */,
 				9B14FF432141212A007B8AD9 /* BaseModel.swift */,
 				9B14FF442141212A007B8AD9 /* Content.swift */,
@@ -436,6 +452,11 @@
 				9B1670F0214BD5C300254FDC /* LoungeFormCell.xib */,
 				9BFD0E9F2150F07700F38FA3 /* AgeCell.xib */,
 				9BFD0EA12150F0A100F38FA3 /* AgeCell.swift */,
+				9BE59E0B215207350040CE99 /* MeetAndLoungeListingVC.swift */,
+				9BE59E0D2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift */,
+				9BE59E0F215210140040CE99 /* MeetAndLoungeView.swift */,
+				9BE59E132152264A0040CE99 /* MeetAndLoungeListingCell.xib */,
+				9BE59E1521522D520040CE99 /* MeetAndLoungeListingCell.swift */,
 			);
 			path = "Meet & Assist";
 			sourceTree = "<group>";
@@ -867,6 +888,7 @@
 				9B11E8F72135023400F201E8 /* ErrorCell.xib in Resources */,
 				D962CDBD2113306600CF94CA /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				D962CDC12113307100CF94CA /* OpenSans-Regular.ttf in Resources */,
+				9BE59E142152264A0040CE99 /* MeetAndLoungeListingCell.xib in Resources */,
 				9BEB0BEC213FA459004B2DB5 /* NewHomeCell.xib in Resources */,
 				9B11E8F92135031400F201E8 /* error.jpg in Resources */,
 				D962CDBB2113306000CF94CA /* OpenSans-BoldItalic.ttf in Resources */,
@@ -1022,6 +1044,7 @@
 				D956C9532111B60F0083CE9E /* BaseTableViewCell.swift in Sources */,
 				D989ED7A21099B87005975C3 /* NetworkManager.swift in Sources */,
 				D956C94F2111A3340083CE9E /* UIImage.swift in Sources */,
+				9BE59E0E2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift in Sources */,
 				9B11E8FE2135203000F201E8 /* ErrorVC.swift in Sources */,
 				D962CDA92112EB6B00CF94CA /* HomeVC.swift in Sources */,
 				D963CF97211ABE850051F8A4 /* AttributedString.swift in Sources */,
@@ -1031,12 +1054,15 @@
 				9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */,
 				D956C95B2111D5170083CE9E /* Country+CoreDataClass.swift in Sources */,
 				D962CDCB211335D700CF94CA /* E_VisaVC.swift in Sources */,
+				9BE59E10215210140040CE99 /* MeetAndLoungeView.swift in Sources */,
+				9BE59E0C215207350040CE99 /* MeetAndLoungeListingVC.swift in Sources */,
 				D956C9332111928D0083CE9E /* ExSlideMenuController.swift in Sources */,
 				9BFD0E9E2150DDD100F38FA3 /* UIButton.swift in Sources */,
 				D989ED862109E300005975C3 /* BasePresenter.swift in Sources */,
 				9B1210EB212577E300D7AEF9 /* QuestionData.swift in Sources */,
 				D95A1B2D2110337B0030741F /* DataManager.swift in Sources */,
 				D956C93A2111962F0083CE9E /* UIColor.swift in Sources */,
+				9BE59E122152164D0040CE99 /* MnA_ProductData.swift in Sources */,
 				D956C95C2111D5170083CE9E /* Country+CoreDataProperties.swift in Sources */,
 				9BF21E822146334B0003EFFC /* HomePopup.swift in Sources */,
 				D989ED822109E02F005975C3 /* HomeView.swift in Sources */,
@@ -1076,6 +1102,7 @@
 				9B1210E5212551DF00D7AEF9 /* PageViewController.swift in Sources */,
 				9B5F31F9214918EF00A579B7 /* SACalendarCell.m in Sources */,
 				D9DB0219211C93B4003F25F3 /* Reachability.swift in Sources */,
+				9BE59E18215249A90040CE99 /* Enums.swift in Sources */,
 				9B8C5FF8212A9582005A456C /* ModalVC.swift in Sources */,
 				D986A719211468D600D7E1D7 /* VoiceVC.swift in Sources */,
 				9BFD0EA22150F0A100F38FA3 /* AgeCell.swift in Sources */,
@@ -1084,6 +1111,7 @@
 				9B14FF3D2140F0C6007B8AD9 /* BaseCollectionViewCell.swift in Sources */,
 				D989ED7D2109BD7F005975C3 /* BaseVC.swift in Sources */,
 				D986A71721145DC500D7E1D7 /* BottomCell.swift in Sources */,
+				9BE59E1621522D520040CE99 /* MeetAndLoungeListingCell.swift in Sources */,
 				D989ED842109E0FF005975C3 /* HomePresenter.swift in Sources */,
 				9BEB0BF0213FCD31004B2DB5 /* ServiceCell.swift in Sources */,
 				D964AA672118399B00C32E14 /* PaddedLabel.swift in Sources */,

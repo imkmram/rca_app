@@ -31,8 +31,13 @@ class Constant {
      static let ANSWER_VC = "AnswerVC"
     static let MEETASSISTFORM_VC = "MeetAssistFormVC"
     static let CALENDAR_VC = "CalendarVC"
+    static let MEET_LOUNGE_VC = "MeetAndLoungeListingVC"
     
     static let HOME_METHOD_NAME = "get_service_list"
+    static let MEET_ASSIST_METHOD_NAME = "get_mna_products"
+    static let LOUNGE_METHOD_NAME = "get_lounge_products"
+    static let BASE_URL = "http://dev.redcarpetassist.com/rca_website/api/"
+    
     static let HOME_REQUEST_URL = "http://dev.redcarpetassist.com/rca_website/api/rca_website_api.php"
     
     static let DATABASE_VERSION = "DatabaseVersion"

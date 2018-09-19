@@ -8,12 +8,7 @@
 
 import UIKit
 
-enum LeftMenu: Int {
-    case home = 0
-    case about_us
-    case privacy_policy
-//    case nonMenu
-}
+
 
 protocol LeftMenuProtocol : class {
     func changeViewController(_ menu: LeftMenu)

@@ -21,8 +21,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B8m-vU-e2x">
                                 <rect key="frame" x="16" y="84" width="343" height="29"/>
                                 <segments>
-                                    <segment title="Transit"/>
                                     <segment title="Departure"/>
+                                    <segment title="Transit"/>
                                     <segment title="Arrival"/>
                                 </segments>
                                 <connections>
@@ -79,6 +79,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hud-Le-mlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="917.60000000000002" y="71.514242878560722"/>
+        </scene>
+        <!--Meet And Lounge ListingVC-->
+        <scene sceneID="M6i-DT-IVJ">
+            <objects>
+                <viewController storyboardIdentifier="MeetAndLoungeListingVC" id="avy-nG-L2N" customClass="MeetAndLoungeListingVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XlQ-fb-2yp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ero-CX-ofA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="avy-nG-L2N" id="E7v-cm-SQs"/>
+                                    <outlet property="delegate" destination="avy-nG-L2N" id="eM1-Dv-LZP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ero-CX-ofA" firstAttribute="top" secondItem="XlQ-fb-2yp" secondAttribute="top" id="82d-op-7Fw"/>
+                            <constraint firstItem="Ero-CX-ofA" firstAttribute="trailing" secondItem="mm0-EQ-TPO" secondAttribute="trailing" id="D0v-fu-V0n"/>
+                            <constraint firstItem="Ero-CX-ofA" firstAttribute="bottom" secondItem="mm0-EQ-TPO" secondAttribute="bottom" id="glZ-Kh-DlE"/>
+                            <constraint firstItem="Ero-CX-ofA" firstAttribute="leading" secondItem="mm0-EQ-TPO" secondAttribute="leading" id="qAq-FO-tY3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mm0-EQ-TPO"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblProduct" destination="Ero-CX-ofA" id="WTU-x3-HYa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZ5-IT-OBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618.4000000000001" y="71.514242878560722"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4O-To-G0b">

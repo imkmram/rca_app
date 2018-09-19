@@ -43,7 +43,8 @@ class HomePresenter: BasePresenter {
         loadData?.delegate = self
         loadData?.checkDataVersion()
 
-//         let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
+         let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
+        print(param)
 //
 //         dataManager.getData(requestType: "POST", url: url, parameter: param) { (data, error) in
 //

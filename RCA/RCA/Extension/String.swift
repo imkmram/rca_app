@@ -20,4 +20,14 @@ extension String {
     var length: Int {
         return self.characters.count
     }
+    
+    var roundOff: String {
+        
+        if let myDouble = Double(self) {
+            return String(format: "%.f", myDouble)
+        }
+        else {
+            return self
+        }
+    }
 }

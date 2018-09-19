@@ -38,4 +38,12 @@ struct Utils {
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
         return vc
     }
+    
+    static var ruppeSymbol: String {
+        return "\u{20B9}"
+       
+    }
+    static var dollarSymbol: String {
+        return "\u{0024}"
+    }
 }

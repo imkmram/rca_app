@@ -8,26 +8,7 @@
 
 import Foundation
 
-enum CustomError : Error {
-    case NoNetwork
-    case BadRequest
-    case InternalServerError
-    case OtherError
-    
-    var localizedDescription: String {
-        
-        switch self {
-        case .NoNetwork:
-            return NSLocalizedString("No Network, check your connection", comment: "Custom Error")
-        case .BadRequest:
-            return NSLocalizedString("Request error, try later", comment: "Custom Error")
-        case .InternalServerError:
-            return NSLocalizedString("Server not responding, try later", comment: "Custom Error")
-        case .OtherError:
-            return NSLocalizedString("Something went wrong....", comment: "Custom Error")
-        }
-    }
-}
+
 
 public class DataManager {
     

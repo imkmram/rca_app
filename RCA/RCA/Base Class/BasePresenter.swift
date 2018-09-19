@@ -13,4 +13,8 @@ class BasePresenter {
     func getData(strURL:String) {
         
     }
+    
+    func  getData(strURL: String, param: [String: Any]) {
+        
+    }
 }

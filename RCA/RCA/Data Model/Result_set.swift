@@ -17,15 +17,21 @@ import Foundation
 struct Result_set : Codable {
 	
     let service_list : [Service_list]?
+    let mna_product_list : [MnA_ProductData]?
+    let lounge_product_list : [MnA_ProductData]?
 
 	enum CodingKeys: String, CodingKey {
 
         case service_list = "service_list"
+        case mna_product_list = "mna_products_list"
+        case lounge_product_list = "lounge_products_list"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		
         service_list = try values.decodeIfPresent([Service_list].self, forKey: .service_list)
+        mna_product_list = try values.decodeIfPresent([MnA_ProductData].self, forKey: .mna_product_list)
+         lounge_product_list = try values.decodeIfPresent([MnA_ProductData].self, forKey: .lounge_product_list)
 	}
 }

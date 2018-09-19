@@ -8,15 +8,8 @@
 
 import UIKit
 
-enum ProductType: String {
-    
-   case Transit = "Transit"
-    case Departure = "Departure"
-   case Arrival = "Arrival"
-}
-
 struct FormData {
-    var productType: String = ""
+    var travelType: TravelType?
     var travelDate: String = ""
     var adultCount: Int = 0
     var childCount: Int = 0
@@ -25,14 +18,17 @@ struct FormData {
 
 class MeetAndLoungeFormVC: UIViewController {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var segmentProductType: UISegmentedControl!
     @IBOutlet weak var tblForm: UITableView!
     @IBOutlet weak var btnContinue: RoundButton!
-    var form:FormData = FormData()
     
+    //MARK: - Variables
+    var form:FormData = FormData()
     var service:Service_list?
     var popView: PopTipView?
 
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +39,13 @@ class MeetAndLoungeFormVC: UIViewController {
         tblForm.rowHeight = UITableViewAutomaticDimension
         tblForm.estimatedRowHeight = 160
         
+        if service?.product_id == "3" {
+            
+            segmentProductType.removeSegment(at: 2, animated: true)
+        }
+
         segmentProductType.selectedSegmentIndex = 0
-        form.productType = ProductType.Transit.rawValue
+        form.travelType = TravelType.Departure
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,15 +53,17 @@ class MeetAndLoungeFormVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - Events
     @IBAction func segmentProductTypeValueChanged(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            form.productType = ProductType.Transit.rawValue
+            form.travelType = TravelType.Departure
         case 1:
-            form.productType = ProductType.Departure.rawValue
+            form.travelType = TravelType.Transit
         case 2:
-            form.productType = ProductType.Arrival.rawValue
+            form.travelType = TravelType.Arrival
         default:
             break
         }
@@ -68,9 +71,14 @@ class MeetAndLoungeFormVC: UIViewController {
     
     @IBAction func btnContinueTapped(_ sender: Any) {
         
+        let listingVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEET_LOUNGE_VC) as! MeetAndLoungeListingVC
+        listingVC.formData = form
+        listingVC.service = service
+        self.navigationController?.pushViewController(listingVC, animated: true)
     }
 }
 
+//MARK: - UITableView Datasource & Delegate
 extension MeetAndLoungeFormVC : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -111,6 +119,7 @@ extension MeetAndLoungeFormVC : UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - LoungeFormCell Delegate
 extension MeetAndLoungeFormVC : LoungeFormCellDelegate {
     func updateCount(stepperView: StepperView, count: String) {
         
@@ -150,6 +159,7 @@ extension MeetAndLoungeFormVC : LoungeFormCellDelegate {
     }
 }
 
+//MARK: - SACalendar Delegate
 extension MeetAndLoungeFormVC : SACalendarDelegate {
     func saCalendar(_ calendar: SACalendar!, didSelectDate day: Int32, month: Int32, year: Int32) {
         
@@ -160,6 +170,7 @@ extension MeetAndLoungeFormVC : SACalendarDelegate {
     }
 }
 
+//MARK: - CaleandarVC Delegate
 extension MeetAndLoungeFormVC : CalendarVCDelegate {
     func selectedDate(date: String) {
         form.travelDate = date
@@ -167,6 +178,7 @@ extension MeetAndLoungeFormVC : CalendarVCDelegate {
     }
 }
 
+//MARK: - AgeCell Delegate
 extension MeetAndLoungeFormVC : AgeCellDelegate {
     func updateAge(age: Int, row: Int) {
         
