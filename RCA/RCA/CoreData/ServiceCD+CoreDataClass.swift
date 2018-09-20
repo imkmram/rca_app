@@ -13,7 +13,7 @@ import CoreData
 @objc(ServiceCD)
 class ServiceCD: BaseManagedObject {
     
-    class func save(list: [Service_list]) {
+    class func save(list: [ServiceData]) {
         
         let coreDataService = BaseCoreService.shared
         

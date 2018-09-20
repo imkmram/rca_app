@@ -43,7 +43,7 @@ class HomePresenter: BasePresenter {
         loadData?.delegate = self
         loadData?.checkDataVersion()
 
-         let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
+         let param: [String:Any] = ["method":Constant.kHOME_METHOD_NAME]
         print(param)
 //
 //         dataManager.getData(requestType: "POST", url: url, parameter: param) { (data, error) in
@@ -133,11 +133,11 @@ extension HomePresenter : LoadDataDelegate {
         homeView?.setList(data: test, success: true)
     }
     
-    func createArrayList(listCD: [ServiceCD]) -> [Service_list] {
+    func createArrayList(listCD: [ServiceCD]) -> [ServiceData] {
         
-        var list:[Service_list] = []
+        var list:[ServiceData] = []
         for item in listCD {
-            list.append(Service_list(coredata: item))
+            list.append(ServiceData(coredata: item))
         }
         return list
     }

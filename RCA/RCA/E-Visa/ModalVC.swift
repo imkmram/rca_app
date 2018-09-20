@@ -28,7 +28,7 @@ class ModalVC: UIViewController {
         
         if isIndianVisaSelected  {
             
-            let vc = Utils.getMainStoryboardController(identifier: Constant.HOMEPOPUP_VC) as! HomePopup
+            let vc = Utils.getMainStoryboardController(identifier: Constant.kHOMEPOPUP_VC) as! HomePopup
             
             vc.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
             vc.view.backgroundColor = UIColor.clear
@@ -40,7 +40,7 @@ class ModalVC: UIViewController {
         }
         else {
             
-            let vc = Utils.getE_visaStoryboardController(identifier: Constant.ANSWER_VC) as! AnswerVC
+            let vc = Utils.getE_visaStoryboardController(identifier: Constant.kANSWER_VC) as! AnswerVC
             
             vc.data = data
             vc.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)

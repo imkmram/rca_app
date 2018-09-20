@@ -21,6 +21,7 @@ enum CustomError : Error {
     case BadRequest
     case InternalServerError
     case OtherError
+    case NoData
     
     var localizedDescription: String {
         
@@ -33,6 +34,8 @@ enum CustomError : Error {
             return NSLocalizedString("Server not responding, try later", comment: "Custom Error")
         case .OtherError:
             return NSLocalizedString("Something went wrong....", comment: "Custom Error")
+        case .NoData:
+            return NSLocalizedString("No Data available", comment: "Custom Error")
         }
     }
 }
@@ -49,4 +52,10 @@ enum RateType: String {
     case Group = "Group"
 }
 
+enum ServiceType: String {
+    
+    case EVisa = "e-Visa"
+    case Meet_N_Assist = "Meet & Assist"
+    case Lounge = "Lounge"
+}
 

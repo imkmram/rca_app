@@ -10,7 +10,7 @@ import UIKit
  
  protocol NewHomeCellDelegate: class {
     
-    func serviceTapped(service: Service_list, collectionViewTag: Int?)
+    func serviceTapped(service: ServiceData, collectionViewTag: Int?)
  }
 
 class NewHomeCell: BaseTableViewCell {
@@ -20,7 +20,7 @@ class NewHomeCell: BaseTableViewCell {
     
     weak var delegate: NewHomeCellDelegate?
     
-    var newList:[Service_list] = []
+    var newList:[ServiceData] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,11 +40,11 @@ class NewHomeCell: BaseTableViewCell {
     func setList(dict:[String:Any]) {
         
         lblTitle.text = dict["title"] as? String
-        newList = (dict["list"] as? [Service_list])!
+        newList = (dict["list"] as? [ServiceData])!
         
         if newList.count > 3 {
             
-            newList.insert(Service_list(productID: "0", title: "More"), at: 3)
+            newList.insert(ServiceData(productID: "0", title: "More"), at: 3)
         }
         collectionView.reloadData()
     }

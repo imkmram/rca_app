@@ -46,4 +46,8 @@ struct Utils {
     static var dollarSymbol: String {
         return "\u{0024}"
     }
+    static var bullet: String {
+        return "\u{27a4}"
+    }
+    
 }

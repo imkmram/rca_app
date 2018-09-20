@@ -35,7 +35,7 @@
 		9B50C34C21422F5300287D2B /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C34B21422F5300287D2B /* LoadData.swift */; };
 		9B50C34F2142603200287D2B /* ServiceCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C34D2142603200287D2B /* ServiceCD+CoreDataClass.swift */; };
 		9B50C3502142603200287D2B /* ServiceCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C34E2142603200287D2B /* ServiceCD+CoreDataProperties.swift */; };
-		9B50C35221428A1300287D2B /* Service_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C35121428A1300287D2B /* Service_list.swift */; };
+		9B50C35221428A1300287D2B /* ServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C35121428A1300287D2B /* ServiceData.swift */; };
 		9B50C35421428EF200287D2B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50C35321428EF200287D2B /* UserDefaults.swift */; };
 		9B5F31F9214918EF00A579B7 /* SACalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F31F1214918EE00A579B7 /* SACalendarCell.m */; };
 		9B5F31FA214918EF00A579B7 /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F31F3214918EE00A579B7 /* DMLazyScrollView.m */; };
@@ -47,6 +47,13 @@
 		9B8C5FFE212ABC6C005A456C /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */; };
 		9B8C6000212ABD90005A456C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8C5FFF212ABD90005A456C /* CustomTextField.swift */; };
 		9B9BF98221465C0200AE04BF /* AnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9BF98121465C0200AE04BF /* AnswerVC.swift */; };
+		9BE46D30215357B200A41952 /* MeetAndLoungeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE46D2F215357B200A41952 /* MeetAndLoungeDetailVC.swift */; };
+		9BE46D322153739500A41952 /* DetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE46D312153739500A41952 /* DetailHeaderCell.xib */; };
+		9BE46D342153782E00A41952 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE46D332153782E00A41952 /* DetailHeaderCell.swift */; };
+		9BE46D36215386D800A41952 /* DetailDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE46D35215386D800A41952 /* DetailDescCell.xib */; };
+		9BE46D382153870100A41952 /* DetailDescCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE46D372153870100A41952 /* DetailDescCell.swift */; };
+		9BE46D3A2153C83800A41952 /* DetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE46D392153C83800A41952 /* DetailImageCell.xib */; };
+		9BE46D3C2153C84A00A41952 /* DetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE46D3B2153C84A00A41952 /* DetailImageCell.swift */; };
 		9BE59E0C215207350040CE99 /* MeetAndLoungeListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E0B215207350040CE99 /* MeetAndLoungeListingVC.swift */; };
 		9BE59E0E2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E0D2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift */; };
 		9BE59E10215210140040CE99 /* MeetAndLoungeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59E0F215210140040CE99 /* MeetAndLoungeView.swift */; };
@@ -195,7 +202,7 @@
 		9B50C34B21422F5300287D2B /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		9B50C34D2142603200287D2B /* ServiceCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9B50C34E2142603200287D2B /* ServiceCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9B50C35121428A1300287D2B /* Service_list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service_list.swift; sourceTree = "<group>"; };
+		9B50C35121428A1300287D2B /* ServiceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceData.swift; sourceTree = "<group>"; };
 		9B50C35321428EF200287D2B /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9B5F31EF214918ED00A579B7 /* RCA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCA-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B5F31F0214918EE00A579B7 /* SACalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACalendarCell.h; sourceTree = "<group>"; };
@@ -213,6 +220,13 @@
 		9B8C5FFD212ABC6C005A456C /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		9B8C5FFF212ABD90005A456C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9B9BF98121465C0200AE04BF /* AnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerVC.swift; sourceTree = "<group>"; };
+		9BE46D2F215357B200A41952 /* MeetAndLoungeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeDetailVC.swift; sourceTree = "<group>"; };
+		9BE46D312153739500A41952 /* DetailHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderCell.xib; sourceTree = "<group>"; };
+		9BE46D332153782E00A41952 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
+		9BE46D35215386D800A41952 /* DetailDescCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDescCell.xib; sourceTree = "<group>"; };
+		9BE46D372153870100A41952 /* DetailDescCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescCell.swift; sourceTree = "<group>"; };
+		9BE46D392153C83800A41952 /* DetailImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageCell.xib; sourceTree = "<group>"; };
+		9BE46D3B2153C84A00A41952 /* DetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCell.swift; sourceTree = "<group>"; };
 		9BE59E0B215207350040CE99 /* MeetAndLoungeListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeListingVC.swift; sourceTree = "<group>"; };
 		9BE59E0D2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeListingPresenter.swift; sourceTree = "<group>"; };
 		9BE59E0F215210140040CE99 /* MeetAndLoungeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetAndLoungeView.swift; sourceTree = "<group>"; };
@@ -420,7 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				9BE59E112152164D0040CE99 /* MnA_ProductData.swift */,
-				9B50C35121428A1300287D2B /* Service_list.swift */,
+				9B50C35121428A1300287D2B /* ServiceData.swift */,
 				9B14FF432141212A007B8AD9 /* BaseModel.swift */,
 				9B14FF442141212A007B8AD9 /* Content.swift */,
 				9B14FF4121412129007B8AD9 /* Result_set.swift */,
@@ -457,6 +471,13 @@
 				9BE59E0F215210140040CE99 /* MeetAndLoungeView.swift */,
 				9BE59E132152264A0040CE99 /* MeetAndLoungeListingCell.xib */,
 				9BE59E1521522D520040CE99 /* MeetAndLoungeListingCell.swift */,
+				9BE46D2F215357B200A41952 /* MeetAndLoungeDetailVC.swift */,
+				9BE46D312153739500A41952 /* DetailHeaderCell.xib */,
+				9BE46D332153782E00A41952 /* DetailHeaderCell.swift */,
+				9BE46D35215386D800A41952 /* DetailDescCell.xib */,
+				9BE46D372153870100A41952 /* DetailDescCell.swift */,
+				9BE46D392153C83800A41952 /* DetailImageCell.xib */,
+				9BE46D3B2153C84A00A41952 /* DetailImageCell.swift */,
 			);
 			path = "Meet & Assist";
 			sourceTree = "<group>";
@@ -861,6 +882,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE46D322153739500A41952 /* DetailHeaderCell.xib in Resources */,
 				D9566A6C211C625C009EF5E4 /* speech.gif in Resources */,
 				D962CDC32113307600CF94CA /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				D94C67B92119820D00D49A29 /* ConfirmDataCell.xib in Resources */,
@@ -879,6 +901,7 @@
 				D962CDBF2113306C00CF94CA /* OpenSans-Light.ttf in Resources */,
 				9BFD0EA02150F07700F38FA3 /* AgeCell.xib in Resources */,
 				D962CDC22113307400CF94CA /* OpenSans-SemiBold.ttf in Resources */,
+				9BE46D3A2153C83800A41952 /* DetailImageCell.xib in Resources */,
 				9BF621E62147BE46004B682E /* Meet_N_Assist.storyboard in Resources */,
 				D96A99922108B4D600908488 /* GoogleService-Info.plist in Resources */,
 				9BEB0BEE213FCC84004B2DB5 /* ServiceCell.xib in Resources */,
@@ -893,6 +916,7 @@
 				9B11E8F92135031400F201E8 /* error.jpg in Resources */,
 				D962CDBB2113306000CF94CA /* OpenSans-BoldItalic.ttf in Resources */,
 				D962CDC62113319800CF94CA /* E-visa.storyboard in Resources */,
+				9BE46D36215386D800A41952 /* DetailDescCell.xib in Resources */,
 				D962CDC02113306F00CF94CA /* OpenSans-LightItalic.ttf in Resources */,
 				D96A99662108B27900908488 /* Main.storyboard in Resources */,
 				9BF621EE2147CBF5004B682E /* notification.png in Resources */,
@@ -1036,6 +1060,7 @@
 				9B1210E72125559900D7AEF9 /* PageViewContentVC.swift in Sources */,
 				D956C9632111ED060083CE9E /* RCA.xcdatamodeld in Sources */,
 				D964AA69211880E000C32E14 /* ConfirmationVC.swift in Sources */,
+				9BE46D3C2153C84A00A41952 /* DetailImageCell.swift in Sources */,
 				9B50C34C21422F5300287D2B /* LoadData.swift in Sources */,
 				D956C9312111928D0083CE9E /* SlideMenuController.swift in Sources */,
 				9BFB58F4212EB18100395AA1 /* NewVoiceVC.swift in Sources */,
@@ -1045,11 +1070,14 @@
 				D989ED7A21099B87005975C3 /* NetworkManager.swift in Sources */,
 				D956C94F2111A3340083CE9E /* UIImage.swift in Sources */,
 				9BE59E0E2152096A0040CE99 /* MeetAndLoungeListingPresenter.swift in Sources */,
+				9BE46D342153782E00A41952 /* DetailHeaderCell.swift in Sources */,
 				9B11E8FE2135203000F201E8 /* ErrorVC.swift in Sources */,
 				D962CDA92112EB6B00CF94CA /* HomeVC.swift in Sources */,
 				D963CF97211ABE850051F8A4 /* AttributedString.swift in Sources */,
 				9B50C34F2142603200287D2B /* ServiceCD+CoreDataClass.swift in Sources */,
+				9BE46D30215357B200A41952 /* MeetAndLoungeDetailVC.swift in Sources */,
 				D986A71321145D5700D7E1D7 /* E_VisaDetailVC.swift in Sources */,
+				9BE46D382153870100A41952 /* DetailDescCell.swift in Sources */,
 				9B124FE32134035E0046CFCF /* HelperProtocol.swift in Sources */,
 				9BF1C0AD21369DF9004DBC86 /* BaseManagedObject.swift in Sources */,
 				D956C95B2111D5170083CE9E /* Country+CoreDataClass.swift in Sources */,
@@ -1076,7 +1104,7 @@
 				9B5F31FC214918EF00A579B7 /* DateUtil.m in Sources */,
 				9BF621F22147D188004B682E /* NibView.swift in Sources */,
 				9B5F31FA214918EF00A579B7 /* DMLazyScrollView.m in Sources */,
-				9B50C35221428A1300287D2B /* Service_list.swift in Sources */,
+				9B50C35221428A1300287D2B /* ServiceData.swift in Sources */,
 				D986A71D211469AC00D7E1D7 /* ChatCell.swift in Sources */,
 				D986A7112114320F00D7E1D7 /* RoundButton.swift in Sources */,
 				9B1210E32125504B00D7AEF9 /* TypedFormVC.swift in Sources */,

@@ -37,7 +37,7 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
         
         let storyboard = UIStoryboard.init(name: Constant.STORYBOARD_E_Visa, bundle: nil)
         
-        pageControllerVC = storyboard.instantiateViewController(withIdentifier:Constant.PAGEVIEWCONTROLLER) as? PageViewController
+        pageControllerVC = storyboard.instantiateViewController(withIdentifier:Constant.kPAGEVIEWCONTROLLER) as? PageViewController
         pageControllerVC?.delegate = self
         pageControllerVC?.dataSource = self
         
@@ -111,7 +111,7 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
         
         let storyboard = UIStoryboard.init(name: Constant.STORYBOARD_E_Visa, bundle: nil)
         
-        let contentVC :PageViewContentVC = storyboard.instantiateViewController(withIdentifier: Constant.PAGEVIEWCONTENTVC) as! PageViewContentVC
+        let contentVC :PageViewContentVC = storyboard.instantiateViewController(withIdentifier: Constant.kPAGEVIEWCONTENT_VC) as! PageViewContentVC
         
         contentVC.delegate = self
         pageIndex = index

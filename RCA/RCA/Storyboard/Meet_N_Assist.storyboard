@@ -114,6 +114,97 @@
             </objects>
             <point key="canvasLocation" x="1618.4000000000001" y="71.514242878560722"/>
         </scene>
+        <!--Meet And Lounge DetailVC-->
+        <scene sceneID="ay2-aT-Aw8">
+            <objects>
+                <viewController storyboardIdentifier="MeetAndLoungeDetailVC" id="LO3-8M-E2R" customClass="MeetAndLoungeDetailVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMb-uK-CJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z9X-0N-8Ck">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LO3-8M-E2R" id="wxg-cF-r4T"/>
+                                    <outlet property="delegate" destination="LO3-8M-E2R" id="bH9-LM-CUf"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Te-OI-SSu">
+                                <rect key="frame" x="10" y="597" width="355" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qgr-YY-O5w">
+                                        <rect key="frame" x="20" y="10" width="315" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78x-wC-Ipx" customClass="RoundButton" customModule="RCA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="50"/>
+                                                <state key="normal" title="ADD TO CART">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aql-Dr-1VV" customClass="RoundButton" customModule="RCA" customModuleProvider="target">
+                                                <rect key="frame" x="167.5" y="0.0" width="147.5" height="50"/>
+                                                <state key="normal" title="BUY NOW">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Qgr-YY-O5w" firstAttribute="top" secondItem="8Te-OI-SSu" secondAttribute="top" constant="10" id="KDz-m2-UBO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qgr-YY-O5w" secondAttribute="bottom" constant="10" id="ONE-Tq-gUR"/>
+                                    <constraint firstItem="Qgr-YY-O5w" firstAttribute="centerX" secondItem="8Te-OI-SSu" secondAttribute="centerX" id="XfB-Bq-ecE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qgr-YY-O5w" secondAttribute="trailing" constant="20" id="bJ0-C6-dW3"/>
+                                    <constraint firstItem="Qgr-YY-O5w" firstAttribute="centerY" secondItem="8Te-OI-SSu" secondAttribute="centerY" id="iWd-4I-p3x"/>
+                                    <constraint firstItem="Qgr-YY-O5w" firstAttribute="leading" secondItem="8Te-OI-SSu" secondAttribute="leading" constant="20" id="ksD-gQ-Ekd"/>
+                                    <constraint firstAttribute="height" constant="70" id="wzn-Bj-NXr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Te-OI-SSu" firstAttribute="bottom" secondItem="4uC-fk-bmz" secondAttribute="bottom" id="6EE-1A-rU7"/>
+                            <constraint firstItem="4uC-fk-bmz" firstAttribute="trailing" secondItem="8Te-OI-SSu" secondAttribute="trailing" constant="10" id="DPz-Fm-fii"/>
+                            <constraint firstItem="z9X-0N-8Ck" firstAttribute="top" secondItem="vMb-uK-CJr" secondAttribute="top" id="P6U-Ev-dPL"/>
+                            <constraint firstItem="8Te-OI-SSu" firstAttribute="top" secondItem="z9X-0N-8Ck" secondAttribute="bottom" id="QzP-2r-4yl"/>
+                            <constraint firstItem="z9X-0N-8Ck" firstAttribute="leading" secondItem="4uC-fk-bmz" secondAttribute="leading" id="i8Y-B5-oUn"/>
+                            <constraint firstItem="z9X-0N-8Ck" firstAttribute="trailing" secondItem="4uC-fk-bmz" secondAttribute="trailing" id="qHS-8L-6ex"/>
+                            <constraint firstItem="8Te-OI-SSu" firstAttribute="leading" secondItem="4uC-fk-bmz" secondAttribute="leading" constant="10" id="qdJ-ZB-BNI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4uC-fk-bmz"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblDetail" destination="z9X-0N-8Ck" id="P2x-ti-mdy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghQ-tp-puj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="71.514242878560722"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4O-To-G0b">
             <objects>

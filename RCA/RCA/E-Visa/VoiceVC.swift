@@ -308,7 +308,7 @@ class VoiceVC: UIViewController {
         }
         
         let storyboard = UIStoryboard(name: Constant.STORYBOARD_E_Visa, bundle: nil)
-        let eVisaVC = storyboard.instantiateViewController(withIdentifier: Constant.VIEWCONTROLLER_CONFIRMATION) as! ConfirmationVC
+        let eVisaVC = storyboard.instantiateViewController(withIdentifier: Constant.kCONFIRMATION_VC) as! ConfirmationVC
         setBackTitle(title: "eVisa")
         eVisaVC.confirmData = confirmData
         self.navigationController?.pushViewController(eVisaVC, animated: true)

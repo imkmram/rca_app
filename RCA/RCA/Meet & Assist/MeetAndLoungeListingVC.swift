@@ -11,7 +11,7 @@ import UIKit
 class MeetAndLoungeListingVC: BaseVC {
     
     @IBOutlet weak var tblProduct: UITableView!
-    var service: Service_list?
+    var service: ServiceData?
     var formData: FormData?
     
     var productList: [MnA_ProductData] = []
@@ -30,10 +30,10 @@ class MeetAndLoungeListingVC: BaseVC {
         
         var methodName: String = ""
         if service?.product_id == "2" {
-            methodName = Constant.MEET_ASSIST_METHOD_NAME
+            methodName = Constant.kMEET_ASSIST_METHOD_NAME
         }
         else {
-            methodName = Constant.LOUNGE_METHOD_NAME
+            methodName = Constant.kLOUNGE_METHOD_NAME
         }
         
         let param: [String:Any] = ["method":methodName,
@@ -47,8 +47,7 @@ class MeetAndLoungeListingVC: BaseVC {
                                 ]
         
         presenter.attachView(view: self)
-        presenter.getData(strURL: Constant.HOME_REQUEST_URL, param: param)
-        
+        presenter.getData(strURL: Constant.kBASE_URL.appending(Constant.kHOME_URL), param: param)
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,7 +67,6 @@ extension MeetAndLoungeListingVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MeetAndLoungeListingCell.identifier) as! MeetAndLoungeListingCell
-        //cell.travelType = formData?.productType
         cell.formData = formData
         cell.setData(productList[indexPath.row])
         
@@ -78,6 +76,15 @@ extension MeetAndLoungeListingVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.kMEET_LOUNGE_DETAIL_VC) as! MeetAndLoungeDetailVC
+        detailVC.productData = productList[indexPath.row]
+        detailVC.serviceData = service
+        detailVC.formData = formData
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 //MARK: - MeetAndLounge View Protocol
@@ -86,12 +93,20 @@ extension MeetAndLoungeListingVC : MeetAndLoungeView {
     func setList(list: [MnA_ProductData]) {
         
         productList = list
-         DispatchQueue.main.async {
-            self.tblProduct.reloadData()
+        
+        if productList.count > 0 {
+            DispatchQueue.main.async {
+                self.tblProduct.reloadData()
+            }
+        }
+        else {
+              emptyList(error: .NoData, success: false)
         }
     }
     
     func emptyList(error: CustomError, success: Bool) {
-        
+         DispatchQueue.main.async {
+      self.loadErrorPage(parent: self, error: error)
+        }
     }
 }

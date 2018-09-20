@@ -73,7 +73,6 @@ class MeetAndLoungeListingPresenter: BasePresenter {
                      view?.setList(list: result.lounge_product_list!)
                 }
                
-                
             } catch {
                 
             }

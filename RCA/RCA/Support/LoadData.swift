@@ -26,11 +26,11 @@ class LoadData {
             
             if error == nil {
                 
-                if UserDefaults.exists(key: Constant.DATABASE_VERSION) {
+                if UserDefaults.exists(key: Constant.kDATABASE_VERSION) {
                     self.delegate?.updatePresenter()
                 }
                 else {
-                    UserDefaults.standard.set("1.0", forKey: Constant.DATABASE_VERSION)
+                    UserDefaults.standard.set("1.0", forKey: Constant.kDATABASE_VERSION)
                     self.loadData()
                 }
             }
@@ -43,9 +43,9 @@ class LoadData {
     private func loadData() {
         
         queue.addOperation {
-            let param: [String:Any] = ["method":Constant.HOME_METHOD_NAME]
+            let param: [String:Any] = ["method":Constant.kHOME_METHOD_NAME]
             
-            let url = URL(string: Constant.HOME_REQUEST_URL)
+            let url = URL(string: Constant.kBASE_URL.appending(Constant.kHOME_URL))
             
             self.dataManager.getData(requestType: "POST", url: url!, parameter: param, completion: { (data, error) in
                 

@@ -25,7 +25,7 @@ class MeetAndLoungeFormVC: UIViewController {
     
     //MARK: - Variables
     var form:FormData = FormData()
-    var service:Service_list?
+    var service:ServiceData?
     var popView: PopTipView?
 
     //MARK: - Life Cycle
@@ -71,7 +71,7 @@ class MeetAndLoungeFormVC: UIViewController {
     
     @IBAction func btnContinueTapped(_ sender: Any) {
         
-        let listingVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEET_LOUNGE_VC) as! MeetAndLoungeListingVC
+        let listingVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.kMEET_LOUNGE_LISTING_VC) as! MeetAndLoungeListingVC
         listingVC.formData = form
         listingVC.service = service
         self.navigationController?.pushViewController(listingVC, animated: true)
@@ -152,7 +152,7 @@ extension MeetAndLoungeFormVC : LoungeFormCellDelegate {
     
     func btnCalendarPopOverTapped(sender: UIButton) {
 
-        let calendarVC = Utils.getCalendarStoryboardController(identifier: Constant.CALENDAR_VC) as! CalendarVC
+        let calendarVC = Utils.getCalendarStoryboardController(identifier: Constant.kCALENDAR_VC) as! CalendarVC
         calendarVC.delegate = self
         view.addSubview(calendarVC.view)
         addChildViewController(calendarVC)

@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
         </array>
@@ -29,7 +32,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCj-nf-vwg">
                         <rect key="frame" x="10" y="16" width="355" height="122.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oh7-Rg-mYs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Oh7-Rg-mYs">
                                 <rect key="frame" x="8" y="16" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="HyB-5g-EfO"/>
@@ -37,38 +40,38 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-cW-oS9">
-                                <rect key="frame" x="106" y="16" width="241" height="19.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                <rect key="frame" x="106" y="8" width="241" height="23.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chhatrapati Shivaji International Airport, Mumbai, India" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAL-pq-L0D">
-                                <rect key="frame" x="106" y="39.5" width="241" height="33"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <rect key="frame" x="106" y="35.5" width="241" height="38.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMC-m7-HWx">
-                                <rect key="frame" x="106" y="80.5" width="47.5" height="15"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="11"/>
+                                <rect key="frame" x="106" y="82" width="52" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="508-mW-Zcg">
-                                <rect key="frame" x="157.5" y="77.5" width="32" height="19.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                <rect key="frame" x="162" y="79.5" width="34.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-gY-9r0">
-                                <rect key="frame" x="205" y="79" width="50.5" height="17"/>
+                                <rect key="frame" x="212" y="82" width="50.5" height="17"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM5-nw-BSq">
-                                <rect key="frame" x="259.5" y="77.5" width="32" height="19.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                <rect key="frame" x="266.5" y="79.5" width="34.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -78,7 +81,8 @@
                             <constraint firstItem="508-mW-Zcg" firstAttribute="leading" secondItem="LMC-m7-HWx" secondAttribute="trailing" constant="4" id="2T2-zK-8Yn"/>
                             <constraint firstItem="oMi-cW-oS9" firstAttribute="leading" secondItem="Oh7-Rg-mYs" secondAttribute="trailing" constant="8" id="59U-dE-Dqg"/>
                             <constraint firstItem="TAL-pq-L0D" firstAttribute="leading" secondItem="Oh7-Rg-mYs" secondAttribute="trailing" constant="8" id="7Z5-IB-XEL"/>
-                            <constraint firstItem="oMi-cW-oS9" firstAttribute="top" secondItem="Oh7-Rg-mYs" secondAttribute="top" id="Bss-KN-o02"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LMC-m7-HWx" secondAttribute="bottom" constant="16" id="AlW-zb-X9X"/>
+                            <constraint firstItem="oMi-cW-oS9" firstAttribute="top" secondItem="Oh7-Rg-mYs" secondAttribute="top" constant="-8" id="Bss-KN-o02"/>
                             <constraint firstAttribute="trailing" secondItem="TAL-pq-L0D" secondAttribute="trailing" constant="8" id="Jn6-pS-CDj"/>
                             <constraint firstItem="Oh7-Rg-mYs" firstAttribute="centerY" secondItem="tCj-nf-vwg" secondAttribute="centerY" id="Jvl-8A-cJ1"/>
                             <constraint firstAttribute="trailing" secondItem="oMi-cW-oS9" secondAttribute="trailing" constant="8" id="OnE-gC-02N"/>
@@ -115,4 +119,7 @@
             <point key="canvasLocation" x="20.5" y="70.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="error.jpg" width="300" height="300"/>
+    </resources>
 </document>

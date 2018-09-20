@@ -16,7 +16,7 @@ import Foundation
 
 struct Result_set : Codable {
 	
-    let service_list : [Service_list]?
+    let service_list : [ServiceData]?
     let mna_product_list : [MnA_ProductData]?
     let lounge_product_list : [MnA_ProductData]?
 
@@ -30,7 +30,7 @@ struct Result_set : Codable {
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		
-        service_list = try values.decodeIfPresent([Service_list].self, forKey: .service_list)
+        service_list = try values.decodeIfPresent([ServiceData].self, forKey: .service_list)
         mna_product_list = try values.decodeIfPresent([MnA_ProductData].self, forKey: .mna_product_list)
          lounge_product_list = try values.decodeIfPresent([MnA_ProductData].self, forKey: .lounge_product_list)
 	}

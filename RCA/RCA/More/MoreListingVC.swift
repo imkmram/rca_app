@@ -11,7 +11,7 @@ import UIKit
 class MoreListingVC: BaseVC {
     
     @IBOutlet weak var collectionViewMore: UICollectionView!
-    var moreList: [Service_list] = []
+    var moreList: [ServiceData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +55,12 @@ extension MoreListingVC : UICollectionViewDataSource, UICollectionViewDelegate, 
         let service = moreList[indexPath.row] 
         
         if service.product_id == "1" {
-            let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
+            let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.kEVisaDetail_VC) as! E_VisaDetailVC
             
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
         else {
-            let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEETASSISTFORM_VC) as! MeetAndLoungeFormVC
+            let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.kMEET_ASSIST_FORM_VC) as! MeetAndLoungeFormVC
             meetAssistVC.service = service
             setBackTitle(title: "Back")
             

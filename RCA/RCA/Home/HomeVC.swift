@@ -28,7 +28,7 @@ class HomeVC: BaseVC {
         super.delagate = self
         
         presenter.attachView(view: self)
-        presenter.getData(strURL: Constant.HOME_REQUEST_URL)
+        presenter.getData(strURL: Constant.kBASE_URL.appending(Constant.kHOME_URL))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -129,13 +129,13 @@ extension HomeVC : BaseViewDelegate {
 // MARK: - NewHomeCell Delegate
 extension HomeVC : NewHomeCellDelegate {
     
-    func serviceTapped(service: Service_list, collectionViewTag: Int?) {
+    func serviceTapped(service: ServiceData, collectionViewTag: Int?) {
         
         if service.product_id == "0" {
            
-          let moreLsitingVC =  Utils.getMainStoryboardController(identifier: Constant.VIEWCONTROLLER_MORELISTING) as! MoreListingVC
+          let moreLsitingVC =  Utils.getMainStoryboardController(identifier: Constant.kMORELISTING_VC) as! MoreListingVC
             
-            if let list: [Service_list] = serviceList[collectionViewTag!]["list"] as? [Service_list] {
+            if let list: [ServiceData] = serviceList[collectionViewTag!]["list"] as? [ServiceData] {
                 moreLsitingVC.moreList = list
                 moreLsitingVC.title = serviceList[collectionViewTag!]["title"] as? String
             }
@@ -155,7 +155,7 @@ extension HomeVC : NewHomeCellDelegate {
                 blurredBackgroundView.alpha = 0.5
                 view.addSubview(blurredBackgroundView)
                 
-                let modalVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_MODAL) as! ModalVC
+                let modalVC = Utils.getE_visaStoryboardController(identifier: Constant.kMODAL_VC) as! ModalVC
                 modalVC.modalPresentationStyle = .overCurrentContext
                 modalVC.delegate = self
                 modalVC.isIndianVisaSelected = true
@@ -166,12 +166,12 @@ extension HomeVC : NewHomeCellDelegate {
             else {
                 
                 if service.product_id == "1" {
-                let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
+                let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.kEVisaDetail_VC) as! E_VisaDetailVC
                 
                 self.navigationController?.pushViewController(detailVC, animated: true)
                 }
                 else {
-                    let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.MEETASSISTFORM_VC) as! MeetAndLoungeFormVC
+                    let meetAssistVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.kMEET_ASSIST_FORM_VC) as! MeetAndLoungeFormVC
                     meetAssistVC.service = service
                     self.navigationController?.pushViewController(meetAssistVC, animated: true)
                 }
@@ -182,7 +182,7 @@ extension HomeVC : NewHomeCellDelegate {
 extension HomeVC : ModalVCDelegate {
     func continueTappped() {
         
-        let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.VIEWCONTROLLER_E_VisaDetail) as! E_VisaDetailVC
+        let detailVC = Utils.getE_visaStoryboardController(identifier: Constant.kEVisaDetail_VC) as! E_VisaDetailVC
 
         self.navigationController?.pushViewController(detailVC, animated: true)
         
