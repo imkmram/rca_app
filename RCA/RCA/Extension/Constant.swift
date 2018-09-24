@@ -33,6 +33,7 @@ class Constant {
     static let kCALENDAR_VC = "CalendarVC"
     static let kMEET_LOUNGE_LISTING_VC = "MeetAndLoungeListingVC"
     static let kMEET_LOUNGE_DETAIL_VC = "MeetAndLoungeDetailVC"
+    static let kIMAGEPAGEVIEWCONTENT_VC = "ImagePageViewContentVC"
     
     static let kHOME_METHOD_NAME = "get_service_list"
     static let kMEET_ASSIST_METHOD_NAME = "get_mna_products"

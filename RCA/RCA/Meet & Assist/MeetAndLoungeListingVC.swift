@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeetAndLoungeListingVC: BaseVC {
+class MeetAndLoungeListingVC: BaseVC, UIScrollViewDelegate {
     
     @IBOutlet weak var tblProduct: UITableView!
     var service: ServiceData?
@@ -21,8 +21,22 @@ class MeetAndLoungeListingVC: BaseVC {
         super.viewDidLoad()
         
         tblProduct.registerCellNib(MeetAndLoungeListingCell.self)
+        tblProduct.registerCellClass(BaseTableViewCell.self)
+        
         tblProduct.rowHeight = UITableViewAutomaticDimension
         tblProduct.estimatedRowHeight = 160
+        
+        let titleView = ConcealingTitleView(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        
+        switch service?.product_id {
+        case "2":
+            titleView.text = "Meet & Assist"
+        case "3":
+            titleView.text = "Lounge"
+        default:
+            break
+        }
+        navigationItem.titleView = titleView
         
         guard let form = formData, let serviceData = service else {
             return
@@ -50,6 +64,11 @@ class MeetAndLoungeListingVC: BaseVC {
         presenter.getData(strURL: Constant.kBASE_URL.appending(Constant.kHOME_URL), param: param)
     }
 
+     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let titleView = navigationItem.titleView as? ConcealingTitleView else { return }
+        titleView.scrollViewDidScroll(scrollView)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,16 +80,33 @@ class MeetAndLoungeListingVC: BaseVC {
 extension MeetAndLoungeListingVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productList.count
+        
+        return productList.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if indexPath.row == 0 {
+         
+            let cell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewCell.identifier) as! BaseTableViewCell
+            switch service?.product_id {
+            case "2":
+                cell.textLabel?.text = "Meet & Assist"
+            case "3":
+                cell.textLabel?.text = "Lounge"
+            default:
+                break
+            }
+            
+            return cell
+        }
+        else {
         let cell = tableView.dequeueReusableCell(withIdentifier: MeetAndLoungeListingCell.identifier) as! MeetAndLoungeListingCell
         cell.formData = formData
-        cell.setData(productList[indexPath.row])
+        cell.setData(productList[indexPath.row - 1])
         
         return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -79,7 +115,7 @@ extension MeetAndLoungeListingVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = Utils.getMeet_AssistStoryboardController(identifier: Constant.kMEET_LOUNGE_DETAIL_VC) as! MeetAndLoungeDetailVC
-        detailVC.productData = productList[indexPath.row]
+        detailVC.productData = productList[indexPath.row - 1]
         detailVC.serviceData = service
         detailVC.formData = formData
         

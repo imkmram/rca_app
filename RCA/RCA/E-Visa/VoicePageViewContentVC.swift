@@ -12,19 +12,18 @@ protocol PageViewContentVCDelegate:class {
     func goNext()
 }
 
-class PageViewContentVC: UIViewController {
+class VoicePageViewContentVC: UIViewController {
     
     @IBOutlet weak var lblQuestion: UILabel!
     @IBOutlet weak var txtAnswer: UITextField!
     weak var delegate:PageViewContentVCDelegate?
+    
     var pageIndex: Int = 0
     
     private var data:QuestionData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,20 +49,9 @@ class PageViewContentVC: UIViewController {
     @IBAction func btnNextTapped(_ sender: Any) {
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
-extension PageViewContentVC :UITextFieldDelegate {
+extension VoicePageViewContentVC :UITextFieldDelegate {
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -72,5 +60,4 @@ extension PageViewContentVC :UITextFieldDelegate {
         
         return false
     }
-    
 }

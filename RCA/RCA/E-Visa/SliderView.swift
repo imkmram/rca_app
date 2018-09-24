@@ -9,14 +9,6 @@
 import UIKit
 
 class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     private var pageControllerVC:PageViewController?
     private var selectedIndex :Int = 0
@@ -41,7 +33,7 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
         pageControllerVC?.delegate = self
         pageControllerVC?.dataSource = self
         
-        if let startingContentVC : PageViewContentVC = self.viewControllerAtIndex(index: selectedIndex) {
+        if let startingContentVC : VoicePageViewContentVC = self.viewControllerAtIndex(index: selectedIndex) {
             startingContentVC.delegate = self
             
             let viewControllers = Array(arrayLiteral: startingContentVC)
@@ -57,10 +49,9 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
     }
     
     // MARK:- UIPageViewController Datasource
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        let pageContent :PageViewContentVC = viewController as! PageViewContentVC
+        let pageContent :VoicePageViewContentVC = viewController as! VoicePageViewContentVC
         // pageContent.delegate = self
         var index = pageContent.pageIndex
         
@@ -74,7 +65,7 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        let pageContent :PageViewContentVC = viewController as! PageViewContentVC
+        let pageContent :VoicePageViewContentVC = viewController as! VoicePageViewContentVC
         
        // pageContent.delegate = self
         
@@ -95,13 +86,13 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
         
         if pendingViewControllers.count > 0 {
             
-            if let contentVC = pendingViewControllers[0] as? PageViewContentVC {
+            if let contentVC = pendingViewControllers[0] as? VoicePageViewContentVC {
                
             }
         }
     }
     
-    func viewControllerAtIndex(index:Int) -> PageViewContentVC? {
+    func viewControllerAtIndex(index:Int) -> VoicePageViewContentVC? {
         
         if ((questionList.count == 0) || (index >= questionList.count)) {
             return nil
@@ -111,7 +102,7 @@ class SliderView: UIView, UIPageViewControllerDataSource, UIPageViewControllerDe
         
         let storyboard = UIStoryboard.init(name: Constant.STORYBOARD_E_Visa, bundle: nil)
         
-        let contentVC :PageViewContentVC = storyboard.instantiateViewController(withIdentifier: Constant.kPAGEVIEWCONTENT_VC) as! PageViewContentVC
+        let contentVC :VoicePageViewContentVC = storyboard.instantiateViewController(withIdentifier: Constant.kPAGEVIEWCONTENT_VC) as! VoicePageViewContentVC
         
         contentVC.delegate = self
         pageIndex = index
@@ -132,7 +123,7 @@ extension SliderView : PageViewContentVCDelegate {
             return
         }
         pageIndex += 1
-        if let nextContentVC : PageViewContentVC = self.viewControllerAtIndex(index: pageIndex) {
+        if let nextContentVC : VoicePageViewContentVC = self.viewControllerAtIndex(index: pageIndex) {
             
             let viewControllers = Array(arrayLiteral: nextContentVC)
             

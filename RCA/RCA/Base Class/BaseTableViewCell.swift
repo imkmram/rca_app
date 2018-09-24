@@ -36,6 +36,9 @@ open class BaseTableViewCell : UITableViewCell {
     }
     
     open func setup() {
+        
+        self.textLabel?.font = UIFont(name: "OpenSans-Bold", size: 34)
+        
     }
     
     open class func height() -> CGFloat {

@@ -21,8 +21,18 @@ class MeetAndLoungeDetailVC: UIViewController {
 
         tblDetail.registerCellNib(DetailHeaderCell.self)
         tblDetail.registerCellNib(DetailDescCell.self)
+        tblDetail.registerCellNib(DetailImageCell.self)
         tblDetail.rowHeight = UITableViewAutomaticDimension
         tblDetail.estimatedRowHeight = 160
+        
+        let titleView = ConcealingTitleView(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        titleView.text = (productData?.product_name!)! + " by " + (productData?.supplier!)!
+        navigationItem.titleView = titleView
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let titleView = navigationItem.titleView as? ConcealingTitleView else { return }
+        titleView.scrollViewDidScroll(scrollView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +42,7 @@ class MeetAndLoungeDetailVC: UIViewController {
 
 extension MeetAndLoungeDetailVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,11 +51,19 @@ extension MeetAndLoungeDetailVC : UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: DetailHeaderCell.identifier) as! DetailHeaderCell
             
             if let product = productData, let service = serviceData, let form = formData {
-                 cell.setData(productData: product, serviceData: service, formData: form)
+                cell.setData(productData: product, serviceData: service, formData: form)
             }
             return cell
         }
         else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: DetailImageCell.identifier) as! DetailImageCell
+            
+            cell.setData(nil)
+            
+            return cell
+        }
+        else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: DetailDescCell.identifier) as! DetailDescCell
             
@@ -53,11 +71,15 @@ extension MeetAndLoungeDetailVC : UITableViewDelegate, UITableViewDataSource {
             
             return cell
         }
-        
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        
+        if indexPath.row == 1 {
+            return 200
+        }
+        else {
+            return UITableViewAutomaticDimension
+        }
     }    
 }

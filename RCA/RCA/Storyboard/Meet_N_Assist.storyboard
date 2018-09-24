@@ -205,6 +205,35 @@
             </objects>
             <point key="canvasLocation" x="2316" y="71.514242878560722"/>
         </scene>
+        <!--Image Page View ContentVC-->
+        <scene sceneID="rP3-XL-ONX">
+            <objects>
+                <viewController storyboardIdentifier="ImagePageViewContentVC" id="I3U-1x-ram" customClass="ImagePageViewContentVC" customModule="RCA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWR-VT-1Cn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-1z-teo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tud-1z-teo" firstAttribute="leading" secondItem="jmQ-hm-w4T" secondAttribute="leading" id="AcQ-MB-Hgl"/>
+                            <constraint firstItem="Tud-1z-teo" firstAttribute="trailing" secondItem="jmQ-hm-w4T" secondAttribute="trailing" id="Y7u-dQ-b8L"/>
+                            <constraint firstItem="Tud-1z-teo" firstAttribute="top" secondItem="vWR-VT-1Cn" secondAttribute="top" id="bmv-Sq-UNC"/>
+                            <constraint firstItem="Tud-1z-teo" firstAttribute="bottom" secondItem="jmQ-hm-w4T" secondAttribute="bottom" id="opf-5X-4NA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jmQ-hm-w4T"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="Tud-1z-teo" id="DaE-ZB-P35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4j-Ii-0be" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2988" y="72.413793103448285"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4O-To-G0b">
             <objects>

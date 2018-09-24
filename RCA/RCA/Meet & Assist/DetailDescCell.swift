@@ -32,14 +32,10 @@ class DetailDescCell: BaseTableViewCell {
             var strServiceProvided = productData.inclusions?.replacingOccurrences(of: "<ul>", with: "")
             strServiceProvided = strServiceProvided?.replacingOccurrences(of: "</ul>", with: "")
             strServiceProvided = strServiceProvided?.replacingOccurrences(of: "</li>", with: "")
-            strServiceProvided = strServiceProvided?.replacingOccurrences(of: "<li>", with: "\n\n" + Utils.bullet + " " )
+            strServiceProvided = strServiceProvided?.replacingOccurrences(of: "<li>", with: "\n" + Utils.bullet + " " )
             
-            //lblServiceOffered.attributedText = NSAttributedString(string: strServiceProvided!)
             lblServiceOffered.text = strServiceProvided
             
-            
-            
-        
 //            if let regex = try? NSRegularExpression(pattern: "(<[a-z 0-9 A-Z /]+>)", options: .caseInsensitive) {
 //
 //                var resut: String = ""

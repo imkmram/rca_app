@@ -8,17 +8,26 @@
 
 import UIKit
 
-class DetailImageCell: UITableViewCell {
-
+class DetailImageCell: BaseTableViewCell {
+    @IBOutlet weak var sliderContentView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+       
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    }
+    
+   override func setData(_ data: Any?) {
+        
+        let sliderView: ImageSliderView = ImageSliderView(frame: CGRect(x: 0, y: 0, width: sliderContentView.bounds.size.width, height: sliderContentView.bounds.size.height))
+        sliderView.initializeView(list: [UIImage(named: "error.jpg")!, UIImage(named: "error.jpg")!])
+        sliderContentView.addSubview(sliderView)
     }
 
 }

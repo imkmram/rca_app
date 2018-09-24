@@ -11,14 +11,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailDescCell" rowHeight="112" id="xf3-ZR-YAS" customClass="DetailDescCell" customModule="RCA" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailImageCell" rowHeight="223" id="xf3-ZR-YAS" customClass="DetailImageCell" customModule="RCA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xf3-ZR-YAS" id="8ag-f2-zw6">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJX-yu-kAD">
+                        <rect key="frame" x="10" y="10" width="355" height="202.5"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="tJX-yu-kAD" firstAttribute="top" secondItem="8ag-f2-zw6" secondAttribute="top" constant="10" id="3b9-Kk-Q07"/>
+                    <constraint firstAttribute="trailing" secondItem="tJX-yu-kAD" secondAttribute="trailing" constant="10" id="OED-FY-fLH"/>
+                    <constraint firstItem="tJX-yu-kAD" firstAttribute="leading" secondItem="8ag-f2-zw6" secondAttribute="leading" constant="10" id="ZtA-gq-gy7"/>
+                    <constraint firstAttribute="bottom" secondItem="tJX-yu-kAD" secondAttribute="bottom" constant="10" id="vgI-DP-m5n"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-11.5" y="52"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="sliderContentView" destination="tJX-yu-kAD" id="TXX-bo-FSt"/>
+            </connections>
+            <point key="canvasLocation" x="19.5" y="64.5"/>
         </tableViewCell>
     </objects>
 </document>
