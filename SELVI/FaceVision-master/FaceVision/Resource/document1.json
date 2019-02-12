@@ -1,0 +1,3909 @@
+{
+    "country": [
+                {
+                "id": 1,
+                "name": "Afghanistan",
+                "document": [
+                             {
+                             "doc_id": 1,
+                             "doc_name": "Afghanistan visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 2,
+                             "doc_name": "Afghanistan visa(from the USA)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 2,
+                "name": "Albania",
+                "document": [
+                             {
+                             "doc_id": 3,
+                             "doc_name": "Albania visa and e-visa",
+                             "doc_size": "47x36mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.85,
+                             "height": 1.42
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 3,
+                "name": "Algeria",
+                "document": [
+                             {
+                             "doc_id": 4,
+                             "doc_name": "Algeria visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 4,
+                "name": "Angola",
+                "document": [
+                             {
+                             "doc_id": 5,
+                             "doc_name": "Angola visa",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 5,
+                "name": "Argentina",
+                "document": [
+                             {
+                             "doc_id": 6,
+                             "doc_name": "Argentina visa",
+                             "doc_size": "4x4 cm (40x40 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.57
+                             }
+                             },
+                             {
+                             "doc_id": 7,
+                             "doc_name": "Argentina visa in USA",
+                             "doc_size": "1.5x1.5 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.5,
+                             "height": 1.5
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 6,
+                "name": "Armenia",
+                "document": [
+                             {
+                             "doc_id": 8,
+                             "doc_name": "Armenia evisa photo",
+                             "doc_size": "600x600 px",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             },
+                             {
+                             "doc_id": 9,
+                             "doc_name": "Armenia visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 7,
+                "name": "Australia",
+                "document": [
+                             {
+                             "doc_id": 10,
+                             "doc_name": "Australia Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 8,
+                "name": "Austria",
+                "document": [
+                             {
+                             "doc_id": 11,
+                             "doc_name": "Austria Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 9,
+                "name": "Bahrain",
+                "document": [
+                             {
+                             "doc_id": 12,
+                             "doc_name": "Bahrain visa",
+                             "doc_size": "4x6 cm (40x60 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 10,
+                "name": "Bangladesh",
+                "document": [
+                             {
+                             "doc_id": 13,
+                             "doc_name": "Bangladesh e-visa",
+                             "doc_size": "45x35 mm",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             },
+                             {
+                             "doc_id": 14,
+                             "doc_name": "Bangladesh visa",
+                             "doc_size": "45x35 mm",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             },
+                             {
+                             "doc_id": 15,
+                             "doc_name": "Bangladesh visa",
+                             "doc_size": "37x37 mm",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.46,
+                             "height": 1.46
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 11,
+                "name": "Belarus",
+                "document": [
+                             {
+                             "doc_id": 16,
+                             "doc_name": "Belarus Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 12,
+                "name": "Belgium",
+                "document": [
+                             {
+                             "doc_id": 17,
+                             "doc_name": "Belgium Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 13,
+                "name": "Benin",
+                "document": [
+                             {
+                             "doc_id": 18,
+                             "doc_name": "Benin visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 14,
+                "name": "Botswana",
+                "document": [
+                             {
+                             "doc_id": 19,
+                             "doc_name": "Botswana visa",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 15,
+                "name": "Brazil",
+                "document": [
+                             {
+                             "doc_id": 20,
+                             "doc_name": "Brazil Visa (from the US)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 16,
+                "name": "Bulgaria",
+                "document": [
+                             {
+                             "doc_id": 21,
+                             "doc_name": "Bulgaria Visa",
+                             "doc_size": "35x45mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 17,
+                "name": "Burkina Faso",
+                "document": [
+                             {
+                             "doc_id": 22,
+                             "doc_name": "Burkina Faso visa",
+                             "doc_size": "4.5x3.5 cm (45x35 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 18,
+                "name": "Cambodia",
+                "document": [
+                             {
+                             "doc_id": 23,
+                             "doc_name": "Cambodia Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 24,
+                             "doc_name": "Cambodia visa",
+                             "doc_size": "4x6 cm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             },
+                             {
+                             "doc_id": 25,
+                             "doc_name": "Cambodia visa from the USA",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 19,
+                "name": "Cameroon",
+                "document": [
+                             {
+                             "doc_id": 26,
+                             "doc_name": "Cameroon visa",
+                             "doc_size": "4x4 cm (40x40 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.57
+                             }
+                             },
+                             {
+                             "doc_id": 27,
+                             "doc_name": "Cameroon visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 20,
+                "name": "Canada",
+                "document": [
+                             {
+                             "doc_id": 28,
+                             "doc_name": "Canada Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 29,
+                             "doc_name": "Canada Temporary Resident Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 21,
+                "name": "China",
+                "document": [
+                             {
+                             "doc_id": 30,
+                             "doc_name": "China Visa",
+                             "doc_size": "33x48 mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.3,
+                             "height": 1.89
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 22,
+                "name": "Colombia",
+                "document": [
+                             {
+                             "doc_id": 31,
+                             "doc_name": "Colombian visa online",
+                             "doc_size": "3x4 cm",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.18
+                             }
+                             },
+                             {
+                             "doc_id": 32,
+                             "doc_name": "Colombian residence visa",
+                             "doc_size": "3x4 cm",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.18
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 23,
+                "name": "Comoros",
+                "document": [
+                             {
+                             "doc_id": 33,
+                             "doc_name": "Comoros visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 24,
+                "name": "Congo [Republic]",
+                "document": [
+                             {
+                             "doc_id": 34,
+                             "doc_name": "Congo (Brazzaville) e-visa",
+                             "doc_size": "40x40 mm",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             },
+                             {
+                             "doc_id": 35,
+                             "doc_name": "Congo (Brazzaville) visa",
+                             "doc_size": "4x4 cm (40x40 mm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.57
+                             }
+                             },
+                             {
+                             "doc_id": 36,
+                             "doc_name": "Congo (Brazzaville) visa(from US, Canada, Mexico)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 25,
+                "name": "Croatia",
+                "document": [
+                             {
+                             "doc_id": 37,
+                             "doc_name": "Croatia Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 26,
+                "name": "Cyprus",
+                "document": [
+                             {
+                             "doc_id": 38,
+                             "doc_name": "Cyprus visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 39,
+                             "doc_name": "Cyprus visa from USA",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 27,
+                "name": "Czech Republic",
+                "document": [
+                             {
+                             "doc_id": 40,
+                             "doc_name": "Czech Republic Visa",
+                             "doc_size": "35x45mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 28,
+                "name": "Denmark",
+                "document": [
+                             {
+                             "doc_id": 41,
+                             "doc_name": "Denmark Visa",
+                             "doc_size": "35x45mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 29,
+                "name": "Djibouti",
+                "document": [
+                             {
+                             "doc_id": 42,
+                             "doc_name": "Djibouti visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 30,
+                "name": "Egypt",
+                "document": [
+                             {
+                             "doc_id": 43,
+                             "doc_name": "Egypt visa",
+                             "doc_size": "40x60 mm (4x6 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             },
+                             {
+                             "doc_id": 44,
+                             "doc_name": "Egypt visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 31,
+                "name": "Equatorial Guinea",
+                "document": [
+                             {
+                             "doc_id": 45,
+                             "doc_name": "Equatorial Guinea visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 32,
+                "name": "Estonia",
+                "document": [
+                             {
+                             "doc_id": 46,
+                             "doc_name": "Estonia visa",
+                             "doc_size": "40x50 mm (4x5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.97
+                             }
+                             },
+                             {
+                             "doc_id": 47,
+                             "doc_name": "Estonia long stay D visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 33,
+                "name": "Ethiopia",
+                "document": [
+                             {
+                             "doc_id": 48,
+                             "doc_name": "Ethiopia e-visa online",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 49,
+                             "doc_name": "Ethiopia visa offline",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 34,
+                "name": "European Union",
+                "document": [
+                             {
+                             "doc_id": 50,
+                             "doc_name": "Schengen Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 35,
+                "name": "Finland",
+                "document": [
+                             {
+                             "doc_id": 51,
+                             "doc_name": "Finland Visa",
+                             "doc_size": "36x47 mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.42,
+                             "height": 1.85
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 36,
+                "name": "France",
+                "document": [
+                             {
+                             "doc_id": 52,
+                             "doc_name": "France Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 37,
+                "name": "Gabon",
+                "document": [
+                             {
+                             "doc_id": 53,
+                             "doc_name": "Gabon evisa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 54,
+                             "doc_name": "Gabon visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 38,
+                "name": "Georgia",
+                "document": [
+                             {
+                             "doc_id": 55,
+                             "doc_name": "Georgia visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 56,
+                             "doc_name": "Georgia e-visa",
+                             "doc_size": "472x610 pixels (4x5.16 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.03
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 39,
+                "name": "Germany",
+                "document": [
+                             {
+                             "doc_id": 57,
+                             "doc_name": "Germany Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 40,
+                "name": "Ghana",
+                "document": [
+                             {
+                             "doc_id": 58,
+                             "doc_name": "Ghana visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "5",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 59,
+                             "doc_name": "Ghana visa from Brazil",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "5",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 41,
+                "name": "Greece",
+                "document": [
+                             {
+                             "doc_id": 60,
+                             "doc_name": "SGreece Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 61,
+                             "doc_name": "Greece Visa(from the USA)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 42,
+                "name": "Guinea-Bissau",
+                "document": [
+                             {
+                             "doc_id": 62,
+                             "doc_name": "Guinea-Bissau visa",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             },
+                             {
+                             "doc_id": 63,
+                             "doc_name": "Guinea-Bissau e-visa",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 43,
+                "name": "Hong Kong",
+                "document": [
+                             {
+                             "doc_id": 64,
+                             "doc_name": "Hong Kong Visa",
+                             "doc_size": "40x50 mm (4x5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.97
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 44,
+                "name": "Hungary",
+                "document": [
+                             {
+                             "doc_id": 65,
+                             "doc_name": "Hungary Visa",
+                             "doc_size": "35x45mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 45,
+                "name": "India",
+                "document": [
+                             {
+                             "doc_id": 66,
+                             "doc_name": "India Visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 67,
+                             "doc_name": "India Visa via VFSglobal.com",
+                             "doc_size": "190x190 px",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.97,
+                             "height": 1.97
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 46,
+                "name": "Indonesia",
+                "document": [
+                             {
+                             "doc_id": 68,
+                             "doc_name": "Indonesia Visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 69,
+                             "doc_name": "Indonesia Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 47,
+                "name": "Iran",
+                "document": [
+                             {
+                             "doc_id": 70,
+                             "doc_name": "Iran e-visa",
+                             "doc_size": "600x400 pixels",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 4.17,
+                             "height": 6.25
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 48,
+                "name": "Iraq",
+                "document": [
+                             {
+                             "doc_id": 71,
+                             "doc_name": "Iraq visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 49,
+                "name": "Ireland",
+                "document": [
+                             {
+                             "doc_id": 72,
+                             "doc_name": "Ireland Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 50,
+                "name": "Israel",
+                "document": [
+                             {
+                             "doc_id": 73,
+                             "doc_name": "Israel Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 74,
+                             "doc_name": "Israel Visa (usually from India)",
+                             "doc_size": "55x55mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2.16,
+                             "height": 2.16
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 51,
+                "name": "Italy",
+                "document": [
+                             {
+                             "doc_id": 75,
+                             "doc_name": "Italy Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 52,
+                "name": "Ivory Coast",
+                "document": [
+                             {
+                             "doc_id": 76,
+                             "doc_name": "Cote d'Ivoire visa",
+                             "doc_size": "4.5x3.5 cm (45x35 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 53,
+                "name": "Japan",
+                "document": [
+                             {
+                             "doc_id": 77,
+                             "doc_name": "Japan Visa head 27 mm",
+                             "doc_size": "45x45mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 78,
+                             "doc_name": "Japan Visa (standard visa from the US)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 79,
+                             "doc_name": "Japan Visa, head 34 mm",
+                             "doc_size": "45x45mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 54,
+                "name": "Jordan",
+                "document": [
+                             {
+                             "doc_id": 80,
+                             "doc_name": "Jordan visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 55,
+                "name": "Kazakhstan",
+                "document": [
+                             {
+                             "doc_id": 81,
+                             "doc_name": "Kazakhstan Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 56,
+                "name": "Kenya",
+                "document": [
+                             {
+                             "doc_id": 82,
+                             "doc_name": "Eastern Africa visa photo (Kenya)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 57,
+                "name": "Kuwait",
+                "document": [
+                             {
+                             "doc_id": 83,
+                             "doc_name": "Kuwait visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 58,
+                "name": "Laos",
+                "document": [
+                             {
+                             "doc_id": 84,
+                             "doc_name": "Laos visa",
+                             "doc_size": "4x6 cm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             },
+                             {
+                             "doc_id": 85,
+                             "doc_name": "Laos visa",
+                             "doc_size": "3x4 cm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             },
+                             {
+                             "doc_id": 86,
+                             "doc_name": "Laos adoption visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 59,
+                "name": "Lebanon",
+                "document": [
+                             {
+                             "doc_id": 87,
+                             "doc_name": "Lebanon visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 60,
+                "name": "Lesotho",
+                "document": [
+                             {
+                             "doc_id": 88,
+                             "doc_name": "Lesotho e-visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 61,
+                "name": "Libya",
+                "document": [
+                             {
+                             "doc_id": 89,
+                             "doc_name": "Libya visa",
+                             "doc_size": "4x6 cm (40x60 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 62,
+                "name": "Macau",
+                "document": [
+                             {
+                             "doc_id": 90,
+                             "doc_name": "Macau Visa",
+                             "doc_size": "33x48 mm",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.3,
+                             "height": 1.89
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 63,
+                "name": "Madagascar",
+                "document": [
+                             {
+                             "doc_id": 91,
+                             "doc_name": "Madagascar visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 92,
+                             "doc_name": "Madagascar visa",
+                             "doc_size": "5x5 cm (50x50 mm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.97,
+                             "height": 1.97
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 64,
+                "name": "Malaysia",
+                "document": [
+                             {
+                             "doc_id": 93,
+                             "doc_name": "Malaysia eVisa online application",
+                             "doc_size": "35x50 mm",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.97
+                             }
+                             },
+                             {
+                             "doc_id": 94,
+                             "doc_name": "Malaysia Visa blue background",
+                             "doc_size": "35x50 mm",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.97
+                             }
+                             },
+                             {
+                             "doc_id": 95,
+                             "doc_name": "Malaysia Visa white background",
+                             "doc_size": "35x50 mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.97
+                             }
+                             },
+                             {
+                             "doc_id": 96,
+                             "doc_name": "Malaysia Visa blue background",
+                             "doc_size": "35x45 mm ",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 97,
+                             "doc_name": "Malaysia Visa white background",
+                             "doc_size": "35x45 mm ",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 65,
+                "name": "Mauritania",
+                "document": [
+                             {
+                             "doc_id": 98,
+                             "doc_name": "Mauritania visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 66,
+                "name": "Mexico",
+                "document": [
+                             {
+                             "doc_id": 99,
+                             "doc_name": "Mexico visa",
+                             "doc_size": "25x35mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1,
+                             "height": 1.2
+                             }
+                             },
+                             {
+                             "doc_id": 100,
+                             "doc_name": "Mexico permanent residents visa",
+                             "doc_size": "31x39mm (3.1x3.9cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.22,
+                             "height": 1.38
+                             }
+                             },
+                             {
+                             "doc_id": 101,
+                             "doc_name": "Mexico visa",
+                             "doc_size": "1.5x1.75 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.5,
+                             "height": 1.75
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 67,
+                "name": "Moldova",
+                "document": [
+                             {
+                             "doc_id": 102,
+                             "doc_name": "Moldova visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 68,
+                "name": "Mongolia",
+                "document": [
+                             {
+                             "doc_id": 103,
+                             "doc_name": "Mongolia visa",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 69,
+                "name": "Morocco",
+                "document": [
+                             {
+                             "doc_id": 104,
+                             "doc_name": "Morocco visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 70,
+                "name": "Mozambique",
+                "document": [
+                             {
+                             "doc_id": 105,
+                             "doc_name": "Mozambique visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 71,
+                "name": "Myanmar [Burma]",
+                "document": [
+                             {
+                             "doc_id": 106,
+                             "doc_name": "Myanmar (Burma) Visa",
+                             "doc_size": "38x46 mm (3.8x4.6 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.5,
+                             "height": 1.81
+                             }
+                             },
+                             {
+                             "doc_id": 107,
+                             "doc_name": "Myanmar (Burma) Visa",
+                             "doc_size": "38x48 mm (3.8x4.8 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.5,
+                             "height": 1.89
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 72,
+                "name": "Namibia",
+                "document": [
+                             {
+                             "doc_id": 108,
+                             "doc_name": "Namibia visa",
+                             "doc_size": "37x52mm (3.7x5.2 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.46,
+                             "height": 2.05
+                             }
+                             },
+                             {
+                             "doc_id": 109,
+                             "doc_name": "Namibia visa from Europe",
+                             "doc_size": "35x45mm (3.5x4.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 73,
+                "name": "Nepal",
+                "document": [
+                             {
+                             "doc_id": 110,
+                             "doc_name": "Nepal online visa",
+                             "doc_size": "1.5x1.5 inch",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.5,
+                             "height": 1.5
+                             }
+                             },
+                             {
+                             "doc_id": 111,
+                             "doc_name": "Nepal visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 112,
+                             "doc_name": "Nepal visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 74,
+                "name": "Netherlands",
+                "document": [
+                             {
+                             "doc_id": 113,
+                             "doc_name": "Netherlands Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 75,
+                "name": "New Zealand",
+                "document": [
+                             {
+                             "doc_id": 114,
+                             "name": "New Zealand Visa online",
+                             "doc_size": "1650x2200 pixel",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 17.18,
+                             "height": 22.92
+                             }
+                             },
+                             {
+                             "doc_id": 115,
+                             "doc_name": "New Zealand Visa Offline",
+                             "doc_size": "35x45 mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.37,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 76,
+                "name": "Niger",
+                "document": [
+                             {
+                             "doc_id": 116,
+                             "doc_name": "Niger visa(from USA)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 77,
+                "name": "Nigeria",
+                "document": [
+                             {
+                             "doc_id": 117,
+                             "doc_name": "Nigeria visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 78,
+                "name": "Norway",
+                "document": [
+                             {
+                             "doc_id": 118,
+                             "doc_name": "Norway Visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 79,
+                "name": "Oman",
+                "document": [
+                             {
+                             "doc_id": 119,
+                             "doc_name": "Oman visa",
+                             "doc_size": "4x6 cm (40x60 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 80,
+                "name": "Pakistan",
+                "document": [
+                             {
+                             "doc_id": 120,
+                             "doc_name": "Pakistan visa",
+                             "doc_size": "35x45 mm",
+                             "doc_copies": "4",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 121,
+                             "doc_name": "Pakistan visa (from USA)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 81,
+                "name": "Palestinian Territories",
+                "document": [
+                             {
+                             "doc_id": 122,
+                             "doc_name": "Palestine visa",
+                             "doc_size": "30x40mm (3x4 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 82,
+                "name": "Philippines",
+                "document": [
+                             {
+                             "doc_id": 123,
+                             "doc_name": "Philippines visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 124,
+                             "doc_name": "Philippines visa",
+                             "doc_size": "35x45 mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 83,
+                "name": "Poland",
+                "document": [
+                             {
+                             "doc_id": 125,
+                             "doc_name": "Poland Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 84,
+                "name": "Portugal",
+                "document": [
+                             {
+                             "doc_id": 126,
+                             "doc_name": "Portugal Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 127,
+                             "doc_name": "Portugal Visa (in Indonesia and Philippines)",
+                             "doc_size": "30x40 mm (3x4 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 85,
+                "name": "Qatar",
+                "document": [
+                             {
+                             "doc_id": 128,
+                             "doc_name": "Qatar visa",
+                             "doc_size": "38x48 mm (3.8x4.8 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.5,
+                             "height": 1.89
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 86,
+                "name": "Romania",
+                "document": [
+                             {
+                             "doc_id": 129,
+                             "doc_name": "Romania Visa",
+                             "doc_size": "30x40 mm (3x4 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 87,
+                "name": "Russia",
+                "document": [
+                             {
+                             "doc_id": 130,
+                             "doc_name": "Russia Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 131,
+                             "doc_name": "Russia evisa Vladivostok and Far East",
+                             "doc_size": "450x600 pixels",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 4.68,
+                             "height": 6.25
+                             }
+                             },
+                             {
+                             "doc_id": 132,
+                             "doc_name": "Russia visa via VFSGlobal",
+                             "doc_size": "35x45 mm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 88,
+                "name": "Rwanda",
+                "document": [
+                             {
+                             "doc_id": 133,
+                             "doc_name": "Eastern Africa visa photo (Rwanda)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 89,
+                "name": "Samoa",
+                "document": [
+                             {
+                             "doc_id": 134,
+                             "doc_name": "Samoa visa",
+                             "doc_size": "45x35 mm (4.5x3.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 90,
+                "name": "Saudi Arabia",
+                "document": [
+                             {
+                             "doc_id": 135,
+                             "doc_name": "Saudi Arabia e-visa online",
+                             "doc_size": "200x200 pixels",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2.08,
+                             "height": 2.08
+                             }
+                             },
+                             {
+                             "doc_id": 136,
+                             "doc_name": "Saudi Arabia visa",
+                             "doc_size": " 2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 91,
+                "name": "Serbia",
+                "document": [
+                             {
+                             "doc_id": 137,
+                             "doc_name": "Serbia Visa",
+                             "doc_size": "35x45mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 92,
+                "name": "Singapore",
+                "document": [
+                             {
+                             "doc_id": 138,
+                             "doc_name": "Singapore visa online",
+                             "doc_size": "400x514 pixels",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 4.17,
+                             "height": 5.35
+                             }
+                             },
+                             {
+                             "doc_id": 139,
+                             "doc_name": "Singapore visa offline",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 93,
+                "name": "Slovakia",
+                "document": [
+                             {
+                             "doc_id": 140,
+                             "doc_name": "Slovakia Visa",
+                             "doc_size": "30x35 mm (3x3.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 94,
+                "name": "Somalia",
+                "document": [
+                             {
+                             "doc_id": 141,
+                             "doc_name": "Somalia visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 95,
+                "name": "South Africa",
+                "document": [
+                             {
+                             "doc_id": 142,
+                             "doc_name": "South Africa Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 96,
+                "name": "South Korea",
+                "document": [
+                             {
+                             "doc_id": 143,
+                             "doc_name": "South Korea Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 97,
+                "name": "Spain",
+                "document": [
+                             {
+                             "doc_id": 144,
+                             "doc_name": "Spain Passport",
+                             "doc_size": "40x53 mm",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.09
+                             }
+                             },
+                             {
+                             "doc_id": 145,
+                             "doc_name": "Spain Visa (US Chicago consulate)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 98,
+                "name": "Sri Lanka",
+                "document": [
+                             {
+                             "doc_id": 146,
+                             "doc_name": "Sri Lanka visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 99,
+                "name": "Sudan",
+                "document": [
+                             {
+                             "doc_id": 147,
+                             "doc_name": "Sudan visa",
+                             "doc_size": "40x50 mm (4x5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.97
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 100,
+                "name": "Suriname",
+                "document": [
+                             {
+                             "doc_id": 148,
+                             "doc_name": "Suriname visa online",
+                             "doc_size": "35x45 mm",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 149,
+                             "doc_name": "Suriname visa",
+                             "doc_size": "45x35 mm (1.77x1.37 inch)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 101,
+                "name": "Sweden",
+                "document": [
+                             {
+                             "doc_id": 150,
+                             "doc_name": "Sweden Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 102,
+                "name": "Switzerland",
+                "document": [
+                             {
+                             "doc_id": 151,
+                             "doc_name": "Switzerland Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 103,
+                "name": "Syria",
+                "document": [
+                             {
+                             "doc_id": 152,
+                             "doc_name": "Syrian visa",
+                             "doc_size": "40x60 mm (4x6 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 104,
+                "name": "Taiwan",
+                "document": [
+                             {
+                             "doc_id": 153,
+                             "doc_name": "Taiwan Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 105,
+                "name": "Thailand",
+                "document": [
+                             {
+                             "doc_id": 154,
+                             "doc_name": "Thailand Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 155,
+                             "doc_name": "Thailand Visa(from the US)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 156,
+                             "doc_name": "Thailand e-visa",
+                             "doc_size": "132x170 pixel",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.37,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 106,
+                "name": "Togo",
+                "document": [
+                             {
+                             "doc_id": 157,
+                             "doc_name": "Togo visa",
+                             "doc_size": "4.5x3.5 cm (45x35mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 107,
+                "name": "Tunisia",
+                "document": [
+                             {
+                             "doc_id": 158,
+                             "doc_name": "Tunisia visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 108,
+                "name": "Turkey",
+                "document": [
+                             {
+                             "doc_id": 159,
+                             "doc_name": "Turkey Visa",
+                             "doc_size": "50x60 mm (5x6 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.97,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 109,
+                "name": "Turkmenistan",
+                "document": [
+                             {
+                             "doc_id": 160,
+                             "doc_name": "Turkmenistan visa",
+                             "doc_size": "5x6 cm (50x60 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 110,
+                "name": "Uganda",
+                "document": [
+                             {
+                             "doc_id": 161,
+                             "doc_name": "Uganda visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 162,
+                             "doc_name": "Eastern Africa visa photo (Uganda)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 111,
+                "name": "Ukraine",
+                "document": [
+                             {
+                             "doc_id": 163,
+                             "doc_name": "Ukraine Visa online",
+                             "doc_size": "450x600 pixels",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 4.67,
+                             "height": 6.25
+                             }
+                             },
+                             {
+                             "doc_id": 164,
+                             "doc_name": "Ukraine Visa",
+                             "doc_size": "3x4 cm (30x40 mm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 112,
+                "name": "United Arab Emirates",
+                "document": [
+                             {
+                             "doc_id": 165,
+                             "doc_name": "UAE Visa offline",
+                             "doc_size": "43x55 mm",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.69,
+                             "height": 2.17
+                             }
+                             },
+                             {
+                             "doc_id": 166,
+                             "doc_name": "UAE Visa online Emirates.com",
+                             "doc_size": "300x369 pixels",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 3.12,
+                             "height": 3.84
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 113,
+                "name": "United Kingdom",
+                "document": [
+                             {
+                             "doc_id": 167,
+                             "doc_name": "UK Visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 114,
+                "name": "United States",
+                "document": [
+                             {
+                             "doc_id": 168,
+                             "doc_name": "US Visa",
+                             "doc_size": "2x2 inch (51x51mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 169,
+                             "doc_name": "CIBTvisas visa photo (any country)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 170,
+                             "doc_name": "VisaCentral visa photo (any country)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 171,
+                             "doc_name": "Travisa visa photo (any country)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 172,
+                             "doc_name": "VisaHQ visa photo (any country)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             },
+                             {
+                             "doc_id": 173,
+                             "doc_name": "Visa Headquarters visa photo (any country)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 115,
+                "name": "Uzbekistan",
+                "document": [
+                             {
+                             "doc_id": 174,
+                             "doc_name": "Uzbekistan visa",
+                             "doc_size": "3.5x4.5 cm (35x45 mm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 116,
+                "name": "Vietnam",
+                "document": [
+                             {
+                             "doc_id": 175,
+                             "doc_name": "Vietnam visa",
+                             "doc_size": "40x60 mm (4x6 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             },
+                             {
+                             "doc_id": 176,
+                             "doc_name": "Vietnam visa",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 117,
+                "name": "Yemen",
+                "document": [
+                             {
+                             "doc_id": 177,
+                             "doc_name": "Yemen visa",
+                             "doc_size": "4x6 cm",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.57,
+                             "height": 2.36
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 118,
+                "name": "Zambia",
+                "document": [
+                             {
+                             "doc_id": 178,
+                             "doc_name": "Zambia visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             },
+                             {
+                             "doc_id": 179,
+                             "doc_name": "Zambia visa(from USA)",
+                             "doc_size": "2x2 inch",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 119,
+                "name": "Zimbabwe",
+                "document": [
+                             {
+                             "doc_id": 180,
+                             "doc_name": "Zimbabwe visa",
+                             "doc_size": "35x45 mm (3.5x4.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 120,
+                "name": "Sweden",
+                "document": [
+                             {
+                             "doc_id": 181,
+                             "doc_name": "Sweden Visa ",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 121,
+                "name": "Denmark",
+                "document": [
+                             {
+                             "doc_id": 182,
+                             "doc_name": "Denmark Visa",
+                             "doc_size": "35x45Mmm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 122,
+                "name": "Iceland",
+                "document": [
+                             {
+                             "doc_id": 183,
+                             "doc_name": "Iceland Visa",
+                             "doc_size": "35x45Mmm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 123,
+                "name": "Domicana",
+                "document": [
+                             {
+                             "doc_id": 184,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 124,
+                "name": "Italy",
+                "document": [
+                             {
+                             "doc_id": 185,
+                             "doc_name": "Italy",
+                             "doc_size": "35x45mm (3.5 x 4.5 cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 125,
+                "name": "Spain",
+                "document": [
+                             {
+                             "doc_id": 186,
+                             "doc_name": "Spain Visa",
+                             "doc_size": "35x45MM (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 126,
+                "name": "Latvia",
+                "document": [
+                             {
+                             "doc_id": 187,
+                             "doc_name": "Latvia",
+                             "doc_size": "45x35mm (4.5 x 3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 127,
+                "name": "New Zealand",
+                "document": [
+                             {
+                             "doc_id": 188,
+                             "doc_name": "New Zealand",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 128,
+                "name": "Singapore",
+                "document": [
+                             {
+                             "doc_id": 189,
+                             "doc_name": "Singapore Visa",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 129,
+                "name": "Thailand",
+                "document": [
+                             {
+                             "doc_id": 190,
+                             "doc_name": "Thailand",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 130,
+                "name": "China",
+                "document": [
+                             {
+                             "doc_id": 191,
+                             "doc_name": "China",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 131,
+                "name": "Australia",
+                "document": [
+                             {
+                             "doc_id": 192,
+                             "doc_name": "Australia",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 132,
+                "name": "Greece",
+                "document": [
+                             {
+                             "doc_id": 193,
+                             "doc_name": "Greece",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 133,
+                "name": "Argentina",
+                "document": [
+                             {
+                             "doc_id": 194,
+                             "doc_name": "Argentina",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 134,
+                "name": "Peru",
+                "document": [
+                             {
+                             "doc_id": 195,
+                             "doc_name": "Peru Visa",
+                             "doc_size": "43x35mm (4.3 x 3.5cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 135,
+                "name": "Mexico",
+                "document": [
+                             {
+                             "doc_id": 196,
+                             "doc_name": "Mexico",
+                             "doc_size": "45x35mm (4.5 x 3.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 136,
+                "name": "SOUTH AFRICA",
+                "document": [
+                             {
+                             "doc_id": 197,
+                             "doc_name": "South Africa",
+                             "doc_size": "45x35mm (4.5 x 3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 137,
+                "name": "Morocco",
+                "document": [
+                             {
+                             "doc_id": 198,
+                             "doc_name": "Morocco",
+                             "doc_size": "40x30mm (4.0x3.0cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.57
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 138,
+                "name": "Russia",
+                "document": [
+                             {
+                             "doc_id": 199,
+                             "doc_name": "Russia",
+                             "doc_size": "45x35mm (4.5 x 3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 139,
+                "name": "Turkey",
+                "document": [
+                             {
+                             "doc_id": 200,
+                             "doc_name": "Turkey",
+                             "doc_size": "2.5inch x 2.5 inch",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 2.5,
+                             "height": 2.5
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 140,
+                "name": "USA",
+                "document": [
+                             {
+                             "doc_id": 201,
+                             "doc_name": "USA",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 141,
+                "name": "Brazil",
+                "document": [
+                             {
+                             "doc_id": 202,
+                             "doc_name": "Brazil",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 142,
+                "name": "Canada",
+                "document": [
+                             {
+                             "doc_id": 203,
+                             "doc_name": "Canada",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 143,
+                "name": "Lebanon",
+                "document": [
+                             {
+                             "doc_id": 204,
+                             "doc_name": "Lebanon",
+                             "doc_size": "35x40mm (3.5 x 4.0cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.18
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 144,
+                "name": "Slovenia",
+                "document": [
+                             {
+                             "doc_id": 205,
+                             "doc_name": "Slovenia",
+                             "doc_size": "45mm x 35mm (4.5 x 3.5cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 145,
+                "name": "Malta",
+                "document": [
+                             {
+                             "doc_id": 206,
+                             "doc_name": "Malta",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 146,
+                "name": "Poland",
+                "document": [
+                             {
+                             "doc_id": 207,
+                             "doc_name": "Poland",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 148,
+                "name": "South Korea",
+                "document": [
+                             {
+                             "doc_id": 208,
+                             "doc_name": "South Korea",
+                             "doc_size": "45x35mm (4.5 x 3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 149,
+                "name": "Egypt",
+                "document": [
+                             {
+                             "doc_id": 209,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 151,
+                "name": "Dominican Republic",
+                "document": [
+                             {
+                             "doc_id": 210,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 152,
+                "name": "Greenland",
+                "document": [
+                             {
+                             "doc_id": 211,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 153,
+                "name": "Luxembourg",
+                "document": [
+                             {
+                             "doc_id": 212,
+                             "doc_name": "Luxembourg",
+                             "doc_size": "45mm x 35mm (4.5 x 3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 154,
+                "name": "Vietnam (Offline)",
+                "document": [
+                             {
+                             "doc_id": 213,
+                             "doc_name": "Vietnam Offline",
+                             "doc_size": "45mm x 35mm (4.5 x 3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 155,
+                "name": "Bahamas",
+                "document": [
+                             {
+                             "doc_id": 214,
+                             "doc_name": "Bahamas",
+                             "doc_size": "35x45mm (3.5 x 4.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 156,
+                "name": "Barbados",
+                "document": [
+                             {
+                             "doc_id": 215,
+                             "doc_name": "Barbados",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 158,
+                "name": "Phillipines",
+                "document": [
+                             {
+                             "doc_id": 216,
+                             "doc_name": "Phillipines",
+                             "doc_size": "50.8mm x 50.8mm",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 2,
+                             "height": 2
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 159,
+                "name": "Papua new guinea",
+                "document": [
+                             {
+                             "doc_id": 217,
+                             "doc_name": "Papua new guinea",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 160,
+                "name": "Israel",
+                "document": [
+                             {
+                             "doc_id": 218,
+                             "doc_name": "Israel",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 161,
+                "name": "Bosnia & Herzegovina",
+                "document": [
+                             {
+                             "doc_id": 219,
+                             "doc_name": "Bosnia & Herzegovina",
+                             "doc_size": "45x35mm(4.5x3.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 162,
+                "name": "Columbia",
+                "document": [
+                             {
+                             "doc_id": 220,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 163,
+                "name": "Gibraltar",
+                "document": [
+                             {
+                             "doc_id": 221,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 164,
+                "name": "Cayman Islands",
+                "document": [
+                             {
+                             "doc_id": 222,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 165,
+                "name": "Bolivia",
+                "document": [
+                             {
+                             "doc_id": 223,
+                             "doc_name": "Bolivia",
+                             "doc_size": "45x35mm( 4.5x3.5cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 166,
+                "name": "Chile",
+                "document": [
+                             {
+                             "doc_id": 224,
+                             "doc_name": "Chile",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 167,
+                "name": "Equador",
+                "document": [
+                             {
+                             "doc_id": 225,
+                             "doc_name": "Equador",
+                             "doc_size": "45x35mm( 4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 168,
+                "name": "Romania",
+                "document": [
+                             {
+                             "doc_id": 226,
+                             "doc_name": "Romania",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 169,
+                "name": "Venezuela",
+                "document": [
+                             {
+                             "doc_id": 227,
+                             "doc_name": "Venezuela",
+                             "doc_size": "30mm x 30mm",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.18,
+                             "height": 1.18
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 170,
+                "name": "Uruguay",
+                "document": [
+                             {
+                             "doc_id": 228,
+                             "doc_name": "uruguay",
+                             "doc_size": "45x35mm (4.5 x 3.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 171,
+                "name": "Andorra",
+                "document": [
+                             {
+                             "doc_id": 229,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 172,
+                "name": "Belarus",
+                "document": [
+                             {
+                             "doc_id": 230,
+                             "doc_name": "Belarus",
+                             "doc_size": "35x45mm (3.5x4.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 173,
+                "name": "Brunie Darusalam",
+                "document": [
+                             {
+                             "doc_id": 231,
+                             "doc_name": "Brunie",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 174,
+                "name": "Burundi",
+                "document": [
+                             {
+                             "doc_id": 232,
+                             "doc_name": "Burundi",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 175,
+                "name": "chad",
+                "document": [
+                             {
+                             "doc_id": 233,
+                             "doc_name": "Chad",
+                             "doc_size": "45x35mm( 4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 176,
+                "name": "Costa Rica",
+                "document": [
+                             {
+                             "doc_id": 234,
+                             "doc_name": "Costa Rica",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 177,
+                "name": "Cote dIvoire",
+                "document": [
+                             {
+                             "doc_id": 235,
+                             "doc_name": "Cote dIvoire",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 178,
+                "name": "Cuba",
+                "document": [
+                             {
+                             "doc_id": 236,
+                             "doc_name": "Cuba",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 179,
+                "name": "El Salvador",
+                "document": [
+                             {
+                             "doc_id": 237,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 180,
+                "name": "Eritrea",
+                "document": [
+                             {
+                             "doc_id": 238,
+                             "doc_name": "Eritrea",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 181,
+                "name": "Ethopia",
+                "document": [
+                             {
+                             "doc_id": 239,
+                             "doc_name": "Ethopia",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 182,
+                "name": "Fiji",
+                "document": [
+                             {
+                             "doc_id": 240,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 183,
+                "name": "Gabon",
+                "document": [
+                             {
+                             "doc_id": 241,
+                             "doc_name": "Gabon",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "1",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 184,
+                "name": "Gambia",
+                "document": [
+                             {
+                             "doc_id": 242,
+                             "doc_name": "Gambia",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 185,
+                "name": "Grenada",
+                "document": [
+                             {
+                             "doc_id": 243,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 186,
+                "name": "Guatemala",
+                "document": [
+                             {
+                             "doc_id": 244,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 187,
+                "name": "Honduras",
+                "document": [
+                             {
+                             "doc_id": 245,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 188,
+                "name": "Iran",
+                "document": [
+                             {
+                             "doc_id": 246,
+                             "doc_name": "Iran",
+                             "doc_size": "40x30mm (4.0 x 3.0cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.57,
+                             "height": 1.18
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 189,
+                "name": "Jamaica",
+                "document": [
+                             {
+                             "doc_id": 247,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 190,
+                "name": "Kyrgyzstan",
+                "document": [
+                             {
+                             "doc_id": 248,
+                             "doc_name": "Kyrgyzstan",
+                             "doc_size": "45x35mm (4.5x3.5m)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 191,
+                "name": "Lithunia",
+                "document": [
+                             {
+                             "doc_id": 249,
+                             "doc_name": "Lithunia",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 192,
+                "name": "Luxembourg",
+                "document": [
+                             {
+                             "doc_id": 250,
+                             "doc_name": "Luxembourg",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 193,
+                "name": "Macau",
+                "document": [
+                             {
+                             "doc_id": 251,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 194,
+                "name": "Macedonia",
+                "document": [
+                             {
+                             "doc_id": 252,
+                             "doc_name": "Macedonia",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 195,
+                "name": "Malawi",
+                "document": [
+                             {
+                             "doc_id": 253,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 196,
+                "name": "Mali",
+                "document": [
+                             {
+                             "doc_id": 254,
+                             "doc_name": "Mali",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 197,
+                "name": "Mauritius",
+                "document": [
+                             {
+                             "doc_id": 255,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 198,
+                "name": "Monaco",
+                "document": [
+                             {
+                             "doc_id": 256,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 199,
+                "name": "Nicaragua",
+                "document": [
+                             {
+                             "doc_id": 257,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 200,
+                "name": "Niger",
+                "document": [
+                             {
+                             "doc_id": 258,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0}
+                             }
+                             ]
+                },
+                {
+                "id": 201,
+                "name": "Panama",
+                "document": [
+                             {
+                             "doc_id": 259,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 202,
+                "name": "Panama",
+                "document": [
+                             {
+                             "doc_id": 260,
+                             "doc_name": "Need to check",
+                             "doc_size": "",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 203,
+                "name": "Paraguay",
+                "document": [
+                             {
+                             "doc_id": 261,
+                             "doc_name": "Paraguay",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 204,
+                "name": "San Marino",
+                "document": [
+                             {
+                             "doc_id": 262,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 205,
+                "name": "Senegal",
+                "document": [
+                             {
+                             "doc_id": 263,
+                             "doc_name": "Senegal",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "3",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 206,
+                "name": "Seychelles",
+                "document": [
+                             {
+                             "doc_id": 264,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 207,
+                "name": "Tanzania",
+                "document": [
+                             {
+                             "doc_id": 265,
+                             "doc_name": "Tanzania",
+                             "doc_size": "45x35mm (4.5x3.5cm)",
+                             "doc_copies": "2",
+                             "size": {
+                             "width": 1.77,
+                             "height": 1.38
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 208,
+                "name": "Domicana",
+                "document": [
+                             {
+                             "doc_id": 266,
+                             "doc_name": "",
+                             "doc_size": "",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 0,
+                             "height": 0
+                             }
+                             }
+                             ]
+                },
+                {
+                "id": 209,
+                "name": "Italy",
+                "document": [
+                             {
+                             "doc_id": 267,
+                             "doc_name": "Italy",
+                             "doc_size": "35x45mm (3.5 x 4.5 cm)",
+                             "doc_copies": "0",
+                             "size": {
+                             "width": 1.38,
+                             "height": 1.77
+                             }
+                             }
+                             ]
+                }
+                ]
+}

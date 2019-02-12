@@ -10,8 +10,6 @@ import CoreData
 
 class BaseManagedObject: NSManagedObject {
     
-    
-    
     func selectAllFrom<T: BaseManagedObject>(entityName: String) ->[T] {
         
         var list: [T] = []
@@ -52,4 +50,3 @@ class BaseManagedObject: NSManagedObject {
         return false
     }
 }
-

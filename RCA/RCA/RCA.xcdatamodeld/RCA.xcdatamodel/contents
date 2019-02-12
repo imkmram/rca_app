@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Airport" representedClassName="Airport" syncable="YES" codeGenerationType="class">
         <attribute name="airport_code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="airport_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -61,11 +61,11 @@
         <element name="Airport" positionX="-54" positionY="36" width="128" height="135"/>
         <element name="City" positionX="-36" positionY="72" width="128" height="120"/>
         <element name="Country" positionX="-63" positionY="9" width="128" height="120"/>
+        <element name="DatabaseStatusCD" positionX="-9" positionY="99" width="128" height="60"/>
         <element name="PassportType" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ServiceCD" positionX="-18" positionY="72" width="128" height="165"/>
         <element name="State" positionX="-18" positionY="90" width="128" height="105"/>
         <element name="User" positionX="0" positionY="99" width="128" height="90"/>
         <element name="VisaType" positionX="18" positionY="108" width="128" height="90"/>
-        <element name="ServiceCD" positionX="-18" positionY="72" width="128" height="165"/>
-        <element name="DatabaseStatusCD" positionX="-9" positionY="99" width="128" height="60"/>
     </elements>
 </model>
