@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceDetailCell" rowHeight="54" id="mEc-fj-ssu" customClass="PlaceDetailCell" customModule="weRide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEc-fj-ssu" id="dRf-49-4YP">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Atv-uH-JXK">
+                        <rect key="frame" x="10" y="5" width="355" height="48.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="o1X-53-srn">
+                                <rect key="frame" x="0.0" y="8" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Wqo-OO-OKl"/>
+                                    <constraint firstAttribute="height" constant="25" id="oq9-6z-Bey"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tK-3h-n1s">
+                                <rect key="frame" x="33" y="4" width="306" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6tK-3h-n1s" firstAttribute="top" secondItem="Atv-uH-JXK" secondAttribute="top" constant="4" id="3p8-o2-VCI"/>
+                            <constraint firstItem="6tK-3h-n1s" firstAttribute="leading" secondItem="o1X-53-srn" secondAttribute="trailing" constant="8" id="LMa-Cr-L2T"/>
+                            <constraint firstItem="o1X-53-srn" firstAttribute="top" secondItem="Atv-uH-JXK" secondAttribute="top" constant="8" id="eQT-uc-FaM"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="o1X-53-srn" secondAttribute="bottom" constant="14.5" id="oEq-dI-9gd"/>
+                            <constraint firstAttribute="trailing" secondItem="6tK-3h-n1s" secondAttribute="trailing" constant="16" id="pFP-nU-W2z"/>
+                            <constraint firstItem="o1X-53-srn" firstAttribute="leading" secondItem="Atv-uH-JXK" secondAttribute="leading" id="pbQ-TY-Vh8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Atv-uH-JXK" firstAttribute="leading" secondItem="dRf-49-4YP" secondAttribute="leading" constant="10" id="8rq-Zi-QgB"/>
+                    <constraint firstAttribute="bottom" secondItem="Atv-uH-JXK" secondAttribute="bottom" id="gs0-wb-prx"/>
+                    <constraint firstItem="Atv-uH-JXK" firstAttribute="top" secondItem="dRf-49-4YP" secondAttribute="top" constant="5" id="oAz-1f-8hI"/>
+                    <constraint firstAttribute="trailing" secondItem="Atv-uH-JXK" secondAttribute="trailing" constant="10" id="wDL-as-cY7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="baseView" destination="Atv-uH-JXK" id="pJt-Oz-41f"/>
+                <outlet property="lblPlace" destination="6tK-3h-n1s" id="vQH-05-9hS"/>
+            </connections>
+            <point key="canvasLocation" x="46.5" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="edit" width="17" height="17"/>
+    </resources>
+</document>

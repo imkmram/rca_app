@@ -1,0 +1,344 @@
+{
+    "geocoded_waypoints" : [
+                            {
+                            "geocoder_status" : "OK",
+                            "place_id" : "ChIJff4_q9vO5zsRrqEzBfQEITQ",
+                            "types" : [ "premise" ]
+                            },
+                            {
+                            "geocoder_status" : "OK",
+                            "place_id" : "ChIJJ_ekzdnJ5zsRYevI0W_96I8",
+                            "types" : [ "establishment", "point_of_interest", "store" ]
+                            }
+                            ],
+    "routes" : [
+                {
+                "bounds" : {
+                "northeast" : {
+                "lat" : 19.062034,
+                "lng" : 72.8930385
+                },
+                "southwest" : {
+                "lat" : 19.0180404,
+                "lng" : 72.8427016
+                }
+                },
+                "copyrights" : "Map data ©2018 Google",
+                "legs" : [
+                          {
+                          "distance" : {
+                          "text" : "8.2 km",
+                          "value" : 8198
+                          },
+                          "duration" : {
+                          "text" : "15 mins",
+                          "value" : 920
+                          },
+                          "end_address" : "Shop number 2, Belgrami Rd, Chhadva Nagar, Kurla West, Mumbai, Maharashtra 400070, India",
+                          "end_location" : {
+                          "lat" : 19.0603951,
+                          "lng" : 72.8896738
+                          },
+                          "start_address" : "Bagwe Nivas, Post Office Marg, Kasaravadi, Dadar, Mumbai, Maharashtra 400028, India",
+                          "start_location" : {
+                          "lat" : 19.0214523,
+                          "lng" : 72.8427016
+                          },
+                          "steps" : [
+                                     {
+                                     "distance" : {
+                                     "text" : "43 m",
+                                     "value" : 43
+                                     },
+                                     "duration" : {
+                                     "text" : "1 min",
+                                     "value" : 11
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0211182,
+                                     "lng" : 72.8428957
+                                     },
+                                     "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eVeer Kotwal Udyan Chowk\u003c/b\u003e toward \u003cb\u003eTilak Rd\u003c/b\u003e/\u003cb\u003eTilak Bridge\u003c/b\u003e/\u003cb\u003eTilak Flyover\u003c/b\u003e",
+                                     "polyline" : {
+                                     "points" : "acbsB{ar{LPIJGZQBABA"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0214523,
+                                     "lng" : 72.8427016
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.6 km",
+                                     "value" : 609
+                                     },
+                                     "duration" : {
+                                     "text" : "2 mins",
+                                     "value" : 119
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0180404,
+                                     "lng" : 72.8476603
+                                     },
+                                     "html_instructions" : "Exit the roundabout onto \u003cb\u003eTilak Rd\u003c/b\u003e/\u003cb\u003eTilak Bridge\u003c/b\u003e/\u003cb\u003eTilak Flyover\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Tilak Rd\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Cafe Colony Stores &amp; Restaurant (on the left in 500&nbsp;m)\u003c/div\u003e",
+                                     "polyline" : {
+                                     "points" : "_absBccr{LJIJIDGDEHO\\m@FKDGDEHO^q@^q@HMHOfAgBdAgBDMBIHWVi@Ti@jBcDLUj@_ALSHMFKDMDMFS"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0211182,
+                                     "lng" : 72.8428957
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.3 km",
+                                     "value" : 324
+                                     },
+                                     "duration" : {
+                                     "text" : "1 min",
+                                     "value" : 50
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0203431,
+                                     "lng" : 72.8494846
+                                     },
+                                     "html_instructions" : "At \u003cb\u003eDadar TT Cir\u003c/b\u003e/\u003cb\u003eKhodadad Cir\u003c/b\u003e, take the \u003cb\u003e1st\u003c/b\u003e exit onto \u003cb\u003eDr Baba Saheb Ambedkar Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Café Coffee Day - Dadar T.T (on the left)\u003c/div\u003e",
+                                     "maneuver" : "roundabout-left",
+                                     "polyline" : {
+                                     "points" : "wmasB{`s{LCEACAEAEACAEAEAE}B}AmBqAiAw@{@i@gAm@"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0180404,
+                                     "lng" : 72.8476603
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "1.7 km",
+                                     "value" : 1666
+                                     },
+                                     "duration" : {
+                                     "text" : "2 mins",
+                                     "value" : 136
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0322681,
+                                     "lng" : 72.8586712
+                                     },
+                                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at \u003cb\u003eDattray Shankar Nadkarni Chowk\u003c/b\u003e onto \u003cb\u003eKing's Cir Flyover\u003c/b\u003e",
+                                     "maneuver" : "turn-right",
+                                     "polyline" : {
+                                     "points" : "c|asBgls{LJSSMsGqE}@o@}@q@eAw@y@o@y@o@_@Yg@a@m@g@m@i@q@o@q@m@sPiPo@m@WUUU[U[USOQMk@_@[SYQUKWOWMWK[O]O_@MwBy@iA[}@]{Ak@cA]_@Mm@O"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0203431,
+                                     "lng" : 72.8494846
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.6 km",
+                                     "value" : 612
+                                     },
+                                     "duration" : {
+                                     "text" : "1 min",
+                                     "value" : 58
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0373854,
+                                     "lng" : 72.86079549999999
+                                     },
+                                     "html_instructions" : "Continue onto \u003cb\u003eSion Hospital Flyover\u003c/b\u003e",
+                                     "polyline" : {
+                                     "points" : "ufdsBueu{LwHcCo@SqDgA{@WcBk@yAe@aEuAi@I"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0322681,
+                                     "lng" : 72.8586712
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.3 km",
+                                     "value" : 336
+                                     },
+                                     "duration" : {
+                                     "text" : "1 min",
+                                     "value" : 43
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0401335,
+                                     "lng" : 72.86208209999999
+                                     },
+                                     "html_instructions" : "Continue onto \u003cb\u003eRashtrasevika Laxmibai Kelkar Marg\u003c/b\u003e",
+                                     "polyline" : {
+                                     "points" : "ufesB_su{LmAWy@U}Bq@]KCA}Am@uAu@gAm@"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0373854,
+                                     "lng" : 72.86079549999999
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "1.2 km",
+                                     "value" : 1177
+                                     },
+                                     "duration" : {
+                                     "text" : "2 mins",
+                                     "value" : 107
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0485241,
+                                     "lng" : 72.8684777
+                                     },
+                                     "html_instructions" : "Keep \u003cb\u003eright\u003c/b\u003e to continue on \u003cb\u003eChunabhatti Flyover\u003c/b\u003e/\u003cb\u003eSion Flyover\u003c/b\u003e",
+                                     "maneuver" : "keep-right",
+                                     "polyline" : {
+                                     "points" : "ywesB_{u{Ly@k@q@g@qBoAuBuAo@_@o@]g@Sg@UUIWISIYIuAa@kA[_@K[I_@Km@Qq@S[MWKUKUIWOSKOKUMQKOMQMOMQOkAiAmAiAa@a@WWSWSWUYQWQWOWOWS_@MYQ[MYa@w@GQEQ"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0401335,
+                                     "lng" : 72.86208209999999
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "1.5 km",
+                                     "value" : 1465
+                                     },
+                                     "duration" : {
+                                     "text" : "2 mins",
+                                     "value" : 114
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0533666,
+                                     "lng" : 72.8814253
+                                     },
+                                     "html_instructions" : "Continue onto \u003cb\u003eEastern Express Hwy\u003c/b\u003e/\u003cb\u003eMumbai - Agra National Hwy\u003c/b\u003e",
+                                     "polyline" : {
+                                     "points" : "glgsB_cw{Lc@{Am@{Bm@{BwEuQW_A_BmGUy@qCqKoB}HaCoIQ_@?Ak@kAMm@So@"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0485241,
+                                     "lng" : 72.8684777
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.1 km",
+                                     "value" : 96
+                                     },
+                                     "duration" : {
+                                     "text" : "1 min",
+                                     "value" : 10
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.053592,
+                                     "lng" : 72.8823084
+                                     },
+                                     "html_instructions" : "Continue onto \u003cb\u003eEastern Express Hwy\u003c/b\u003e/\u003cb\u003eMumbai - Agra National Hwy\u003c/b\u003e",
+                                     "polyline" : {
+                                     "points" : "qjhsB}sy{La@mCIa@"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0533666,
+                                     "lng" : 72.8814253
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "1.4 km",
+                                     "value" : 1409
+                                     },
+                                     "duration" : {
+                                     "text" : "2 mins",
+                                     "value" : 105
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0611071,
+                                     "lng" : 72.8930385
+                                     },
+                                     "html_instructions" : "Keep \u003cb\u003eright\u003c/b\u003e to stay on \u003cb\u003eEastern Express Hwy\u003c/b\u003e/\u003cb\u003eMumbai - Agra National Hwy\u003c/b\u003e",
+                                     "maneuver" : "keep-right",
+                                     "polyline" : {
+                                     "points" : "}khsBmyy{La@uA]{@Yw@Y}@[{@Yy@Uc@Wc@IO{@qAqBmC_FaHW]W]cJmMkA{AmAcByAyBeAcB?Ae@s@{BkD"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.053592,
+                                     "lng" : 72.8823084
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.2 km",
+                                     "value" : 181
+                                     },
+                                     "duration" : {
+                                     "text" : "1 min",
+                                     "value" : 75
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.062034,
+                                     "lng" : 72.89168979999999
+                                     },
+                                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e toward \u003cb\u003eThakkar Bappa Colony Rd\u003c/b\u003e",
+                                     "maneuver" : "turn-left",
+                                     "polyline" : {
+                                     "points" : "}zisBo|{{L]TUPOJMJONILGHEJCJCLENENIREFYbA"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.0611071,
+                                     "lng" : 72.8930385
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     },
+                                     {
+                                     "distance" : {
+                                     "text" : "0.3 km",
+                                     "value" : 280
+                                     },
+                                     "duration" : {
+                                     "text" : "2 mins",
+                                     "value" : 92
+                                     },
+                                     "end_location" : {
+                                     "lat" : 19.0603951,
+                                     "lng" : 72.8896738
+                                     },
+                                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Everest Co. Op. Society onto \u003cb\u003eThakkar Bappa Colony Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Friends Hair Cutting Saloon (on the right)\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                                     "maneuver" : "turn-left",
+                                     "polyline" : {
+                                     "points" : "u`jsBat{{Lx@t@r@v@nArBnBlCVb@"
+                                     },
+                                     "start_location" : {
+                                     "lat" : 19.062034,
+                                     "lng" : 72.89168979999999
+                                     },
+                                     "travel_mode" : "DRIVING"
+                                     }
+                                     ],
+                          "traffic_speed_entry" : [],
+                          "via_waypoint" : []
+                          }
+                          ],
+                "overview_polyline" : {
+                "points" : "acbsB{ar{L|@e@NKPQt@oAt@oAr@oAlCoEHW`@aA`CmEpAwBZ{@IUGUqJqGgAm@JSgH_F{BaB_CgBoDsC_ByAeRwQgAcAq@k@mBsAcBaAiBy@wCgAgCy@_DiAmA]gJwCmF_B}DqAaEuAi@IgCm@{C}@aBo@}CcBkBsAgFeD_B}@oAi@{Ag@}EsA{C_A{Aq@kAq@cAy@sEmEoAaBeAgBoAgC_B{F}J_`@gDkMoB}HaCoIQa@k@kAMm@So@a@mCk@wBmBmFo@}Aa@s@{@qAqBmCwF_I{JkNyC_E_D}Ee@u@{BkD]Te@\\]ZQVSt@o@nBx@t@r@v@nArBnBlCVb@"
+                },
+                "summary" : "Eastern Express Hwy/Mumbai - Agra National Hwy",
+                "warnings" : [],
+                "waypoint_order" : []
+                }
+                ],
+    "status" : "OK"
+}

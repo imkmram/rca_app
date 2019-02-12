@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3ez-FJ-ycS" customClass="MarkerInfoWindow" customModule="weRide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0Q-0J-vIF">
+                    <rect key="frame" x="10" y="10" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chQ-rd-zrI">
+                    <rect key="frame" x="362" y="61" width="30" height="30"/>
+                    <state key="normal" title="DEL"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-FK-3N6">
+                    <rect key="frame" x="10" y="39" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiK-Bb-VRg">
+                    <rect key="frame" x="319" y="61" width="33" height="30"/>
+                    <state key="normal" title="EDIT"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7tS-Qu-O26" firstAttribute="bottom" secondItem="qiK-Bb-VRg" secondAttribute="bottom" constant="10" id="7op-Qi-iLb"/>
+                <constraint firstItem="4wJ-FK-3N6" firstAttribute="leading" secondItem="7tS-Qu-O26" secondAttribute="leading" constant="10" id="MFs-35-t35"/>
+                <constraint firstItem="h0Q-0J-vIF" firstAttribute="top" secondItem="7tS-Qu-O26" secondAttribute="top" constant="10" id="Ula-u8-0rY"/>
+                <constraint firstItem="h0Q-0J-vIF" firstAttribute="leading" secondItem="7tS-Qu-O26" secondAttribute="leading" constant="10" id="ZO8-ga-GvQ"/>
+                <constraint firstItem="7tS-Qu-O26" firstAttribute="bottom" secondItem="chQ-rd-zrI" secondAttribute="bottom" constant="10" id="c29-mn-kSL"/>
+                <constraint firstItem="4wJ-FK-3N6" firstAttribute="top" secondItem="h0Q-0J-vIF" secondAttribute="bottom" constant="8" id="eGz-Eh-eG2"/>
+                <constraint firstItem="7tS-Qu-O26" firstAttribute="trailing" secondItem="chQ-rd-zrI" secondAttribute="trailing" constant="10" id="mYA-YO-mcz"/>
+                <constraint firstItem="chQ-rd-zrI" firstAttribute="leading" secondItem="qiK-Bb-VRg" secondAttribute="trailing" constant="10" id="nGb-Qh-bOx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="7tS-Qu-O26"/>
+            <connections>
+                <outlet property="btnDelete" destination="chQ-rd-zrI" id="BvM-dw-B8y"/>
+                <outlet property="btnEdit" destination="qiK-Bb-VRg" id="VwC-Ug-YNN"/>
+                <outlet property="lblSubTitle" destination="4wJ-FK-3N6" id="5KN-bf-uKK"/>
+                <outlet property="lblTitle" destination="h0Q-0J-vIF" id="0we-S5-wU8"/>
+            </connections>
+            <point key="canvasLocation" x="-71" y="-122.5"/>
+        </view>
+    </objects>
+</document>
